@@ -6,9 +6,9 @@ ratings, client counts, testimonials and stats must all be real.
 
 ## Tonight (agreed 23 Oct 2026) — move work to the MacBook
 
-- [ ] Commit all work (only the initial commit exists so far)
-- [ ] Write `CLAUDE.md` with the project rules that are only in this PC's Claude memory (images never pixelated, photo hero on every inner page, simple customer flows, logo reminder, honesty / `[placeholder]` rule)
-- [ ] Create a **private** GitHub repo → add remote → push
+- [x] Commit all work
+- [x] Write `CLAUDE.md` (project rules) + `HANDOFF.md` (status and next steps for a new session)
+- [x] Create a **private** GitHub repo → push (`github.com/siamurmahin/websylimev2`, branch `main`)
 - [ ] Mac: install Node.js LTS + Git + Claude app → `git clone` → `npm install` → open the folder in Claude Code (or move this session to the cloud after the push)
 
 ## Open decisions (from the plan)
