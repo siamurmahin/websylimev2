@@ -4,6 +4,8 @@
 
 **New session? Read `HANDOFF.md` first.** It has the current status, the open items and what to do next.
 
+**Before any design, copy or image work, read `STYLE-GUIDE.md`** and match the existing pattern exactly. Copy an existing section rather than inventing a new style.
+
 Marketing site for Websy Lime LLC (US LLC). Main market USA, UK second. Client sites are built on WordPress / WooCommerce, hosting included.
 
 Stack: Next.js 16 (App Router, `cacheComponents`), TypeScript, Tailwind v4, Motion, GSAP.
