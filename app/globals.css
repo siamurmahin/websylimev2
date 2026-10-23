@@ -1,26 +1,256 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "lenis/dist/lenis.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design tokens — Websy Lime v2
+ * Every color, font and radius is defined once here (Tailwind v4 keeps its
+ * config in CSS via @theme). Light values on :root, dark values on .dark.
+ * The site ships dark by default (<html class="dark">).
+ */
 
 @theme inline {
+  /* Brand */
+  --color-lime: var(--lime);
+  --color-lime-strong: var(--lime-strong);
+  --color-lime-soft: var(--lime-soft);
+  --color-ink: var(--ink);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-placeholder: var(--placeholder);
+
+  /* shadcn semantic tokens */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  /* Type */
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --font-heading: var(--font-heading);
   --font-mono: var(--font-geist-mono);
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Layout */
+  --container-site: 80rem;
+  --spacing-header: 4.5rem;
+  --spacing-header-compact: 3.75rem;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --color-star: var(--star);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* inline: --marquee-duration must resolve on the element, not on :root */
+@theme inline {
+  --animate-marquee-x: marquee-x var(--marquee-duration, 40s) linear infinite;
+  --animate-pulse-ring: pulse-ring 1.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  --animate-flow: flow 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  --animate-beat: beat 0.8s ease-out infinite;
+  --animate-column-up: column-up var(--column-duration, 90s) linear infinite;
+  --animate-column-down: column-down var(--column-duration, 90s) linear infinite;
+  /* Hero entrance (CSS, so it runs before JavaScript loads) */
+  --animate-enter-up: enter-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-enter-rise: enter-rise 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-enter-mark: enter-mark 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  /* three stacked slides cross-fading in turn (delays 0 / 4s / 8s) */
+  --animate-cycle-3: cycle-3 12s ease-in-out infinite;
+}
+
+@theme {
+
+  @keyframes marquee-x {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(2.6); opacity: 0; }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Plain keyframes (Tailwind only emits @theme keyframes it can trace to a used token) */
+/* a coin travelling along its track (wrapper is track-wide) */
+@keyframes flow {
+  0% { transform: translateX(0); opacity: 0; }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+/* vertical endless columns (content rendered twice) */
+@keyframes column-up {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+@keyframes column-down {
+  from { transform: translateY(-50%); }
+  to { transform: translateY(0); }
+}
+/* Hero entrance: fade + lift, letter rise, marker swipe */
+@keyframes enter-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes enter-rise {
+  from { transform: translateY(110%); }
+  to { transform: none; }
+}
+@keyframes enter-mark {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+/* one of three cross-fading slides: visible for its third of the loop */
+@keyframes cycle-3 {
+  0%, 100% { opacity: 0; }
+  5%, 33% { opacity: 1; }
+  38% { opacity: 0; }
+}
+/* heart bump as each coin arrives */
+@keyframes beat {
+  0%, 70% { transform: scale(1); }
+  82% { transform: scale(1.16); }
+  100% { transform: scale(1); }
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --lime: #c6f24e;
+  --lime-strong: #4f7a00; /* lime text on light surfaces (AA contrast) */
+  --lime-soft: color-mix(in oklch, var(--lime) 18%, transparent);
+  --ink: #0b0d09;
+  --placeholder: #f59e0b;
+  --star: #f5b301;
+  --glow: color-mix(in oklch, var(--lime) 42%, transparent);
+
+  --background: #f6f7f1;
+  --foreground: #10130c;
+  --surface: #ffffff;
+  --surface-2: #eef0e6;
+  --card: #ffffff;
+  --card-foreground: #10130c;
+  --popover: #ffffff;
+  --popover-foreground: #10130c;
+  --primary: var(--lime);
+  --primary-foreground: var(--ink);
+  --secondary: #e9ece0;
+  --secondary-foreground: #10130c;
+  --muted: #eceee4;
+  --muted-foreground: #5d6352;
+  --accent: #e9ece0;
+  --accent-foreground: #10130c;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #dfe2d5;
+  --input: #dfe2d5;
+  --ring: #7fae12;
+}
+
+.dark {
+  --lime-strong: var(--lime);
+  --glow: color-mix(in oklch, var(--lime) 14%, transparent);
+
+  --background: #0b0d09;
+  --foreground: #f1f4ea;
+  --surface: #12150f;
+  --surface-2: #191d14;
+  --card: #12150f;
+  --card-foreground: #f1f4ea;
+  --popover: #12150f;
+  --popover-foreground: #f1f4ea;
+  --primary: var(--lime);
+  --primary-foreground: var(--ink);
+  --secondary: #1d2117;
+  --secondary-foreground: #f1f4ea;
+  --muted: #1a1e15;
+  --muted-foreground: #9aa18e;
+  --accent: #1d2117;
+  --accent-foreground: #f1f4ea;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: rgb(255 255 255 / 0.08);
+  --input: rgb(255 255 255 / 0.12);
+  --ring: var(--lime);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  ::selection {
+    background: var(--lime);
+    color: var(--ink);
+  }
+}
+
+@utility container-site {
+  width: 100%;
+  max-width: var(--container-site);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 48rem) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Unfilled [placeholder] text stays visible on purpose — see TODO.md */
+@utility placeholder-mark {
+  color: var(--placeholder);
+  background: color-mix(in oklch, var(--placeholder) 12%, transparent);
+  outline: 1px dashed color-mix(in oklch, var(--placeholder) 60%, transparent);
+  outline-offset: 1px;
+  border-radius: 0.25em;
+  padding-inline: 0.15em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* entrance animations: show the final state right away (no hidden delay) */
+  .animate-enter-up,
+  .animate-enter-rise,
+  .animate-enter-mark {
+    animation: none !important;
+  }
 }
