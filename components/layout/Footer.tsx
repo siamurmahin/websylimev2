@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useSyncExternalStore } from "react";
 import { useReducedMotion } from "motion/react";
 import { useLenis } from "lenis/react";
-import { ArrowRight, ArrowUp, Check, HeartHandshake, Mail, MapPin, MessageCircle } from "lucide-react";
+import { ArrowRight, ArrowUp, Check, HeartHandshake, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { site } from "@/content/site";
 import { Logo } from "@/components/layout/Logo";
 import { SOCIAL_ICONS } from "@/components/layout/social-icons";
@@ -51,6 +51,12 @@ export function Footer() {
                 <a href={emailHref} className={cn(linkCls, "inline-flex items-center gap-2.5")}>
                   <Mail className="size-4 text-lime-strong" aria-hidden />
                   <Copy text={f.contact.email} />
+                </a>
+              </li>
+              <li>
+                <a href={f.contact.phone.href} className={cn(linkCls, "inline-flex items-center gap-2.5")}>
+                  <Phone className="size-4 text-lime-strong" aria-hidden />
+                  {f.contact.phone.label}
                 </a>
               </li>
               <li>

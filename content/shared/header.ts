@@ -9,7 +9,7 @@ export const header = {
   bookCall: {
     label: "Book a free call",
     shortLabel: "Book a call",
-    note: "[15]-min chat · no pressure",
+    note: "30-min chat · no pressure",
     href: "/book-a-call",
     // Founder photo makes it personal; null shows a calendar icon
     avatar: { src: null as string | null, alt: "[Founder name]" },
@@ -133,7 +133,7 @@ export const header = {
         name: "WebsyChat",
         tagline: "An AI assistant that answers visitors and captures leads 24/7.",
         href: "/products/websychat",
-        cta: { label: "Try Free", href: "[WebsyChat free-trial URL]" },
+        cta: { label: "Try Free", href: "https://apps.websychat.com/start" },
         secondary: { label: "Learn more", href: "/products/websychat" },
       },
       comingSoon: {

@@ -1,19 +1,21 @@
 import Link from "next/link";
 import {
   ArrowRight,
+  BadgeCheck,
   BellRing,
-  CalendarCheck,
   Check,
   Code2,
   Globe,
   Headphones,
-  Link2,
+  Languages,
   Mail,
   MessageCircle,
   MessageSquareText,
+  Route,
   SendHorizontal,
-  Smartphone,
-  Tag,
+  Sparkles,
+  Users,
+  Wrench,
   type LucideIcon,
 } from "lucide-react";
 import { site } from "@/content/site";
@@ -25,7 +27,7 @@ import { cn } from "@/lib/utils";
 
 const c = site.products.websychat;
 
-/** Every "Try free" button. Until the trial URL is filled in, it goes to Book a Call. */
+/** The hero's "Try free" button (plan cards have their own sign-up links). */
 export const trialHref = isPlaceholder(c.trialUrl) ? "/book-a-call" : c.trialUrl;
 
 function Eyebrow({ children, dark = false }: { children: React.ReactNode; dark?: boolean }) {
@@ -214,17 +216,18 @@ export function WebsyChatHow() {
   );
 }
 
-const PLAN_ICONS: LucideIcon[] = [MessageSquareText, Link2, Mail, Smartphone, CalendarCheck, Tag, Headphones];
+const PLAN_ICONS: LucideIcon[] = [Globe, MessageSquareText, Sparkles, Languages, Headphones, BadgeCheck, Users, Route, Wrench];
 
 const planCards: PlanCardData[] = c.plans.items.map((p) => ({
   id: p.id,
   name: p.name,
   tagline: p.tagline,
   price: p.price,
+  wasPrice: p.wasPrice,
   per: c.plans.per,
   badge: p.badge,
-  featured: p.badge === "Recommended",
-  href: trialHref,
+  featured: Boolean(p.badge),
+  href: p.href,
   values: p.values,
 }));
 
@@ -252,7 +255,7 @@ export function WebsyChatPlans() {
   );
 }
 
-/** Slim banner: we'll set it up with you. */
+/** Slim banner: book a demo on your own site. */
 export function WebsyChatHelp() {
   const n = c.help;
   return (

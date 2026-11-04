@@ -4,22 +4,22 @@
 export const bookACall = {
   meta: {
     title: "Book a free call",
-    description: "Pick a time for a free 15-minute call. Talk to a real person about your business — no sales script, no pressure.",
+    description: "Pick a time for a free 30-minute call. Talk to a real person about your business — no sales script, no pressure.",
   },
 
   // Cal.com booking link, either the short form ("websylime/intro-call") or the full
   // URL ("https://cal.com/websylime/intro-call"). Until it's filled in, the page shows
   // a "calendar coming soon" card instead of the embed.
-  calLink: "[Cal.com link — e.g. websylime/intro-call]",
+  calLink: "siamurmahin/30min",
 
   // Section 1 — hero with photo
   hero: {
     eyebrow: "Book a free call",
     headline: "Let's talk about your business.",
     headlineAccent: "your business.",
-    subheadline: "A free [15]-minute video call with a real person. Ask anything — no sales script, no pressure.",
+    subheadline: "A free 30-minute video call with a real person. Ask anything — no sales script, no pressure.",
     primaryCta: { label: "Pick a time", href: "#calendar" },
-    points: ["[15] minutes", "Free, no obligation", "Times in your time zone"],
+    points: ["30 minutes", "Free, no obligation", "Times in your time zone"],
     // Illustrative photo (AI-generated) — not our actual team. Swap for a real photo later.
     image: { src: "/images/book-a-call-hero.webp", alt: "A smiling consultant on a friendly video call at his laptop" },
   },
@@ -29,8 +29,8 @@ export const bookACall = {
   headline: "Choose a time that suits you.",
   subheadline: "Times show in your own time zone. You'll get a calendar invite and a video link straight away.",
   expect: [
-    { title: "[15] minutes", body: "Short and focused — we respect your time.", icon: "calendarCheck" as const },
-    { title: "Video call", body: "Google Meet link sent to your email.", icon: "chat" as const },
+    { title: "30 minutes", body: "Short and focused — we respect your time.", icon: "calendarCheck" as const },
+    { title: "Video call", body: "We send the video link to your email.", icon: "chat" as const },
     { title: "No pressure", body: "Honest advice, even if we're not the right fit.", icon: "badgeCheck" as const },
   ],
   agendaTitle: "We'll talk about",

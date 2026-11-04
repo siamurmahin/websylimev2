@@ -32,10 +32,15 @@ export function siteSchema() {
         image: abs("/opengraph-image"),
         ...(real(site.brand.logo.src) && { logo: abs(site.brand.logo.src) }),
         ...(real(contact.email) && { email: contact.email }),
-        // Full street address is added once it's confirmed (footer.contact.address)
-        address: real(contact.address)
-          ? { "@type": "PostalAddress", streetAddress: contact.address, addressCountry: "US" }
-          : { "@type": "PostalAddress", addressCountry: "US" },
+        telephone: contact.phone.href.replace("tel:", ""),
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: contact.postal.street,
+          addressLocality: contact.postal.city,
+          addressRegion: contact.postal.region,
+          postalCode: contact.postal.postalCode,
+          addressCountry: "US",
+        },
         areaServed: site.meta.schema.areaServed.map((name) => ({ "@type": "Country", name })),
         knowsAbout: site.meta.schema.services,
         ...(sameAs.length && { sameAs }),

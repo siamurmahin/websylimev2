@@ -33,7 +33,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [x] Booking links → `/book-a-call` (see Book a Call page section). Still to do: `bookCall.note` `[15]`-min and founder photo `bookCall.avatar`
 - [ ] Services → Website Design: `[Package 1 name]`, `[Package 2 name]`, `[Package 3 name]` + their anchor slugs `[package-1..3]`
 - [ ] Services → feature card: `[Client name] — [headline result]`, `[One line on what changed for this client.]`, `[case-study-slug]`, image + `[Case study screenshot alt text]`
-- [ ] Products → WebsyChat `cta.href` — `[WebsyChat free-trial URL]`
+- [x] Products → WebsyChat `cta.href` — from websychat.com
 - [ ] WebsyChat logo (currently an icon)
 
 ### Hero
@@ -95,10 +95,10 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 
 ### Footer
 - [x] Built (`components/layout/Footer.tsx`, copy in `site.footer`) — simple card: brand + contact + socials, 4 link columns, one-line newsletter, legal bar + 2% line
-- [ ] Contact email `[hello@websylime.com]`
-- [ ] WhatsApp link `[WhatsApp link — wa.me/…]`
-- [ ] US LLC address `[US LLC address]`
-- [ ] Social URLs: `[LinkedIn URL]`, `[Facebook URL]`, `[Instagram URL]`
+- [x] Contact email
+- [x] WhatsApp link and phone
+- [x] US LLC address
+- [x] Social URLs
 - [ ] **Newsletter is not connected** — the form only shows a thank-you message. Pick a provider (Mailchimp, ConvertKit, Brevo…) before launch.
 - [ ] Pages `/privacy` and `/terms`
 
@@ -108,7 +108,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [x] `/sitemap.xml` + `/robots.txt` — **add each new page to `app/sitemap.ts` as it's built**
 - [x] Structured data — business (ProfessionalService), website, 3 Growth plans with prices, homepage FAQ (`lib/schema.ts`). Placeholders are skipped automatically.
 - [ ] Confirm production domain `site.meta.url` (canonical, sitemap and share links all use it)
-- [ ] Once real: email, street address, social URLs and logo appear in the structured data automatically
+- [x] Email, street address and social URLs are in the structured data; logo appears automatically once it's added
 - [ ] Favicon / app icons (still the default `app/favicon.ico`)
 - [ ] After launch: submit the sitemap in Google Search Console; test with the Rich Results Test
 
@@ -138,7 +138,8 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 
 ## Book a Call page (`/book-a-call`, copy in `content/pages/book-a-call.ts`)
 - [x] Photo hero + "what to expect" + Cal.com calendar embed; every "Book a call" button on the site now points here
-- [ ] **Cal.com link** → set `calLink` in `content/pages/book-a-call.ts` (e.g. `websylime/intro-call`). Until then a "Calendar coming soon" card links to Start Project. In Cal.com: set brand colour to lime `#c6f24e`, add Google Meet, event length 15 min.
+- [x] **Cal.com link** set in `content/pages/book-a-call.ts` (`siamurmahin/30min`, 30 minutes)
+- [ ] Optional in Cal.com: set brand colour to lime `#c6f24e`
 - [ ] Call length `[15]` minutes (hero, points, expect cards, header pill note)
 - [ ] Hero photo is **AI-generated** (illustrative) — swap for a real photo later: `public/images/book-a-call-hero.webp`
 
@@ -199,12 +200,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [ ] Hero photo is **AI-generated** (no faces) — swap for a real photo later: `public/images/contact-hero.webp`
 
 ## WebsyChat page (`/products/websychat`, demo at `#demo`, plans at `#plans`, copy in `content/products/websychat.ts`)
-- [ ] `trialUrl` — free-trial / sign-up URL. Until filled in, every "Try it free" / "Start free trial" button goes to `/book-a-call`. Also update `header.ts` Products `cta.href`
-- [ ] Confirm each feature in `features.items` is live (24/7 answers, lead capture, appointment booking, learns from your site, lead alerts, works on any website)
-- [ ] Hero points: trial length `[14]` days, setup time `[10]` minutes
-- [ ] Plans: names `[Starter]` / `[Pro]` / `[Business]`, prices `$[X]`, conversations `[100]` / `[500]` / `[Unlimited]`, websites `[3]`, and which plan has SMS alerts / booking / branding removal
-- [ ] Footnote: trial length and `[No card needed — confirm.]`
-- [ ] FAQ (category "WebsyChat" in `content/home/faq.ts`): confirm wrong-answer behaviour, SMS/dashboard, after-trial charge, supported platforms
+- [x] Trial URL, hero points, features, plans, prices, footnote and FAQ now come from websychat.com
 - [ ] Demo conversation is a labelled example ("Example conversation") — swap for a real one if you like
 - [ ] Hero photo is AI-generated (no faces) — swap for a real screenshot/photo later
 

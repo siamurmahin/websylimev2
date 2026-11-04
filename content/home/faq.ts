@@ -65,31 +65,36 @@ export const faq = {
       q: "Can I get a one-off design, like a logo or flyer?",
       a: "Yes. Pick \"One-off design\" in the project form and tell us what you need — we'll send you a price first.",
     },
-    // "WebsyChat" answers show only on the WebsyChat page
+    // "WebsyChat" answers show only on the WebsyChat page (from websychat.com)
     {
       category: "WebsyChat",
-      q: "Will WebsyChat give wrong answers?",
-      a: "It answers from your own website and the info you give it. If it doesn't know something, it takes the visitor's details so you can reply yourself. [Confirm this behaviour.]",
+      q: "Will WebsyChat make up answers?",
+      a: "No. It answers from the pages and files you add. If the answer isn't there, it says so and offers to take a message.",
     },
     {
       category: "WebsyChat",
       q: "Do I need to be technical to set it up?",
-      a: "No. You paste one line of code into your site — or book a free call and we'll set it up with you.",
+      a: "No. You paste one script into your site's footer, the same kind of step as adding an analytics tag. The portal then checks that it's loading.",
     },
     {
       category: "WebsyChat",
       q: "How do I get my leads?",
-      a: "Every new lead is emailed to you straight away, with the full conversation. [Confirm SMS alerts and any dashboard.]",
+      a: "You get a name, an email and what they asked, in your inbox with the conversation attached. On Growth and Academy you can also take over a live chat.",
     },
     {
       category: "WebsyChat",
-      q: "What happens after the free trial?",
-      a: "Pick the plan that fits and keep going. If you don't, the chat simply turns off — [no charge, confirm]. You can cancel anytime.",
+      q: "What happens when the 7-day trial ends?",
+      a: "The trial takes a card so your assistant can go live the same day. Cancel in the portal before day 7 and you're not charged. After that, your plan starts automatically and subscription fees aren't refunded.",
+    },
+    {
+      category: "WebsyChat",
+      q: "Does a visitor have to write in English?",
+      a: "No. They write in their own language and the reply comes back in that language, from your content. Your website can stay in English.",
     },
     {
       category: "WebsyChat",
       q: "Does it work if my website isn't built by Websy Lime?",
-      a: "Yes. WebsyChat works on WordPress, Shopify, Wix, Squarespace and custom sites. [Confirm supported platforms.]",
+      a: "Yes. If you can paste a script into your site's footer, you can use WebsyChat.",
     },
     {
       category: "Monthly plans",

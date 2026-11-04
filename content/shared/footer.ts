@@ -3,10 +3,13 @@
 export const footer = {
   blurb: "Websites, social and local growth for service businesses. One team, one invoice.",
   contact: {
-    email: "[hello@websylime.com]",
-    whatsapp: { label: "WhatsApp", href: "[WhatsApp link — wa.me/…]" },
+    email: "hello@websylime.com",
+    phone: { label: "+1 725 404 0225", href: "tel:+17254040225" },
+    whatsapp: { label: "WhatsApp", href: "https://wa.me/17254040225" },
     addressLabel: "Websy Lime LLC",
-    address: "[US LLC address]",
+    address: "117 S Lexington St, Ste 100, Harrisonville, MO 64701-2444",
+    // Same address, split up for search engines (lib/schema.ts)
+    postal: { street: "117 S Lexington St, Ste 100", city: "Harrisonville", region: "MO", postalCode: "64701-2444" },
   },
   columns: [
     {
@@ -56,9 +59,9 @@ export const footer = {
   },
   socialLabel: "Follow us",
   social: [
-    { id: "linkedin", label: "LinkedIn", href: "[LinkedIn URL]" },
-    { id: "facebook", label: "Facebook", href: "[Facebook URL]" },
-    { id: "instagram", label: "Instagram", href: "[Instagram URL]" },
+    { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/company/websylime" },
+    { id: "facebook", label: "Facebook", href: "https://www.facebook.com/websylime/" },
+    { id: "instagram", label: "Instagram", href: "https://www.instagram.com/websylime/" },
   ] as { id: "linkedin" | "facebook" | "instagram"; label: string; href: string }[],
   // {year} is filled in automatically
   copyright: "© {year} Websy Lime LLC. All rights reserved.",

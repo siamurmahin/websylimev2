@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, CalendarDays, Clock, Mail, MapPin, MessageCircle } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CalendarDays, Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { site } from "@/content/site";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { ContactForm } from "@/components/contact/ContactForm";
@@ -18,14 +18,15 @@ export const metadata: Metadata = {
 };
 
 /**
- * Contact. Section 1: photo hero. Section 2 (#message): three ways to reach us
+ * Contact. Section 1: photo hero. Section 2 (#message): four ways to reach us
  * + hours/address on the left, a one-step message form on the right.
- * Email, WhatsApp and address come from the footer content (one source).
+ * Email, phone, WhatsApp and address come from the footer content (one source).
  */
 export default function ContactPage() {
   const external = (v: string) => (isPlaceholder(v) ? {} : { target: "_blank", rel: "noopener noreferrer" });
   const ways = [
     { ...c.ways.email, Icon: Mail, value: info.email, href: isPlaceholder(info.email) ? "#" : `mailto:${info.email}`, ext: {} },
+    { ...c.ways.phone, body: "", Icon: Phone, value: info.phone.label, href: info.phone.href, ext: {} },
     { ...c.ways.whatsapp, Icon: MessageCircle, value: null, href: href(info.whatsapp.href), ext: external(info.whatsapp.href) },
     { ...c.ways.call, Icon: CalendarDays, value: null, href: c.ways.call.href, ext: {} },
   ];

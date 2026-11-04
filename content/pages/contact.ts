@@ -28,7 +28,8 @@ export const contact = {
   ways: {
     email: { title: "Email us", body: "Best for longer questions." },
     whatsapp: { title: "WhatsApp", body: "Quick questions, quick answers." },
-    call: { title: "Book a free call", body: "[15] minutes with a real person.", href: "/book-a-call" },
+    phone: { title: "Call us" },
+    call: { title: "Book a free call", body: "30 minutes with a real person.", href: "/book-a-call" },
   },
   hours: { label: "Hours", value: "[Mon–Fri, 9am–6pm ET]" },
   projectNote: { text: "Want a price for a new website or plan?", label: "Start your project", href: "/start-project" },

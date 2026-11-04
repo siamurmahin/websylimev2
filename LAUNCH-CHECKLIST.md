@@ -17,7 +17,7 @@ The detailed item-by-item list lives in `TODO.md`. This file is the summary to w
 | Production build | `next build` passes, all 32 routes prerendered |
 | SEO basics | Title + description + canonical on every page, sitemap (24 URLs), robots.txt, structured data |
 
-**Fixed during this audit:** the "Try Free" button in the header's Products menu (desktop and mobile) was a dead `#` link. It now goes to Book a Call, the same as the WebsyChat page, until the trial link arrives.
+**Fixed during this audit:** the "Try Free" button in the header's Products menu (desktop and mobile) was a dead `#` link. It now goes to the WebsyChat sign-up page.
 
 ---
 
@@ -40,15 +40,9 @@ Every form validates and shows a "Thank you" message, but the details **aren't s
 1. Which email address should receive forms 1–3? Or which CRM (HubSpot, etc.)?
 2. Which newsletter tool will you use for forms 4–6? For example Mailchimp, Kit (ConvertKit) or Brevo.
 
-### 1b. Links that are dead (`#`) or temporarily point somewhere else
+### 1b. Dead links
 
-| Button / link | Where | Goes to now | What's needed |
-|---|---|---|---|
-| Email `[hello@websylime.com]` | footer (every page), Contact page | `#` | the real email address |
-| WhatsApp | footer, Contact page | `#` | your `wa.me/…` link |
-| LinkedIn / Facebook / Instagram | footer (every page) | `#` | your profile URLs (or remove the ones you don't use) |
-| **Every "Book a free call" button + the floating pill** | whole site | `/book-a-call`. The page itself shows "Calendar coming soon" | your **Cal.com link** → `content/pages/book-a-call.ts → calLink` |
-| **"Try Free" / "Start free trial"** (WebsyChat) | header menu, WebsyChat hero, 3 plan cards | `/book-a-call` for now | the **WebsyChat trial/sign-up URL** → `content/products/websychat.ts → trialUrl` + `content/shared/header.ts` |
+None left. Cal.com, WebsyChat sign-up, email, phone, WhatsApp and social links are all real.
 
 ### 1c. Brand and domain
 
@@ -57,14 +51,12 @@ Every form validates and shows a "Thank you" message, but the details **aren't s
   - social preview image: `app/opengraph-image.tsx`
   - favicon: `app/favicon.ico`
 - [ ] **Domain:** confirm `https://websylime.com` in `content/shared/meta.ts`. The sitemap, canonical URLs and structured data are all built from it.
-- [ ] **Company details:** `[hello@websylime.com]` and `[US LLC address]` show on every page (footer) and in the legal pages.
 
 ### 1d. Prices (shown to customers)
 
 - [ ] **Website Design:** names `[Launch]` / `[Business]` / `[Store]` and prices `$[X]` (Website Design page + Pricing page + header menu)
 - [ ] **Graphic Design:** `[Starter]` / `[Pro]` / `[Brand]`, prices `$[X]` and design counts
-- [ ] **WebsyChat:** `[Starter]` / `[Pro]` / `[Business]`, prices `$[X]`, conversation limits, trial length `[14]` days
-- [ ] Growth plans already show real prices ✓
+- [ ] Growth and WebsyChat plans already show real prices ✓
 
 ### 1e. Legal
 
@@ -92,13 +84,11 @@ There are **137 different placeholder texts** across the site. All of them show 
 | **Portfolio** | `[Category]` for all **51** websites | `content/portfolio.ts` |
 | **Case studies (3)** | every result, number, challenge, what we did, quote, plus each client's permission | `content/case-studies.ts` |
 | **About** | founder name + story, 4 team members (name, role, photo), timeline `[Year]`s | `content/pages/about.ts` |
-| **Book a Call** | call length `[15]` min, Cal.com link | `content/pages/book-a-call.ts`, `header.ts` |
 | **Contact** | opening hours `[Mon–Fri, 9am–6pm ET]`, reply time `[1]` business day | `content/pages/contact.ts` |
 | **FAQ answers** | 13 "confirm…" answers (hosting, ownership, cancellation, WebsyChat…) | `content/home/faq.ts` |
 | **Website Design** | hosting `[the first 12 months]`, timeline | `content/services/website-design.ts` |
 | **Graphic Design** | delivery `[2–3]` days, revisions, notice period | `content/services/graphic-design.ts` |
 | **Video Editing** | launch date `[soon]`, early-access price | `content/services/video-editing.ts` |
-| **WebsyChat** | confirm the feature list, setup time `[10]` min, trial terms | `content/products/websychat.ts` |
 | **Careers** | which perks are true, reply time `[2 weeks]` | `content/pages/careers.ts` |
 | **Header menu card** | "Hallmark Contractors — `[headline result]`" | `content/shared/header.ts` |
 | **Blog** | read and edit the 3 posts, real publish dates | `content/blog/posts.ts` |

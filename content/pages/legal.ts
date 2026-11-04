@@ -9,8 +9,8 @@ export type LegalSection = { id: string; title: string; body: LegalBlock[] };
 
 // Shared bits
 const company = "Websy Lime LLC";
-const email = "[hello@websylime.com]";
-const address = "[US LLC address]";
+const email = "hello@websylime.com";
+const address = "117 S Lexington St, Ste 100, Harrisonville, MO 64701-2444";
 
 export const legal = {
   // Shared hero photo for both pages (AI-generated, no faces)
@@ -273,7 +273,7 @@ export const legal = {
         id: "websychat",
         title: "WebsyChat",
         body: [
-          { type: "p", text: "WebsyChat uses AI to answer your visitors. It answers from your website and the information you give it, but it can make mistakes — you're responsible for checking what it tells your customers. Free trials end after [14 days]. [Confirm trial, billing and fair-use terms.]" },
+          { type: "p", text: "WebsyChat uses AI to answer your visitors. It answers from your website and the information you give it, but it can make mistakes — you're responsible for checking what it tells your customers. Free trials last 7 days and take a card. Cancel before the trial ends and you're not charged. After that your plan starts automatically, renews until you cancel, and subscription fees aren't refunded. The full terms are in the WebsyChat billing policy at websychat.com/legal/billing." },
         ],
       },
       {
