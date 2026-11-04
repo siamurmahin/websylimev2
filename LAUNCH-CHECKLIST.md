@@ -46,10 +46,6 @@ None left. Cal.com, WebsyChat sign-up, email, phone, WhatsApp and social links a
 
 ### 1c. Brand and domain
 
-- [ ] **Real logo.** The lime-leaf icon is a temporary stand-in, and it has to be replaced in 3 places:
-  - header + footer: `public/brand/logo.svg` + `content/shared/brand.ts`
-  - social preview image: `app/opengraph-image.tsx`
-  - favicon: `app/favicon.ico`
 - [ ] **Domain:** confirm `https://websylime.com` in `content/shared/meta.ts`. The sitemap, canonical URLs and structured data are all built from it.
 
 ### 1d. Prices (shown to customers)

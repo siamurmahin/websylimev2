@@ -3,7 +3,6 @@
 export const brand = {
   name: "Websy Lime",
   legalName: "Websy Lime LLC",
-  // Wordmark is text until the real logo file exists (see TODO.md)
-  logo: { src: null as string | null, alt: "Websy Lime" },
-  wordmark: { first: "websy", second: "lime" },
+  // src = light mode, srcDark = dark mode. The favicon files are app/favicon.ico, icon.png and apple-icon.png.
+  logo: { src: "/brand/logo-light.png", srcDark: "/brand/logo-dark.png", alt: "Websy Lime" },
 };

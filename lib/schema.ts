@@ -30,7 +30,7 @@ export function siteSchema() {
         url,
         description: site.meta.description,
         image: abs("/opengraph-image"),
-        ...(real(site.brand.logo.src) && { logo: abs(site.brand.logo.src) }),
+        logo: abs(site.brand.logo.src),
         ...(real(contact.email) && { email: contact.email }),
         telephone: contact.phone.href.replace("tel:", ""),
         address: {

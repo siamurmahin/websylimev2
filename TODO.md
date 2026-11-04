@@ -15,12 +15,8 @@ ratings, client counts, testimonials and stats must all be real.
 
 ## Brand assets
 
-- [ ] **⚠️ REAL LOGO — must replace before launch.** The lime leaf icon + "websylime" text used now is a **temporary stand-in, not our logo**. It appears in 3 places:
-  - Header + footer → `components/layout/Logo.tsx` (drop the file in `public/brand/logo.svg` and set `logo.src` in `content/shared/brand.ts`)
-  - Social preview image (shown when the link is shared) → `app/opengraph-image.tsx` (swap the leaf SVG + wordmark for the real logo)
-  - Favicon / app icons → `app/favicon.ico` (still the Next.js default)
+- [x] Real logo: `public/brand/logo-light.png` + `logo-dark.png` (set in `content/shared/brand.ts`), social image and favicon done
 - [ ] Heading font: currently **Inter Bold** (Google). Also tried Bricolage Grotesque. Creato Display needs its font file in `app/fonts/` (no official source found yet) → load via `next/font/local` in `app/layout.tsx`.
-- [ ] Favicon / app icons / OG image.
 
 ## Placeholders (by page)
 

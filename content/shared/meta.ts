@@ -9,9 +9,7 @@ export const meta = {
   // Social preview image (app/opengraph-image.tsx)
   og: {
     alt: "Websy Lime — websites, social and growth for service businesses",
-    eyebrow: "Web design · Social · Local growth",
     headline: "Websites that turn visitors into buyers.",
-    footer: "One team. One invoice. 2% to charity.",
   },
   // Structured data (components/seo/JsonLd.tsx). Only real values are output —
   // anything still in [brackets] is skipped until it's filled in.
