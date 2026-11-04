@@ -116,13 +116,13 @@ export const header = {
       ],
       feature: {
         eyebrow: "Latest case study",
-        // Keep in sync with the first story in content/case-studies.ts
-        title: "Hallmark Contractors — [headline result]",
-        description: "[One line on what changed for this client.]",
-        href: "/case-studies/hallmark-contractors",
+        // A case study from content/case-studies.ts
+        title: "A website for a home renovation contractor",
+        description: "How a photo-led website helped a high-end contractor show its craft.",
+        href: "/case-studies/home-renovation-contractor-website-design",
         cta: "Read the case study",
-        image: "/work/hallmark-contractors.webp",
-        imageAlt: "Hallmark Contractors website",
+        image: "/work/home-renovation-contractor-website-design.webp",
+        imageAlt: "Home renovation contractor website",
       },
     },
     {

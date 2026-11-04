@@ -75,10 +75,8 @@ There are **137 different placeholder texts** across the site. All of them show 
 | **Homepage hero** | "Only `[7]` spots left for `[Q1 2027]`" (must be true or removed), 5 client avatar names | `content/home/hero.ts`, `final-cta.ts` |
 | **Homepage numbers** | `[2017]` (the About page says 2024, so pick one), `[800]`, `[650]` | `content/home/results.ts`, `hero.ts` |
 | **Trust bar** | 8 real client logos | `content/home/trust-bar.ts` |
-| **Featured work** | 4 projects: `[Industry]` + a real `[Result]` | `content/home/featured-work.ts` |
 | **Charity (2%)** | `[Charity / cause name]`, yearly update line | `content/home/pricing.ts`, `results.ts`, `faq.ts` |
-| **Portfolio** | `[Category]` for all **51** websites | `content/portfolio.ts` |
-| **Case studies (3)** | every result, number, challenge, what we did, quote, plus each client's permission | `content/case-studies.ts` |
+| **Case studies (45)** | ⚠ confirm every result and quote, get each client's permission, decide on 5 on hold (see `TODO.md`) | `content/case-studies.ts` |
 | **About** | founder name + story, 4 team members (name, role, photo), timeline `[Year]`s | `content/pages/about.ts` |
 | **Contact** | opening hours `[Mon–Fri, 9am–6pm ET]`, reply time `[1]` business day | `content/pages/contact.ts` |
 | **FAQ answers** | 13 "confirm…" answers (hosting, ownership, cancellation, WebsyChat…) | `content/home/faq.ts` |

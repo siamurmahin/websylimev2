@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useSyncExternalStore } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
 import { MotionConfig } from "motion/react";
 import { ReactLenis, useLenis } from "lenis/react";
@@ -136,11 +136,44 @@ function HashScroll() {
   return null;
 }
 
+/**
+ * Lenis lives above the pages, so it keeps its state across client-side
+ * navigation. On every route change: undo a lock left by the previous page (a
+ * stopped Lenis eats wheel events, so the page can't scroll), re-measure the new
+ * page, and end any glide still running (it would pull the new page back down).
+ */
+function LenisRouteReset() {
+  const pathname = usePathname();
+  const lenis = useLenis();
+  const prevPath = useRef(pathname);
+  const isHistoryNav = useRef(false);
+
+  useEffect(() => {
+    const onPop = () => (isHistoryNav.current = true);
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
+  useEffect(() => {
+    if (!lenis || prevPath.current === pathname) return;
+    prevPath.current = pathname;
+    lenis.start();
+    lenis.resize();
+    // Back/forward: keep the position the browser restored. #hash: HashScroll jumps.
+    const stay = isHistoryNav.current || window.location.hash;
+    isHistoryNav.current = false;
+    lenis.scrollTo(stay ? window.scrollY : 0, { immediate: true, force: true });
+  }, [pathname, lenis]);
+
+  return null;
+}
+
 /** Lenis smooth scroll. Disabled entirely for prefers-reduced-motion. */
 function SmoothScroll({ children }: { children: React.ReactNode }) {
   return (
     <ReactLenis root options={{ autoRaf: false, lerp: 0.1 }}>
       <LenisGsapSync />
+      <LenisRouteReset />
       <HashScroll />
       <SamePageAnchors />
       {children}

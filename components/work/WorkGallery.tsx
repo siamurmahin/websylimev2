@@ -35,7 +35,7 @@ export function WorkGallery() {
   const list = useMemo(() => (cat === w.allLabel ? portfolio : portfolio.filter((p) => p.category === cat)), [cat]);
   const visible = list.slice(0, shown);
 
-  // /work#hallmark-contractors → make sure it's shown, then open it.
+  // /work#chiropractor-website-design → make sure it's shown, then open it.
   // /work#graphic-design → Graphic design tab (header menu, Graphic Design page)
   useEffect(() => {
     const openFromHash = () => {
@@ -131,7 +131,7 @@ export function WorkGallery() {
                   <span className="relative block overflow-hidden rounded-[1.25rem] border bg-surface-2 transition-[border-color] duration-500 group-hover:border-lime/60">
                     <Image
                       src={p.image}
-                      alt={`${p.name} website`}
+                      alt={`${p.label} website`}
                       width={1170}
                       height={630}
                       sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
@@ -146,7 +146,7 @@ export function WorkGallery() {
                     </span>
                   </span>
                   <span className="mt-3.5 flex items-center justify-between gap-3 px-1">
-                    <span className="font-display text-lg font-bold tracking-[-0.02em]">{p.name}</span>
+                    <span className="font-display text-lg font-bold tracking-[-0.02em]">{p.label}</span>
                     {!isPlaceholder(p.category) && (
                       <span className="shrink-0 rounded-full border px-2.5 py-0.5 text-xs font-semibold text-muted-foreground">{p.category}</span>
                     )}
@@ -231,6 +231,16 @@ function Lightbox({ item, list, onChange }: { item: PortfolioItem | null; list: 
     if (!item) lenis?.start();
   }, [item, lenis]);
 
+  // Leaving the page with the lightbox open: don't leave scrolling locked behind
+  useEffect(() => () => void lenis?.start(), [lenis]);
+  useEffect(() => {
+    const dlg = ref.current;
+    return () => {
+      if (dlg?.open) dlg.close();
+      onChange(null); // so it isn't open again when coming back to this page
+    };
+  }, [onChange]);
+
   // ← / → move between projects while open
   useEffect(() => {
     if (!item) return;
@@ -252,13 +262,13 @@ function Lightbox({ item, list, onChange }: { item: PortfolioItem | null; list: 
       onClick={(e) => {
         if (e.target === e.currentTarget) close(); // click on the backdrop
       }}
-      aria-label={item?.name}
+      aria-label={item?.label}
       className="m-auto max-h-none w-[min(64rem,calc(100vw-2rem))] max-w-none overflow-visible bg-transparent p-0 text-white backdrop:bg-black/75 backdrop:backdrop-blur-sm"
     >
       {item && (
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between gap-3">
-            <p className="font-display text-xl font-bold tracking-[-0.02em]">{item.name}</p>
+            <p className="font-display text-xl font-bold tracking-[-0.02em]">{item.label}</p>
             <button type="button" onClick={close} aria-label={l.close} className={navBtn}>
               <X className="size-5" aria-hidden />
             </button>
@@ -268,7 +278,7 @@ function Lightbox({ item, list, onChange }: { item: PortfolioItem | null; list: 
             <Image
               key={item.slug}
               src={item.image}
-              alt={`${item.name} website`}
+              alt={`${item.label} website`}
               width={1170}
               height={630}
               quality={90}
@@ -289,16 +299,14 @@ function Lightbox({ item, list, onChange }: { item: PortfolioItem | null; list: 
               </button>
             </div>
             <div className="flex flex-wrap items-center gap-2">
-              {item.url && (
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              {item.hasStudy && (
+                <Link
+                  href={`/case-studies/${item.slug}`}
                   className="inline-flex h-11 items-center gap-2 rounded-full border border-white/20 px-5 text-sm font-semibold outline-none transition-colors hover:border-lime hover:text-lime focus-visible:ring-3 focus-visible:ring-lime/50"
                 >
-                  {l.visit}
+                  {l.study}
                   <ArrowUpRight className="size-4" aria-hidden />
-                </a>
+                </Link>
               )}
               <Link
                 href="/start-project?service=website-design"

@@ -13,9 +13,9 @@ export const featuredWork = {
   ctaCard: { title: "{n} more projects", body: "Law firms, clinics, contractors, coaches and more." },
   // Pick 3–4 projects by slug from content/portfolio.ts (TODO.md: choose the best + add real results)
   items: [
-    { slug: "hallmark-contractors", tags: ["Website Design", "[Industry]"], result: "[Result — e.g. 2× more quote requests]" },
-    { slug: "gh-chiropractic", tags: ["Website Design", "[Industry]"], result: "[Result — e.g. +40% booked visits]" },
-    { slug: "the-kitesurf-academy", tags: ["Website Design", "[Industry]"], result: "[Result — e.g. bookings up 3×]" },
-    { slug: "law-sparks", tags: ["Website Design", "[Industry]"], result: "[Result — e.g. 25 new leads / month]" },
+    { slug: "home-renovation-contractor-website-design", tags: ["Website Design", "Construction"], result: "[9] project inquiries a month" },
+    { slug: "chiropractor-website-design", tags: ["Website Design", "Healthcare"], result: "[55] online bookings a month" },
+    { slug: "kitesurf-school-website-design", tags: ["Website Design", "Sports"], result: "[40] lesson bookings a month" },
+    { slug: "legal-tech-consultancy-website-design", tags: ["Website Design", "Legal tech"], result: "[7] qualified leads a month" },
   ],
 };

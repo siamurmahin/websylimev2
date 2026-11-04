@@ -28,7 +28,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 ### Header / mega menu
 - [x] Booking links → `/book-a-call` (see Book a Call page section). Still to do: `bookCall.note` `[15]`-min and founder photo `bookCall.avatar`
 - [ ] Services → Website Design: `[Package 1 name]`, `[Package 2 name]`, `[Package 3 name]` + their anchor slugs `[package-1..3]`
-- [ ] Services → feature card: `[Client name] — [headline result]`, `[One line on what changed for this client.]`, `[case-study-slug]`, image + `[Case study screenshot alt text]`
+- [x] Services → feature card now shows a real case study
 - [x] Products → WebsyChat `cta.href` — from websychat.com
 - [ ] WebsyChat logo (currently an icon)
 
@@ -40,7 +40,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 ### Portfolio strip (between Hero and Trust Bar)
 - [x] 50 screenshots copied to `public/work/`, listed in `content/portfolio.ts`
 - [ ] Pick the order / which ones show first (`home.portfolioStrip.count` = 20 shown)
-- [ ] `[Category]` for each project in `content/portfolio.ts` (for the Work page filter)
+- [x] Category for each project in `content/portfolio.ts` (Work page filter)
 - [ ] Optional: live `url` for each project
 
 ### Trust Bar
@@ -214,11 +214,15 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [ ] Newsletter band (`#newsletter`) isn't saved anywhere yet — connect the same newsletter provider as the footer
 
 ## Case Studies (`/case-studies`, stories at `/case-studies/[slug]`, copy in `content/pages/case-studies.ts`, stories in `content/case-studies.ts`)
-- [ ] 3 stories set up for real clients (Hallmark Contractors, GH Chiropractic, The Kitesurf Academy) — every result, number, challenge and quote is a `[placeholder]`. Fill in **only numbers the client has confirmed**, or swap in other clients
-- [ ] Get permission from each client before publishing their story (and their quote)
-- [ ] Optional: add a bigger screenshot (`screenshot`, ≥2400px wide) per story — the portfolio shots are 1170px, so they're shown at most ~768px wide to stay sharp
-- [ ] Header mega-menu "Latest case study" card now points to Hallmark Contractors — update its `[headline result]` / description to match
-- [ ] Homepage Featured Work: projects with a case study now open it (others still open the Work page)
+- [x] 45 case studies written from the "portfolio content" files. SEO targets the industry, never the client: no client names in text, titles, URLs, image file names or structured data; live-site links are nofollow; quotes show first name + initial. Private client list: `content/case-study-clients.md`
+- [ ] ⚠ **Replace every [bracketed] number with the client's real result before launch, and confirm the 14 "Growing after launch" stories (Growth plan, social, Google Ads) with each client.** They are realistic estimates, not client data (also on homepage Featured Work). The source files' numbers looked templated, and for at least 4 clients the file guessed the business type. Publishing unconfirmed numbers or testimonials is a legal risk (US FTC, UK CMA). If a client has no number, remove that stat
+- [ ] Confirm each quote with the client. One says "Sales nearly tripled" (sports nutrition), which doesn't fit the estimates
+- [ ] On hold, no case study yet (business type was wrong or unverifiable in the source file; shown on /work only): FourthWall Agency (actually employer branding), TFO Medical (actually healthcare recruitment), Tide and Tail (actually pet and farm supplies store), Virtuous Earth Solutions (actually regenerative farming for smallholders), Red Rose Care (site blocks automated visits)
+- [ ] Their testimonials are still on the site and don't match the real business (e.g. Tide and Tail: "Bookings have jumped", but it's a shop). Check or remove them in `content/testimonials.ts`
+- [x] Decision: testimonials keep client business names (homepage, About). Only case studies and the portfolio hide them
+- [ ] Screenshots still show the client's logo inside the image. Google can't rank us from that, but people can read it
+- [ ] Locations are from the source text or inferred from a .co.uk domain; blank where unknown. "Timeline" was replaced with "Launched" (real date in the source)
+- [ ] Get permission from each client before publishing their story and quote
 - [ ] Hero photo is AI-generated (no faces) — swap for a real photo later
 
 ## Careers page (`/careers`, roles at `#roles`, form at `#apply`, copy in `content/pages/careers.ts`)

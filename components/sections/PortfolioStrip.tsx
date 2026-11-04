@@ -18,7 +18,7 @@ export function PortfolioStrip() {
           >
             <Image
               src={item.image}
-              alt={imageAlt.replace("{name}", item.name)}
+              alt={imageAlt.replace("{name}", item.label)}
               width={1170}
               height={630}
               sizes="(min-width: 640px) 360px, 260px"
@@ -27,7 +27,7 @@ export function PortfolioStrip() {
               className="aspect-[1170/630] h-auto w-full object-cover object-top transition-transform duration-700 ease-out-expo group-hover/card:scale-[1.04]"
             />
             <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-2 bg-gradient-to-t from-black/70 to-transparent px-4 pt-8 pb-3 text-left text-sm font-semibold text-white opacity-0 transition-all duration-300 group-hover/card:translate-y-0 group-hover/card:opacity-100">
-              {item.name}
+              {item.label}
             </figcaption>
           </figure>
         ))}

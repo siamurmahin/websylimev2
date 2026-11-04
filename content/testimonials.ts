@@ -21,7 +21,7 @@ export const testimonials: Testimonial[] = [
     name: "Adam Sparks",
     role: "Founder",
     business: "Law Spark",
-    projectSlug: "law-sparks",
+    projectSlug: "legal-tech-consultancy-website-design",
     photo: null,
   },
   {
@@ -29,7 +29,7 @@ export const testimonials: Testimonial[] = [
     name: "Adrian Cole",
     role: "Director",
     business: "New Key Group",
-    projectSlug: "new-key-group",
+    projectSlug: "luxury-construction-company-website-design",
     photo: null,
   },
   {
@@ -37,7 +37,7 @@ export const testimonials: Testimonial[] = [
     name: "Aisha Khan",
     role: "Founder",
     business: "BroSis Therapy",
-    projectSlug: "brosis-therapy",
+    projectSlug: "therapist-directory-website-design",
     photo: null,
   },
   {
@@ -45,7 +45,7 @@ export const testimonials: Testimonial[] = [
     name: "Andrew Bell",
     role: "Founder",
     business: "Putting Data to Work",
-    projectSlug: "putting-data-to-work",
+    projectSlug: "data-strategy-consultant-website-design",
     photo: null,
   },
   {
@@ -53,7 +53,7 @@ export const testimonials: Testimonial[] = [
     name: "Andrew Scott",
     role: "Director",
     business: "Scotwood",
-    projectSlug: "scotwood",
+    projectSlug: "office-fit-out-company-website-design",
     photo: null,
   },
   {
@@ -61,7 +61,7 @@ export const testimonials: Testimonial[] = [
     name: "Charlotte Reeves",
     role: "Founder",
     business: "Motion Travel",
-    projectSlug: "motion-travel-uk",
+    projectSlug: "luxury-travel-agency-website-design",
     photo: null,
   },
   {
@@ -69,7 +69,7 @@ export const testimonials: Testimonial[] = [
     name: "Daniel Machado",
     role: "Managing Partner",
     business: "Machado Advisory Partners",
-    projectSlug: "machado-advisory-partners",
+    projectSlug: "investment-banking-advisory-website-design",
     photo: null,
   },
   {
@@ -77,7 +77,7 @@ export const testimonials: Testimonial[] = [
     name: "Daniel Okafor",
     role: "Co-Founder",
     business: "Teom AI",
-    projectSlug: "teom-ai",
+    projectSlug: "deep-tech-startup-website-design",
     photo: null,
   },
   {
@@ -85,7 +85,7 @@ export const testimonials: Testimonial[] = [
     name: "Daniel Price",
     role: "Director",
     business: "Stay Property Management",
-    projectSlug: "stay-property-management",
+    projectSlug: "lettings-agency-website-design",
     photo: null,
   },
   {
@@ -93,7 +93,7 @@ export const testimonials: Testimonial[] = [
     name: "Danny Carter",
     role: "Founder",
     business: "Saucy Grills",
-    projectSlug: "saucy-grills-ltd",
+    projectSlug: "food-trailer-builder-website-design",
     photo: null,
   },
   {
@@ -101,7 +101,7 @@ export const testimonials: Testimonial[] = [
     name: "Dr. Faisal Omar",
     role: "Director",
     business: "TFO Medical",
-    projectSlug: "tfo-medical",
+    projectSlug: "healthcare-recruitment-website-design",
     photo: null,
   },
   {
@@ -109,7 +109,7 @@ export const testimonials: Testimonial[] = [
     name: "Dylan Parry",
     role: "Brand & UX Writer",
     business: "",
-    projectSlug: "dylan-parry",
+    projectSlug: "copywriter-portfolio-website-design",
     photo: null,
   },
   {
@@ -117,7 +117,7 @@ export const testimonials: Testimonial[] = [
     name: "Emma Clarke",
     role: "Founder",
     business: "Flowzuk",
-    projectSlug: "flowzuk-ltd",
+    projectSlug: "supplement-store-website-design",
     photo: null,
   },
   {
@@ -125,7 +125,7 @@ export const testimonials: Testimonial[] = [
     name: "Erik Hansen",
     role: "Director",
     business: "Hunsea Shipping",
-    projectSlug: "hunsea-shipping",
+    projectSlug: "ship-management-company-website-design",
     photo: null,
   },
   {
@@ -133,7 +133,7 @@ export const testimonials: Testimonial[] = [
     name: "Gary Hill",
     role: "Owner",
     business: "Ghir Electrical",
-    projectSlug: "ghelectrical",
+    projectSlug: "electrical-supplies-online-store-design",
     photo: null,
   },
   {
@@ -141,7 +141,7 @@ export const testimonials: Testimonial[] = [
     name: "Gemma Holmes",
     role: "Lead Chiropractor",
     business: "GH Chiropractic",
-    projectSlug: "gh-chiropractic",
+    projectSlug: "chiropractor-website-design",
     photo: null,
   },
   {
@@ -149,7 +149,7 @@ export const testimonials: Testimonial[] = [
     name: "Graham Turner",
     role: "Principal Consultant",
     business: "GT Mining",
-    projectSlug: "gt-mining-ltd",
+    projectSlug: "mining-consultancy-website-design",
     photo: null,
   },
   {
@@ -157,7 +157,7 @@ export const testimonials: Testimonial[] = [
     name: "Hannah Reid",
     role: "Founder",
     business: "Tide and Tail",
-    projectSlug: "tideandtail",
+    projectSlug: "pet-supplies-online-store-design",
     photo: null,
   },
   {
@@ -165,7 +165,7 @@ export const testimonials: Testimonial[] = [
     name: "Henry Grant",
     role: "Founder",
     business: "HGC Fine Art",
-    projectSlug: "hgc-fine-art",
+    projectSlug: "art-dealer-website-design",
     photo: null,
   },
   {
@@ -173,7 +173,7 @@ export const testimonials: Testimonial[] = [
     name: "James Cole",
     role: "Editor",
     business: "Watford Actually",
-    projectSlug: "watford-actually",
+    projectSlug: "local-media-website-design",
     photo: null,
   },
   {
@@ -181,7 +181,7 @@ export const testimonials: Testimonial[] = [
     name: "James Whitfield",
     role: "Founder",
     business: "Hello Scaleup",
-    projectSlug: "hello-scaleup",
+    projectSlug: "fractional-cmo-website-design",
     photo: null,
   },
   {
@@ -189,7 +189,7 @@ export const testimonials: Testimonial[] = [
     name: "Jonathan Powell",
     role: "Partner",
     business: "Powell Spencer & Partners",
-    projectSlug: "powell-spencer-and-partners",
+    projectSlug: "criminal-family-law-firm-website-design",
     photo: null,
   },
   {
@@ -197,7 +197,7 @@ export const testimonials: Testimonial[] = [
     name: "Kevin Lynch",
     role: "Owner",
     business: "Lynch Property Services",
-    projectSlug: "lynch-property-services",
+    projectSlug: "property-inspection-company-website-design",
     photo: null,
   },
   {
@@ -205,7 +205,7 @@ export const testimonials: Testimonial[] = [
     name: "Laura Green",
     role: "Founder",
     business: "Virtuous Earth Solutions",
-    projectSlug: "virtuousearthsolution",
+    projectSlug: "sustainable-agriculture-website-design",
     photo: null,
   },
   {
@@ -213,7 +213,7 @@ export const testimonials: Testimonial[] = [
     name: "Lisa Larizadeh",
     role: "Founder & Instructor",
     business: "Lisa Larizadeh Pilates",
-    projectSlug: "lisa-larizadeh-pilates",
+    projectSlug: "pilates-studio-website-design",
     photo: null,
   },
   {
@@ -221,7 +221,7 @@ export const testimonials: Testimonial[] = [
     name: "Lyanne Pudney",
     role: "Psychotherapist",
     business: "Lyanne Pudney Psychotherapy",
-    projectSlug: "lyanne-pudney",
+    projectSlug: "psychotherapist-website-design",
     photo: null,
   },
   {
@@ -229,7 +229,7 @@ export const testimonials: Testimonial[] = [
     name: "Marco Baffo",
     role: "Founder",
     business: "Baffo Properties",
-    projectSlug: "baffo-properties",
+    projectSlug: "property-management-company-website-design",
     photo: null,
   },
   {
@@ -237,7 +237,7 @@ export const testimonials: Testimonial[] = [
     name: "Marco Rossi",
     role: "Founder",
     business: "Sole Flooring London",
-    projectSlug: "sole-flooring-london",
+    projectSlug: "flooring-company-website-design",
     photo: null,
   },
   {
@@ -245,7 +245,7 @@ export const testimonials: Testimonial[] = [
     name: "Margaret Hughes",
     role: "Director",
     business: "Red Rose Care",
-    projectSlug: "red-rose-care",
+    projectSlug: "care-provider-website-design",
     photo: null,
   },
   {
@@ -253,7 +253,7 @@ export const testimonials: Testimonial[] = [
     name: "Mark Ellis",
     role: "Director",
     business: "Reliable Renewables",
-    projectSlug: "reliable-renewables-heat-pump-servicing-ltd",
+    projectSlug: "heat-pump-company-website-design",
     photo: null,
   },
   {
@@ -261,7 +261,7 @@ export const testimonials: Testimonial[] = [
     name: "Michael Anderson",
     role: "Founder",
     business: "Anchor Conzult",
-    projectSlug: "anchor-conzult",
+    projectSlug: "recruitment-agency-website-design",
     photo: null,
   },
   {
@@ -269,7 +269,7 @@ export const testimonials: Testimonial[] = [
     name: "Michelle Flynn",
     role: "Founder & Grief Coach",
     business: "SeeShell Therapy",
-    projectSlug: "seeshell-therapy",
+    projectSlug: "grief-coach-website-design",
     photo: null,
   },
   {
@@ -277,7 +277,7 @@ export const testimonials: Testimonial[] = [
     name: "Olivia Bennett",
     role: "Creative Director",
     business: "FourthWall Agency",
-    projectSlug: "fourthwall-agency",
+    projectSlug: "employer-branding-agency-website-design",
     photo: null,
   },
   {
@@ -285,7 +285,7 @@ export const testimonials: Testimonial[] = [
     name: "Patricia Owusu",
     role: "Director",
     business: "Tiswa",
-    projectSlug: "the-international-tiswa",
+    projectSlug: "social-work-agency-website-design",
     photo: null,
   },
   {
@@ -293,7 +293,7 @@ export const testimonials: Testimonial[] = [
     name: "Paul Mercer",
     role: "Director",
     business: "MechElecPro Solutions",
-    projectSlug: "mechelecpro-solutions-ltd",
+    projectSlug: "industrial-engineering-company-website-design",
     photo: null,
   },
   {
@@ -309,7 +309,7 @@ export const testimonials: Testimonial[] = [
     name: "Priya Sharma",
     role: "Founder & Reiki Practitioner",
     business: "Mañjarī Reiki",
-    projectSlug: "manjari-reiki",
+    projectSlug: "reiki-practitioner-website-design",
     photo: null,
   },
   {
@@ -317,7 +317,7 @@ export const testimonials: Testimonial[] = [
     name: "Rebecca Hayes",
     role: "Director",
     business: "Home-School Tutoring",
-    projectSlug: "home-school-tutoring",
+    projectSlug: "tutoring-company-website-design",
     photo: null,
   },
   {
@@ -325,7 +325,7 @@ export const testimonials: Testimonial[] = [
     name: "Richard Hall",
     role: "Director",
     business: "Hallmark Contractors",
-    projectSlug: "hallmark-contractors",
+    projectSlug: "home-renovation-contractor-website-design",
     photo: null,
   },
   {
@@ -333,7 +333,7 @@ export const testimonials: Testimonial[] = [
     name: "Robert Hughes",
     role: "Founder",
     business: "Alpine Online",
-    projectSlug: "alpine-online",
+    projectSlug: "data-analytics-consultancy-website-design",
     photo: null,
   },
   {
@@ -341,7 +341,7 @@ export const testimonials: Testimonial[] = [
     name: "Ryan Doyle",
     role: "Founder & Head Coach",
     business: "The Kitesurf Academy",
-    projectSlug: "the-kitesurf-academy",
+    projectSlug: "kitesurf-school-website-design",
     photo: null,
   },
   {
@@ -349,7 +349,7 @@ export const testimonials: Testimonial[] = [
     name: "Sanne de Vries",
     role: "Founder",
     business: "Mrs Housing",
-    projectSlug: "mrs-housing",
+    projectSlug: "relocation-housing-advisor-website-design",
     photo: null,
   },
   {
@@ -357,7 +357,7 @@ export const testimonials: Testimonial[] = [
     name: "Steve Newman",
     role: "Owner",
     business: "S L Newman Grab Hire",
-    projectSlug: "s-l-newman-grab-hire",
+    projectSlug: "grab-hire-company-website-design",
     photo: null,
   },
   {
@@ -365,7 +365,7 @@ export const testimonials: Testimonial[] = [
     name: "Steven Taylor",
     role: "Owner",
     business: "STS Gates",
-    projectSlug: "sts-gates",
+    projectSlug: "gate-fencing-company-website-design",
     photo: null,
   },
   {
@@ -373,7 +373,7 @@ export const testimonials: Testimonial[] = [
     name: "Susan Wright",
     role: "Funeral Celebrant",
     business: "Funeral Celebrant Enfield",
-    projectSlug: "funeral-celebranten",
+    projectSlug: "funeral-celebrant-website-design",
     photo: null,
   },
 ];

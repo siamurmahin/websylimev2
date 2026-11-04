@@ -6,10 +6,10 @@ import { cn } from "@/lib/utils";
 
 export type StoryWithProject = CaseStudy & { project: PortfolioItem; image: string };
 
-/** Case studies joined with their portfolio entry (name, screenshot, URL). */
+/** Case studies joined with their portfolio entry (screenshot, group). */
 export const stories: StoryWithProject[] = caseStudies.flatMap((c) => {
   const project = portfolio.find((p) => p.slug === c.slug);
-  return project ? [{ ...c, project, image: c.screenshot ?? project.image }] : [];
+  return project ? [{ ...c, project, image: project.image }] : [];
 });
 
 /**
@@ -48,10 +48,10 @@ export function Stats({ stats, dark = false, className }: { stats: CaseStudy["st
 }
 
 /** Small pills: industry + services. */
-export function Tags({ story, dark = false }: { story: CaseStudy; dark?: boolean }) {
+export function Tags({ story, dark = false }: { story: StoryWithProject; dark?: boolean }) {
   return (
     <ul className="flex flex-wrap gap-1.5">
-      {[story.industry, ...story.services].map((t, i) => (
+      {[story.project.category, ...story.services].map((t, i) => (
         <li
           key={t}
           className={cn(

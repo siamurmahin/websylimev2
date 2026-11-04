@@ -10,7 +10,6 @@ import { AnimatePresence, motion, useMotionValue, useSpring } from "motion/react
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { site } from "@/content/site";
 import { portfolio } from "@/content/portfolio";
-import { caseStudies } from "@/content/case-studies";
 import { Copy, href } from "@/lib/copy";
 import { cn } from "@/lib/utils";
 
@@ -103,7 +102,7 @@ export function FeaturedWork() {
           <Link
             key={project.slug}
             // a case study if there is one, otherwise the project on the Work page
-            href={caseStudies.some((c) => c.slug === project.slug) ? `/case-studies/${project.slug}` : `/work#${project.slug}`}
+            href={project.hasStudy ? `/case-studies/${project.slug}` : `/work#${project.slug}`}
             onPointerEnter={(e) => {
               if (e.pointerType !== "mouse") return;
               // start the bubble right under the cursor instead of flying in from 0,0
@@ -120,7 +119,7 @@ export function FeaturedWork() {
             <div className="relative overflow-hidden rounded-[1.25rem] border bg-surface-2 transition-[border-color] duration-500 group-hover:border-lime/60 group-focus-visible:ring-3 group-focus-visible:ring-ring/50 sm:rounded-[1.5rem] lg:rounded-[1.75rem]">
               <Image
                 src={project.image}
-                alt={`${project.name} website`}
+                alt={`${project.label} website`}
                 width={1170}
                 height={630}
                 sizes="(min-width: 1024px) 46vw, (min-width: 640px) 50vw, 100vw"
@@ -132,7 +131,7 @@ export function FeaturedWork() {
             </div>
             <div className="mt-4 flex flex-col gap-2.5 px-1 lg:mt-5 lg:flex-row lg:items-start lg:justify-between lg:gap-6">
               <div className="min-w-0">
-                <h3 className="font-display text-lg font-bold tracking-[-0.02em] sm:text-xl lg:text-2xl">{project.name}</h3>
+                <h3 className="font-display text-lg font-bold tracking-[-0.02em] sm:text-xl lg:text-2xl">{project.label}</h3>
                 <p className="mt-1 text-sm text-muted-foreground lg:text-[15px]">
                   <Copy text={result} />
                 </p>

@@ -129,7 +129,7 @@ export function Testimonials() {
                           {/* the client's actual site, from the portfolio */}
                           {project && (
                             <span className="relative block aspect-[1170/630] w-32 overflow-hidden rounded-xl border shadow-sm sm:w-40">
-                              <Image src={project.image} alt={`${project.name} website`} fill sizes="160px" className="object-cover" />
+                              <Image src={project.image} alt={`${project.label} website`} fill sizes="160px" className="object-cover" />
                             </span>
                           )}
                         </div>

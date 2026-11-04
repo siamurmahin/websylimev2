@@ -34,5 +34,5 @@ export const work = {
     cta: { label: "Book a free call", href: "/book-a-call" },
   },
 
-  lightbox: { close: "Close", visit: "Visit live site", start: "Want one like this?", startCta: "Let's Build Yours" },
+  lightbox: { close: "Close", study: "Read the case study", start: "Want one like this?", startCta: "Let's Build Yours" },
 };
