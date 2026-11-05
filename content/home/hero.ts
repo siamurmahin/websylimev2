@@ -1,7 +1,7 @@
 // Homepage → hero section.
 // Edit the text below. [Square brackets] = placeholder still to fill in (see TODO.md).
 export const hero = {
-  badge: "Only [7] spots left for [Q1 2027]",
+  badge: "Only 7 spots left for Q1 2027",
   // Open question in the plan: final headline not chosen yet. Alternatives:
   //   "Websites that turn visitors into buyers."
   //   "Your website should be your best salesperson."

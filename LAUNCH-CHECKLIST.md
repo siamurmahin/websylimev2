@@ -72,7 +72,6 @@ There are **137 different placeholder texts** across the site. All of them show 
 
 | Page / area | What to fill in | File |
 |---|---|---|
-| **Homepage hero** | "Only `[7]` spots left for `[Q1 2027]`" (must be true or removed) | `content/home/hero.ts`, `final-cta.ts` |
 | **Trust bar** | 8 real client logos | `content/home/trust-bar.ts` |
 | **Charity (2%)** | `[Charity / cause name]`, yearly update line | `content/home/pricing.ts`, `results.ts`, `faq.ts` |
 | **Case studies (45)** | ⚠ confirm every result and quote, get each client's permission, decide on 5 on hold (see `TODO.md`) | `content/case-studies.ts` |
@@ -86,7 +85,6 @@ There are **137 different placeholder texts** across the site. All of them show 
 | **Blog** | read and edit the 3 posts, real publish dates | `content/blog/posts.ts` |
 
 **Open decisions** (also at the top of `TODO.md`):
-- the hero headline
 - rewriting the template-sounding lines
 - showing or hiding Video Editing
 

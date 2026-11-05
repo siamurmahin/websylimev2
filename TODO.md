@@ -6,7 +6,7 @@ ratings, client counts, testimonials and stats must all be real.
 
 ## Open decisions (from the plan)
 
-- [ ] **Hero headline** — currently "Websites that turn visitors into buyers." (very close to the Designfast template H1). Edit in `content/home/hero.ts`.
+- [x] **Hero headline** — "More calls for home service businesses."
 - [ ] **Website Design packages** — names, prices, features for all 3.
 - [ ] **Charity** — which charity / cause receives the 2%.
 - [x] **Company start year** — founder started solo in 2017; Websy Lime opened as a team in 2024.
@@ -33,7 +33,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [ ] WebsyChat logo (currently an icon)
 
 ### Hero
-- [ ] Badge: `Only [7] spots left for [Q1 2027]`
+- [x] Badge: `Only 7 spots left for Q1 2027` confirmed by owner. Keep the number true, and update it when spots fill or the quarter changes (`content/home/hero.ts`, `final-cta.ts`)
 - [x] Social proof: `Trusted by 300+ business owners`
 - [ ] ⚠ **Before launch: confirm the 5 hero avatar photos are real clients who agreed to appear there.** They were supplied without names. If not, remove them (`content/home/hero.ts`); showing strangers as clients is a legal and trust risk → `public/clients/`, set `home.hero.socialProof.avatars[].src`
 
@@ -86,7 +86,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 
 ### Final CTA
 - [x] Built (`components/sections/FinalCta.tsx`) — dark panel, columns of real site screenshots drifting on the right
-- [ ] Badge `Only [7] spots left for [Q1 2027]` (same as Hero — must be real)
+- [x] Badge: same as Hero, confirmed by owner
 - [ ] Booking link
 
 ### Footer
