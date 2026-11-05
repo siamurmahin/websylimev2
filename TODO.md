@@ -79,7 +79,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 ### FAQ
 - [x] 10 answers written from the Service Packages PDF terms (`home.faq.items`), 4 tabs: General / Websites / Monthly plans / Billing
 - [ ] Website timeline `about [2] weeks`
-- [ ] Ownership terms (`Do I own my website?`) — confirm e.g. full handover once paid in full
+- [x] Ownership: yours once paid in full
 - [ ] Cancellation terms (`Can I cancel anytime?`) — notice period / contract length
 - [ ] Charity name (same as Pricing)
 - [ ] Call card uses the booking link + `[15]`-min note + founder photo from `header.bookCall`
@@ -234,7 +234,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 
 ## Free website design (`/free-website-design`, bar + page copy in `content/pages/free-design.ts`)
 - [ ] **Form isn't connected**: applications aren't sent anywhere yet. Connect with the other forms when email moves to Hostinger
-- [ ] Owner to confirm the assumptions: the free design is a homepage only; the design stays with us unless they build with us; how quickly the design is delivered (not stated on the page)
+- [x] Owner confirmed: homepage only, within 2 days, the client can keep the design or have us build it
 - [ ] Hero uses the Website Design photo (Higgsfield was out of credits). Give it its own photo later
 
 ## Careers page (`/careers`, roles at `#roles`, form at `#apply`, copy in `content/pages/careers.ts`)

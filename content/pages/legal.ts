@@ -267,7 +267,7 @@ export const legal = {
         id: "hosting",
         title: "Hosting",
         body: [
-          { type: "p", text: "Website packages include hosting and SSL for the first 12 months. We don't sell hosting on its own. After that, hosting renews at [price — confirm] unless you move your site elsewhere — we'll help you move it if you want to. We aim for reliable uptime but can't guarantee the site will never go down." },
+          { type: "p", text: "Website packages include hosting and SSL for the first 12 months. We don't sell hosting on its own. After that, hosting renews at $240 a year unless you move your site elsewhere — we'll help you move it if you want to. We aim for reliable uptime but can't guarantee the site will never go down." },
         ],
       },
       {

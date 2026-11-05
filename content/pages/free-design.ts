@@ -1,6 +1,6 @@
 // Page → free website design (/free-website-design), plus the bar at the top of every
 // page (`bar`). The design is free; building the site is a paid package.
-// TODO.md: the form isn't sent anywhere yet, and the scope needs the owner's OK.
+// TODO.md: the form isn't sent anywhere yet.
 
 export const freeDesign = {
   bar: {
@@ -46,8 +46,8 @@ export const freeDesign = {
     headline: "Three steps. No cost to find out.",
     steps: [
       { title: "You apply", body: "Tell us about your business. It takes about two minutes." },
-      { title: "We design it", body: "If you're picked, we design a new homepage made for your business and your customers." },
-      { title: "You decide", body: "Love it? We can build it for you. Not for you? You don't owe us anything." },
+      { title: "We design it", body: "If you're picked, you get a new homepage design within 2 days, made for your business and your customers." },
+      { title: "You decide", body: "Like it? It's yours to keep. Want it built? We can do that too. You don't owe us anything." },
     ],
   },
 
@@ -57,12 +57,12 @@ export const freeDesign = {
     free: {
       label: "Free",
       title: "The design",
-      items: ["A custom homepage design", "Made for your business and your customers", "No card and no obligation"],
+      items: ["A custom homepage design, within 2 days", "Yours to keep if you like it", "No card and no obligation"],
     },
     paid: {
       label: "If you want it live",
       title: "The build",
-      items: ["We build the full website from your design", "A one-time price, agreed before we start", "Hosting and SSL with us, included for the first 12 months"],
+      items: ["We build the full website from your design", "A one-time price, agreed before we start", "Hosting and SSL with us, free for 12 months, then $240 a year"],
       link: { label: "See website prices", href: "/pricing" },
     },
   },
@@ -71,11 +71,11 @@ export const freeDesign = {
     eyebrow: "Questions",
     headline: "Good questions to ask.",
     items: [
-      { q: "Is the design really free?", a: "Yes. The design costs you nothing and you don't need a card. You only pay if you want us to build it into a real website." },
+      { q: "Is the design really free?", a: "Yes. The homepage design costs you nothing and you don't need a card. You only pay if you want us to build it into a real website." },
       { q: "What's the catch?", a: "There isn't one. Some of the businesses we design for go on to build with us, and that's how this pays for itself. If you don't, you don't owe us anything." },
       { q: "How do you pick the 10?", a: "We look for businesses where a better design would make the biggest difference. We'll tell you either way." },
-      { q: "Can I take the design to another developer?", a: "The design stays with us unless you build the site with us. That's what keeps it free." },
-      { q: "When will I hear back?", a: "Within 1 business day. Usually much sooner." },
+      { q: "Do I get to keep the design?", a: "Yes. If you like it, it's yours to keep. If you'd like us to build it into a real website, we can do that too." },
+      { q: "How fast is it?", a: "We reply to your application within 1 business day. If you're picked, your design is ready within 2 days." },
     ],
   },
 

@@ -27,7 +27,7 @@ export const pricingPage = {
     intro: "A new website, built for you. Hosting included.",
     perLabel: "one-time",
     cta: "Get started",
-    footnote: "One-time price. Hosting and SSL are included; your domain name is separate. Prices in USD.",
+    footnote: "One-time price. Hosting and SSL are included for the first 12 months, then $240 a year. Your domain name is separate. Prices in USD.",
     // Rows shown on every card, in this order. "—" = not included.
     rows: [
       "Pages",

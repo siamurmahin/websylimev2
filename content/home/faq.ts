@@ -17,12 +17,12 @@ export const faq = {
     {
       category: "Websites",
       q: "Do I own my website?",
-      a: "Yes. The website, its content and your domain are yours. [Confirm ownership terms — e.g. full handover once the project is paid in full.]",
+      a: "Yes. Once the project is paid in full, the website, its content and your domain are yours.",
     },
     {
       category: "Websites",
       q: "Is hosting really included?",
-      a: "Yes. Hosting and SSL security are included for the first 12 months, with no separate hosting bill. Your domain name is separate. We don't sell hosting on its own, only with websites we build. [After that: confirm the renewal price.]",
+      a: "Yes. Hosting and SSL security are included for the first 12 months, with no separate hosting bill. Your domain name is separate. We don't sell hosting on its own, only with websites we build. After that, hosting is $240 a year.",
     },
     {
       category: "Websites",

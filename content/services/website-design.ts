@@ -72,7 +72,7 @@ export const websiteDesign = {
     eyebrow: "Every website includes",
     headline: "No surprises. Just a site that works.",
     items: [
-      { title: "Hosting + SSL included", body: "For the first 12 months. No separate hosting bill." },
+      { title: "Hosting + SSL included", body: "For the first 12 months, then $240 a year." },
       { title: "Speed & security updates", body: "We keep WordPress and plugins up to date while we host it." },
       { title: "You own your website", body: "Your site, your content, your domain." },
       { title: "Clear price, clear timeline", body: "You know the cost and the launch date before we start." },
