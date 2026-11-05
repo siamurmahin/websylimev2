@@ -55,7 +55,7 @@ const drafts: CaseStudy[] = [
     results: "About [35] learners now ask about lessons each month, most from a phone. Booking takes [3] taps, so nervous learners no longer have to call first.",
     growth: { plan: "Foundation", text: "[After launch they joined our Foundation plan. New area pages, regular social posts and Google Business updates now bring in about 15 more learners a month, and the profile has gained 40 new reviews.]" },
     launched: "August 2026",
-    quote: { text: "Websylime built a site that puts nervous learners at ease. Booking is simple and lessons are filling up faster than ever.", name: "Paul S.", role: "Owner & instructor, driving school" },
+    quote: { text: "Websy Lime built a site that puts nervous learners at ease. Booking is simple and lessons are filling up faster than ever.", name: "Paul S.", role: "Owner & instructor, driving school" },
     liveUrl: "https://paulsalmonsschoolofmotoring.co.uk/",
   },
   {
@@ -72,7 +72,7 @@ const drafts: CaseStudy[] = [
     results: "Around [22] landlords and [60] tenants now get in touch each month through their own path, so the team spends less time sorting who needs what.",
     growth: { plan: "Market Leader", text: "[After launch they moved to our Market Leader plan. Area pages, managed Google Ads and review replies now bring in about 12 more landlord inquiries a month.]" },
     launched: "July 2026",
-    quote: { text: "Websylime built a site that reflects our scale and professionalism. Landlords and tenants both find what they need, and enquiries are up across the board.", name: "Daniel P.", role: "Director, property management company" },
+    quote: { text: "Websy Lime built a site that reflects our scale and professionalism. Landlords and tenants both find what they need, and enquiries are up across the board.", name: "Daniel P.", role: "Director, property management company" },
     liveUrl: "https://www.staypropertymanagement.co.uk/",
   },
   {
@@ -89,7 +89,7 @@ const drafts: CaseStudy[] = [
     results: "The site now brings in about [9] project inquiries a month, and homeowners arrive having already seen [24] finished projects.",
     growth: { plan: "Market Leader", text: "[After launch they moved to our Market Leader plan. Project videos, social posts and managed Google Ads now bring in about 5 more qualified project inquiries a month.]" },
     launched: "June 2026",
-    quote: { text: "Websylime gave us a website worthy of the homes we build. The galleries showcase our craftsmanship and enquiries from the right clients are up.", name: "Richard H.", role: "Director, home renovation company" },
+    quote: { text: "Websy Lime gave us a website worthy of the homes we build. The galleries showcase our craftsmanship and enquiries from the right clients are up.", name: "Richard H.", role: "Director, home renovation company" },
     liveUrl: "https://www.hallmarkcontractors.com/",
   },
   {
@@ -105,7 +105,7 @@ const drafts: CaseStudy[] = [
     did: ["A photography-led design with projects up front", "Clear pages for construction, refurbishment and HVAC", "Messaging built around expert craftsmanship", "A simple inquiry flow on every device"],
     results: "About [6] serious project inquiries arrive each month, and [18] finished projects now do the selling before the first call.",
     launched: "June 2026",
-    quote: { text: "Websylime built a site as premium as our work. The project galleries do the talking and we're hearing from exactly the clients we want.", name: "Adrian C.", role: "Director, luxury construction company" },
+    quote: { text: "Websy Lime built a site as premium as our work. The project galleries do the talking and we're hearing from exactly the clients we want.", name: "Adrian C.", role: "Director, luxury construction company" },
     liveUrl: "https://www.newkeygroup.co.uk/",
   },
   {
@@ -121,7 +121,7 @@ const drafts: CaseStudy[] = [
     did: ["Clear, plain information on distance healing", "A personal introduction to the practitioner", "A simple online booking flow", "A calm, mobile-first design"],
     results: "Around [20] sessions a month are now booked online, in about [2] minutes, with no back-and-forth messages.",
     launched: "May 2026",
-    quote: { text: "Websylime captured the calm at the heart of my practice. Clients say the website feels healing in itself, and bookings have grown steadily.", name: "Priya S.", role: "Founder & reiki practitioner" },
+    quote: { text: "Websy Lime captured the calm at the heart of my practice. Clients say the website feels healing in itself, and bookings have grown steadily.", name: "Priya S.", role: "Founder & reiki practitioner" },
     liveUrl: "https://www.manjari-reiki.com/",
   },
   {
@@ -137,7 +137,7 @@ const drafts: CaseStudy[] = [
     did: ["Aerial photos and video placed front and center", "Service pages by use: surveying, inspection, imaging", "A simple quote request flow", "A bold, mobile-first design"],
     results: "The site brings in about [12] quote requests a month, and buyers can see the quality of the footage before they call.",
     launched: "May 2026",
-    quote: { text: "Websylime built a site that shows off our aerial work brilliantly. Businesses can see the quality instantly and quote requests are up.", name: "Tom F.", role: "Founder, drone services company" },
+    quote: { text: "Websy Lime built a site that shows off our aerial work brilliantly. Businesses can see the quality instantly and quote requests are up.", name: "Tom F.", role: "Founder, drone services company" },
     liveUrl: "https://www.whitehorsedrones.co.uk/",
   },
   {
@@ -154,7 +154,7 @@ const drafts: CaseStudy[] = [
     results: "In season, about [40] lessons and [85] gear orders a month now go through one site, so riders can book and buy in the same visit.",
     growth: { plan: "Foundation", text: "[After launch they joined our Foundation plan. Regular social posts and Google Business updates keep the school visible all season and bring about 15 more lesson bookings a month.]" },
     launched: "April 2026",
-    quote: { text: "Websylime built a site as exciting as the sport. Lesson bookings and gear sales are both up, and it finally feels like us.", name: "Ryan D.", role: "Founder & head coach, kitesurf school" },
+    quote: { text: "Websy Lime built a site as exciting as the sport. Lesson bookings and gear sales are both up, and it finally feels like us.", name: "Ryan D.", role: "Founder & head coach, kitesurf school" },
     liveUrl: "https://www.thekitesurfacademy.com/",
   },
   {
@@ -170,7 +170,7 @@ const drafts: CaseStudy[] = [
     did: ["An elegant design rich with evocative imagery", "Clear messaging on bespoke and concierge service", "A discreet, personal inquiry flow", "A sophisticated, mobile-first build"],
     results: "About [15] high-value holiday inquiries now arrive each month through a discreet, personal form.",
     launched: "March 2026",
-    quote: { text: "Websylime created a site as luxurious as the trips we plan. It captures our personal service beautifully and enquiries from the right clients are up.", name: "Charlotte R.", role: "Founder, luxury travel agency" },
+    quote: { text: "Websy Lime created a site as luxurious as the trips we plan. It captures our personal service beautifully and enquiries from the right clients are up.", name: "Charlotte R.", role: "Founder, luxury travel agency" },
     liveUrl: "https://www.motiontravelgroup.com/",
   },
   {
@@ -203,7 +203,7 @@ const drafts: CaseStudy[] = [
     did: ["A value-creation method explained in clear steps", "Structured pages for each advisory service", "Credible messaging for founders and investors", "A fast, modern, mobile-first build"],
     results: "The site brings in about [8] qualified leads a month, and founders arrive on calls already understanding the method.",
     launched: "February 2026",
-    quote: { text: "Websylime translated a complex methodology into a clear, investor-grade site. The right founders now understand our value immediately.", name: "James W.", role: "Founder, growth advisory firm" },
+    quote: { text: "Websy Lime translated a complex methodology into a clear, investor-grade site. The right founders now understand our value immediately.", name: "James W.", role: "Founder, growth advisory firm" },
     liveUrl: "https://www.helloscaleup.com/",
   },
   {
@@ -219,7 +219,7 @@ const drafts: CaseStudy[] = [
     did: ["Clear pages for each maritime service", "Messaging on technology, safety and sustainability", "A confident, forward-looking brand presence", "Simple inquiry routes for fleet owners"],
     results: "About [5] fleet owners and operators now get in touch each month, and each one can see the full range of services first.",
     launched: "February 2026",
-    quote: { text: "Websylime captured our technical expertise and forward thinking. The site positions us exactly as the modern maritime partner we are.", name: "Erik H.", role: "Director, ship management company" },
+    quote: { text: "Websy Lime captured our technical expertise and forward thinking. The site positions us exactly as the modern maritime partner we are.", name: "Erik H.", role: "Director, ship management company" },
     liveUrl: "https://www.hunseashipping.com/",
   },
   {
@@ -235,7 +235,7 @@ const drafts: CaseStudy[] = [
     did: ["A site structured around the measure, analyze, design method", "Clear pages for each specialist service", "Experience and credentials placed up front", "A straightforward inquiry route"],
     results: "About [4] specialist inquiries now arrive each month from mining operations that already know what the firm does.",
     launched: "January 2026",
-    quote: { text: "Websylime captured decades of expertise in a clear, credible site. Mining clients now grasp our specialism immediately and enquiries are up.", name: "Graham T.", role: "Principal consultant, mining consultancy" },
+    quote: { text: "Websy Lime captured decades of expertise in a clear, credible site. Mining clients now grasp our specialism immediately and enquiries are up.", name: "Graham T.", role: "Principal consultant, mining consultancy" },
     liveUrl: "https://www.gtmining.co.uk/",
   },
   {
@@ -251,7 +251,7 @@ const drafts: CaseStudy[] = [
     did: ["Large, refined imagery that lets each work breathe", "Curated collection pages", "Clear advisory and investment services", "A discreet appointment inquiry flow"],
     results: "About [10] collectors a month now ask for a private appointment, after browsing [120] works in curated collections.",
     launched: "January 2026",
-    quote: { text: "Websylime created a website as refined as the art we deal in. The presentation is stunning and serious collectors are reaching out for appointments.", name: "Henry G.", role: "Founder, contemporary art dealer" },
+    quote: { text: "Websy Lime created a website as refined as the art we deal in. The presentation is stunning and serious collectors are reaching out for appointments.", name: "Henry G.", role: "Founder, contemporary art dealer" },
     liveUrl: "https://www.hgcfineart.com/home",
   },
   {
@@ -267,7 +267,7 @@ const drafts: CaseStudy[] = [
     did: ["Easy search and filters by need and therapy type", "Clear, detailed practitioner profiles", "A calm, reassuring, safety-first design", "An accessible, mobile-first build"],
     results: "About [150] people a month now connect with a therapist through the directory, which lists [85] practitioners.",
     launched: "December 2025",
-    quote: { text: "Websylime built a platform that feels safe and simple to use. People find the right therapist faster, and practitioner sign-ups keep growing.", name: "Aisha K.", role: "Founder, therapist directory" },
+    quote: { text: "Websy Lime built a platform that feels safe and simple to use. People find the right therapist faster, and practitioner sign-ups keep growing.", name: "Aisha K.", role: "Founder, therapist directory" },
     liveUrl: "https://www.brosistherapy.com/",
   },
   {
@@ -283,7 +283,7 @@ const drafts: CaseStudy[] = [
     did: ["Well-structured pages for each assessment", "Strong messaging on independence and expertise", "A straightforward inquiry process", "A professional, accessible design"],
     results: "About [12] assessment inquiries now arrive each month, and commissioners can see what is offered before they get in touch.",
     launched: "December 2025",
-    quote: { text: "Websylime gave us a website that conveys real authority. Commissioners now understand our work immediately and enquiries have grown.", name: "Patricia O.", role: "Director, social work agency" },
+    quote: { text: "Websy Lime gave us a website that conveys real authority. Commissioners now understand our work immediately and enquiries have grown.", name: "Patricia O.", role: "Director, social work agency" },
     liveUrl: "https://www.tiswa.co.uk/",
   },
   {
@@ -315,7 +315,7 @@ const drafts: CaseStudy[] = [
     did: ["Complex technology explained in clear terms", "Strong visual storytelling around the platform", "Clear use cases for defense and industry", "A fast, polished, mobile-first build"],
     results: "About [6] partner inquiries now arrive each month, from buyers who understand the technology before the first conversation.",
     launched: "November 2025",
-    quote: { text: "Websylime made our deep tech understandable and credible. The site has opened conversations with exactly the defense and industry partners we wanted.", name: "Daniel O.", role: "Co-founder, deep-tech startup" },
+    quote: { text: "Websy Lime made our deep tech understandable and credible. The site has opened conversations with exactly the defense and industry partners we wanted.", name: "Daniel O.", role: "Co-founder, deep-tech startup" },
     liveUrl: "https://www.teom.ai/",
   },
   {
@@ -331,7 +331,7 @@ const drafts: CaseStudy[] = [
     did: ["Data strategy framed in plain business terms", "Clear service pages with proof points", "Strong calls to action for decision-makers", "A fast, professional, mobile-first build"],
     results: "About [8] qualified leads a month now come through the site, ready to talk about outcomes rather than definitions.",
     launched: "October 2025",
-    quote: { text: "Websylime turned an abstract service into a clear, compelling offer. The right clients now understand our value before the first call.", name: "Andrew B.", role: "Founder, data strategy consultancy" },
+    quote: { text: "Websy Lime turned an abstract service into a clear, compelling offer. The right clients now understand our value before the first call.", name: "Andrew B.", role: "Founder, data strategy consultancy" },
     liveUrl: "https://www.puttingdatatowork.com/",
   },
   {
@@ -348,7 +348,7 @@ const drafts: CaseStudy[] = [
     results: "About [30] service visits a month are now booked through the site, in around [2] minutes.",
     growth: { plan: "Lead Growth", text: "[After launch they moved to our Lead Growth plan. Service-area pages, Google Ads and review replies now bring in about 15 more bookings a month.]" },
     launched: "October 2025",
-    quote: { text: "Websylime made our service easy to understand and even easier to book. Maintenance bookings have climbed steadily since launch.", name: "Mark E.", role: "Director, heat pump company" },
+    quote: { text: "Websy Lime made our service easy to understand and even easier to book. Maintenance bookings have climbed steadily since launch.", name: "Mark E.", role: "Director, heat pump company" },
     liveUrl: "https://www.reliable-renewables.com/",
   },
   {
@@ -364,7 +364,7 @@ const drafts: CaseStudy[] = [
     did: ["Clear information on funeral and life ceremonies", "A personal introduction to the celebrant", "A sensitive, simple inquiry flow", "A soft, accessible, mobile-first design"],
     results: "About [8] families a month now reach out through the site, by a short form or a direct call.",
     launched: "September 2025",
-    quote: { text: "Websylime created a website as gentle and respectful as the ceremonies I lead. Families tell me it gave them comfort and confidence to get in touch.", name: "Susan W.", role: "Funeral celebrant" },
+    quote: { text: "Websy Lime created a website as gentle and respectful as the ceremonies I lead. Families tell me it gave them comfort and confidence to get in touch.", name: "Susan W.", role: "Funeral celebrant" },
     liveUrl: "https://www.funeralcelebrantenfield.co.uk/",
   },
   {
@@ -380,7 +380,7 @@ const drafts: CaseStudy[] = [
     did: ["Legal technology framed as efficiency, compliance and growth", "Structured pages for each service", "Clear calls to action for law firms", "A fast, modern, mobile-first build"],
     results: "About [7] law firms a month now ask about working together, with a clear idea of what they want to improve.",
     launched: "September 2025",
-    quote: { text: "Websylime gave us a site as modern as the technology we recommend. It explains our value clearly and the right firms are reaching out.", name: "Adam S.", role: "Founder, legal technology consultancy" },
+    quote: { text: "Websy Lime gave us a site as modern as the technology we recommend. It explains our value clearly and the right firms are reaching out.", name: "Adam S.", role: "Founder, legal technology consultancy" },
     liveUrl: "https://www.lawspark.co/",
   },
   {
@@ -396,7 +396,7 @@ const drafts: CaseStudy[] = [
     did: ["Separate paths for investors and tenants", "Clear service areas and strong property presentation", "Messaging built around returns and comfort", "A simple inquiry flow on every device"],
     results: "Around [15] investors and [45] tenants now get in touch each month, each through a path written for them.",
     launched: "August 2025",
-    quote: { text: "Websylime built a site that wins over investors and tenants alike. Enquiries are up on both sides and the brand finally looks the part.", name: "Marco B.", role: "Founder, property management company" },
+    quote: { text: "Websy Lime built a site that wins over investors and tenants alike. Enquiries are up on both sides and the brand finally looks the part.", name: "Marco B.", role: "Founder, property management company" },
     liveUrl: "https://www.baffoproperties.com/",
   },
   {
@@ -429,7 +429,7 @@ const drafts: CaseStudy[] = [
     did: ["Clear areas for servicing, repairs and engineering cover", "Messaging built on dependability and fast response", "A straightforward, mobile-first design", "An easy inquiry route"],
     results: "About [10] manufacturers a month now ask for servicing, repairs or engineering cover through the site.",
     launched: "July 2025",
-    quote: { text: "Websylime made our services clear and our reliability obvious. We're getting enquiries from exactly the manufacturers we want to work with.", name: "Paul M.", role: "Director, industrial engineering company" },
+    quote: { text: "Websy Lime made our services clear and our reliability obvious. We're getting enquiries from exactly the manufacturers we want to work with.", name: "Paul M.", role: "Director, industrial engineering company" },
     liveUrl: "https://www.mechelecprosolutions.com/",
   },
   {
@@ -445,7 +445,7 @@ const drafts: CaseStudy[] = [
     did: ["Separate paths for individuals, couples and organizations", "Simple, plain service pages", "A warm message running through the site", "A friendly, mobile-first design"],
     results: "About [25] people a month now get in touch, plus a few companies, each finding the right service without having to ask.",
     launched: "July 2025",
-    quote: { text: "Websylime untangled all my services into something clear and welcoming. Enquiries are up across the board, from individuals to companies.", name: "Tommy B.", role: "Founder & counselor" },
+    quote: { text: "Websy Lime untangled all my services into something clear and welcoming. Enquiries are up across the board, from individuals to companies.", name: "Tommy B.", role: "Founder & counselor" },
     liveUrl: "https://www.tommytalkstherapy.co.uk/",
   },
   {
@@ -477,7 +477,7 @@ const drafts: CaseStudy[] = [
     did: ["Clear information on coaching and counseling", "The practitioner's personal story", "A sensitive, simple inquiry flow", "A calm, accessible, mobile-first design"],
     results: "About [9] people a month now take the first step through the site, by a short, gentle form.",
     launched: "June 2025",
-    quote: { text: "Websylime captured the warmth I want people to feel. Clients tell me the website is what gave them the courage to reach out.", name: "Michelle F.", role: "Founder & grief coach" },
+    quote: { text: "Websy Lime captured the warmth I want people to feel. Clients tell me the website is what gave them the courage to reach out.", name: "Michelle F.", role: "Founder & grief coach" },
     liveUrl: "https://www.seeshelltherapy.co.uk/",
   },
   {
@@ -509,7 +509,7 @@ const drafts: CaseStudy[] = [
     did: ["Structured paths for renting and buying", "A clear explanation of the success-based fee", "Reassuring, expat-friendly messaging", "A simple inquiry flow on any device"],
     results: "About [20] expats a month now get in touch, already understanding the success-based fee.",
     launched: "May 2025",
-    quote: { text: "Websylime made a stressful service feel simple and reassuring. Expats tell us the website is what convinced them to reach out, and enquiries are up.", name: "Sanne V.", role: "Founder, housing advisory" },
+    quote: { text: "Websy Lime made a stressful service feel simple and reassuring. Expats tell us the website is what convinced them to reach out, and enquiries are up.", name: "Sanne V.", role: "Founder, housing advisory" },
     liveUrl: "https://www.mrshousing.nl/",
   },
   {
@@ -542,7 +542,7 @@ const drafts: CaseStudy[] = [
     did: ["Well-structured practice area pages", "A strong firm story built on its long history", "Easy contact options on every page", "A professional, accessible, mobile-first design"],
     results: "About [30] people a month now contact the firm through the site, finding the right practice area in a couple of clicks.",
     launched: "April 2025",
-    quote: { text: "Websylime gave us a website worthy of our history. Clients find the help they need faster, and enquiries have risen noticeably since launch.", name: "Jonathan P.", role: "Partner, law firm" },
+    quote: { text: "Websy Lime gave us a website worthy of our history. Clients find the help they need faster, and enquiries have risen noticeably since launch.", name: "Jonathan P.", role: "Partner, law firm" },
     liveUrl: "https://www.psplaw.co.uk/",
   },
   {
@@ -559,7 +559,7 @@ const drafts: CaseStudy[] = [
     results: "About [18] food entrepreneurs a month now ask about a build, already knowing the packages and the process.",
     growth: { plan: "Market Leader", text: "[After launch they moved to our Market Leader plan. Build videos, social posts and managed Google Ads now bring in about 10 more trailer inquiries a month.]" },
     launched: "March 2025",
-    quote: { text: "Websylime built us a site that actually sells. Enquiries from serious food entrepreneurs have jumped, and the build packages are crystal clear now.", name: "Danny C.", role: "Founder, food trailer company" },
+    quote: { text: "Websy Lime built us a site that actually sells. Enquiries from serious food entrepreneurs have jumped, and the build packages are crystal clear now.", name: "Danny C.", role: "Founder, food trailer company" },
     liveUrl: "https://www.saucygrillsltd.co.uk/",
   },
   {
@@ -592,7 +592,7 @@ const drafts: CaseStudy[] = [
     did: ["Analytics translated into plain-language outcomes", "Structured service pages", "Sector-specific messaging", "A fast, mobile-first build with clear calls to action"],
     results: "About [8] qualified leads a month now come through the site, from buyers who can see what analytics would do for them.",
     launched: "February 2025",
-    quote: { text: "Websylime made our work easy to understand. The new site explains what we do far better than we ever could, and the leads have followed.", name: "Robert H.", role: "Founder, data analytics consultancy" },
+    quote: { text: "Websy Lime made our work easy to understand. The new site explains what we do far better than we ever could, and the leads have followed.", name: "Robert H.", role: "Founder, data analytics consultancy" },
     liveUrl: "https://www.alpineonline.co.uk/",
   },
   {
@@ -626,7 +626,7 @@ const drafts: CaseStudy[] = [
     results: "About [60] classes a month are now booked online, with around [8] new students joining.",
     growth: { plan: "Foundation", text: "[After launch they joined our Foundation plan. Regular Instagram and Facebook posts now fill about 20 more class spots a month, and the following has grown by 600.]" },
     launched: "January 2025",
-    quote: { text: "Websylime captured the calm at the heart of what I do. The site feels nurturing, and bookings have grown steadily since it went live.", name: "Tiffany B.", role: "Founder & yoga teacher" },
+    quote: { text: "Websy Lime captured the calm at the heart of what I do. The site feels nurturing, and bookings have grown steadily since it went live.", name: "Tiffany B.", role: "Founder & yoga teacher" },
     liveUrl: "https://www.nourishmindbodysoulyoga.co.uk/",
   },
   {
@@ -642,7 +642,7 @@ const drafts: CaseStudy[] = [
     did: ["Clearly structured practice areas", "A strong firm story on trust and leadership", "A bilingual-ready, professional design", "A fast, mobile-first build"],
     results: "About [6] corporate inquiries a month now come through the site, from clients who can see the firm's areas of work.",
     launched: "December 2024",
-    quote: { text: "Websylime delivered a website worthy of our firm. It conveys exactly the authority and trust our clients expect from us.", name: "Thamer A.", role: "Managing partner, corporate law firm" },
+    quote: { text: "Websy Lime delivered a website worthy of our firm. It conveys exactly the authority and trust our clients expect from us.", name: "Thamer A.", role: "Managing partner, corporate law firm" },
     liveUrl: "https://www.alshawa.law/",
   },
   {
@@ -691,7 +691,7 @@ const drafts: CaseStudy[] = [
     did: ["Separate paths for employers and candidates", "Clearly structured service areas", "Messaging that signals global capability", "Streamlined inquiry forms"],
     results: "About [25] employers and [120] candidates a month now sign up or get in touch, each through their own path.",
     launched: "October 2024",
-    quote: { text: "Websylime captured exactly who we are. The site now reflects our global reach and has measurably increased enquiries from both clients and candidates.", name: "Michael A.", role: "Founder, recruitment consultancy" },
+    quote: { text: "Websy Lime captured exactly who we are. The site now reflects our global reach and has measurably increased enquiries from both clients and candidates.", name: "Michael A.", role: "Founder, recruitment consultancy" },
     liveUrl: "https://www.anchorconzult.com/",
   },
   {
@@ -723,7 +723,7 @@ const drafts: CaseStudy[] = [
     did: ["Dynamic event listings", "Rich venue and category pages", "A content system that publishes in minutes", "A fast, image-led design with smart navigation"],
     results: "The guide now reaches about [25,000] visitors a month, and the team can add [40] events a week without any technical help.",
     launched: "August 2024",
-    quote: { text: "Websylime gave us a platform that's a joy to run. Updating events takes minutes now, and our traffic has gone through the roof.", name: "James C.", role: "Editor, local media" },
+    quote: { text: "Websy Lime gave us a platform that's a joy to run. Updating events takes minutes now, and our traffic has gone through the roof.", name: "James C.", role: "Editor, local media" },
     liveUrl: "https://www.watfordactually.com/",
   },
   {
@@ -772,7 +772,7 @@ const drafts: CaseStudy[] = [
     did: ["A refined, content-led design", "Clear paths for buy-side, sell-side and capital raising", "Clean typography and a measured color palette", "A fast, mobile-first build"],
     results: "About [4] qualified inquiries a month now come through the site, from firms that can see the track record first.",
     launched: "March 2024",
-    quote: { text: "Websylime understood exactly how we needed to come across. The new site reflects the seriousness of our work and has already opened doors with the right clients.", name: "Daniel M.", role: "Managing partner, M&A advisory firm" },
+    quote: { text: "Websy Lime understood exactly how we needed to come across. The new site reflects the seriousness of our work and has already opened doors with the right clients.", name: "Daniel M.", role: "Managing partner, M&A advisory firm" },
     liveUrl: "https://www.machadoadvisorypartners.co.uk/",
   },
 ];

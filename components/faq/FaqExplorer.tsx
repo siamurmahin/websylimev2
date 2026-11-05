@@ -152,7 +152,7 @@ export function FaqExplorer() {
                     {g.link && (
                       <Link
                         href={g.link.href}
-                        className="group inline-flex items-center gap-1.5 pb-1 text-sm font-semibold text-lime-strong outline-none hover:underline focus-visible:ring-2 focus-visible:ring-lime/60 dark:text-lime"
+                        className="group inline-flex items-center gap-1.5 pb-1 text-sm font-semibold text-foreground outline-none hover:underline focus-visible:ring-2 focus-visible:ring-lime/60"
                       >
                         {g.link.label}
                         <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />

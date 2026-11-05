@@ -133,7 +133,7 @@ export function IndustryPages({ data }: { data: Industry }) {
           <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{data.extra.body}</p>
           <Link
             href={data.extra.link.href}
-            className="group mt-6 inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-lime-strong outline-none focus-visible:ring-2 focus-visible:ring-ring/60 dark:text-lime"
+            className="group mt-6 inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring/60"
           >
             {data.extra.link.label}
             <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
@@ -242,7 +242,7 @@ export function IndustryGrid() {
                   </span>
                   <h3 className="mt-5 font-display text-2xl font-bold tracking-[-0.03em]">{i.name}</h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{i.card}</p>
-                  <span className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-lime-strong dark:text-lime">
+                  <span className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-foreground">
                     {g.cta}
                     <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
                   </span>

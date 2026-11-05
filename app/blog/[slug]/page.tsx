@@ -161,7 +161,7 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
               {b.post.back}
             </Link>
             <p className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
-              <span className="rounded-full bg-lime-soft px-2.5 py-0.5 text-xs font-bold text-lime-strong">{post.category}</span>
+              <span className="rounded-full bg-lime-soft px-2.5 py-0.5 text-xs font-bold text-foreground">{post.category}</span>
               <time dateTime={post.date}>{formatDate(post.date)}</time>
               <span aria-hidden>·</span>
               {post.readTime}

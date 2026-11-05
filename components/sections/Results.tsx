@@ -228,7 +228,7 @@ export function Results() {
           <Link
             data-reveal
             href={href(cta.href)}
-            className="group mt-4 inline-flex w-fit items-center gap-2 rounded-full text-sm font-semibold outline-none hover:text-lime-strong focus-visible:ring-2 focus-visible:ring-ring/60 dark:hover:text-lime"
+            className="group mt-4 inline-flex w-fit items-center gap-2 rounded-full text-sm font-semibold outline-none hover:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring/60"
           >
             {cta.label}
             <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />

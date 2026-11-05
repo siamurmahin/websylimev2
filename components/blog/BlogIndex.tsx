@@ -14,7 +14,7 @@ const b = site.blog;
 function Meta({ post, dark = false }: { post: BlogPost; dark?: boolean }) {
   return (
     <p className={cn("flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px]", dark ? "text-white/60" : "text-muted-foreground")}>
-      <span className={cn("rounded-full px-2.5 py-0.5 text-xs font-bold", dark ? "bg-lime text-ink" : "bg-lime-soft text-lime-strong")}>{post.category}</span>
+      <span className={cn("rounded-full px-2.5 py-0.5 text-xs font-bold", dark ? "bg-lime text-ink" : "bg-lime-soft text-foreground")}>{post.category}</span>
       <time dateTime={post.date}>{formatDate(post.date)}</time>
       <span aria-hidden>·</span>
       {post.readTime}
@@ -127,7 +127,7 @@ export function PostCard({ post }: { post: BlogPost }) {
         <Meta post={post} />
         <h3 className="mt-3 font-display text-xl leading-snug font-bold tracking-[-0.02em] text-balance">{post.title}</h3>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{post.excerpt}</p>
-        <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-lime-strong dark:text-lime">
+        <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-foreground">
           {b.readMore}
           <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />
         </span>

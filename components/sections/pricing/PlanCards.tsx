@@ -54,11 +54,11 @@ export function PlanCards({
           >
             {/* name + badge */}
             <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
-              <h3 className={cn("text-sm font-bold tracking-[0.14em] uppercase", featured ? "text-lime" : "text-lime-strong dark:text-lime")}>
+              <h3 className={cn("text-sm font-bold tracking-[0.14em] uppercase", featured ? "text-lime" : "text-foreground")}>
                 <Copy text={plan.name} />
               </h3>
               {plan.badge && !featured && (
-                <span className="rounded-full bg-lime-soft px-3 py-1 text-xs font-bold text-lime-strong">{plan.badge}</span>
+                <span className="rounded-full bg-lime-soft px-3 py-1 text-xs font-bold text-foreground">{plan.badge}</span>
               )}
             </div>
 

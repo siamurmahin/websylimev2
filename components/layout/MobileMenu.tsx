@@ -31,7 +31,7 @@ function SubLink({ link, onNavigate }: { link: NavLink; onNavigate: () => void }
         <span className="flex items-center gap-2 text-[15px] font-medium">
           <Copy text={link.label} />
           {link.badge && (
-            <span className="rounded-full bg-lime-soft px-2 py-0.5 text-[10px] font-semibold text-lime-strong uppercase">
+            <span className="rounded-full bg-lime-soft px-2 py-0.5 text-[10px] font-semibold text-foreground uppercase">
               {link.badge}
             </span>
           )}
@@ -123,7 +123,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
                     <Link
                       href={item.href}
                       onClick={onClose}
-                      className="flex items-center justify-between py-4 font-display text-2xl font-semibold outline-none focus-visible:text-lime-strong"
+                      className="flex items-center justify-between py-4 font-display text-2xl font-semibold outline-none focus-visible:text-muted-foreground"
                     >
                       {item.label}
                       <ArrowRight className="size-5 text-muted-foreground" />
@@ -149,7 +149,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
                                   group.title
                                 )}
                                 {group.badge && (
-                                  <span className="rounded-full bg-lime-soft px-2 py-0.5 text-[10px] text-lime-strong">
+                                  <span className="rounded-full bg-lime-soft px-2 py-0.5 text-[10px] text-foreground">
                                     {group.badge}
                                   </span>
                                 )}

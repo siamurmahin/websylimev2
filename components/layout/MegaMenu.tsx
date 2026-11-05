@@ -20,7 +20,7 @@ const linkBase =
 
 function Badge({ children }: { children: React.ReactNode }) {
   return (
-    <span className="rounded-full border border-lime/30 bg-lime-soft px-2 py-0.5 text-[10px] font-semibold tracking-wide text-lime-strong uppercase">
+    <span className="rounded-full border border-lime/30 bg-lime-soft px-2 py-0.5 text-[10px] font-semibold tracking-wide text-foreground uppercase">
       {children}
     </span>
   );
@@ -132,7 +132,7 @@ export function MegaPanel({ item, onNavigate }: { item: Mega; onNavigate: () => 
             )}
           </div>
           <div className="flex flex-1 flex-col gap-1.5 p-4">
-            <span className="text-[11px] font-semibold tracking-[0.14em] text-lime-strong uppercase">{feature.eyebrow}</span>
+            <span className="text-[11px] font-semibold tracking-[0.14em] text-foreground uppercase">{feature.eyebrow}</span>
             <span className="font-display text-base leading-tight font-semibold">
               <Copy text={feature.title} />
             </span>
@@ -166,7 +166,7 @@ export function ProductsPanel({ item, onNavigate }: { item: Products; onNavigate
         <Link
           href={href(product.href)}
           onClick={onNavigate}
-          className="mt-4 block w-fit rounded font-display text-xl font-semibold outline-none hover:text-lime-strong focus-visible:ring-2 focus-visible:ring-ring/60"
+          className="mt-4 block w-fit rounded font-display text-xl font-semibold outline-none hover:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring/60"
         >
           {product.name}
         </Link>

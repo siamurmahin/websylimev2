@@ -34,7 +34,7 @@ export function Stats({ stats, dark = false, className }: { stats: CaseStudy["st
             <Copy text={s.label} />
           </dt>
           <dd>
-            <span className={cn("block font-display text-xl font-bold tracking-[-0.03em] sm:text-3xl", dark ? "text-lime" : "text-lime-strong dark:text-lime")}>
+            <span className={cn("block font-display text-xl font-bold tracking-[-0.03em] sm:text-3xl", dark ? "text-lime" : "text-foreground")}>
               <Copy text={s.value} />
             </span>
             <span className={cn("mt-1 block text-xs leading-snug sm:text-[13px]", dark ? "text-white/65" : "text-muted-foreground")}>
@@ -56,7 +56,7 @@ export function Tags({ story, dark = false }: { story: StoryWithProject; dark?: 
           key={t}
           className={cn(
             "rounded-full px-2.5 py-0.5 text-xs font-bold",
-            i === 0 ? (dark ? "bg-lime text-ink" : "bg-lime-soft text-lime-strong") : dark ? "bg-white/10 text-white/75" : "border bg-surface text-muted-foreground",
+            i === 0 ? (dark ? "bg-lime text-ink" : "bg-lime-soft text-foreground") : dark ? "bg-white/10 text-white/75" : "border bg-surface text-muted-foreground",
           )}
         >
           <Copy text={t} />

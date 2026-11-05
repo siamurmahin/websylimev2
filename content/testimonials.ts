@@ -17,7 +17,7 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    quote: "Websylime gave us a site as modern as the technology we recommend. It explains our value clearly and the right firms are reaching out.",
+    quote: "Websy Lime gave us a site as modern as the technology we recommend. It explains our value clearly and the right firms are reaching out.",
     name: "Adam Sparks",
     role: "Founder",
     business: "Law Spark",
@@ -25,7 +25,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime built a site as premium as our work. The project galleries do the talking and we're hearing from exactly the clients we want.",
+    quote: "Websy Lime built a site as premium as our work. The project galleries do the talking and we're hearing from exactly the clients we want.",
     name: "Adrian Cole",
     role: "Director",
     business: "New Key Group",
@@ -33,7 +33,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime built a platform that feels safe and simple to use. People find the right therapist faster, and practitioner sign-ups keep growing.",
+    quote: "Websy Lime built a platform that feels safe and simple to use. People find the right therapist faster, and practitioner sign-ups keep growing.",
     name: "Aisha Khan",
     role: "Founder",
     business: "BroSis Therapy",
@@ -41,7 +41,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime turned an abstract service into a clear, compelling offer. The right clients now understand our value before the first call.",
+    quote: "Websy Lime turned an abstract service into a clear, compelling offer. The right clients now understand our value before the first call.",
     name: "Andrew Bell",
     role: "Founder",
     business: "Putting Data to Work",
@@ -57,7 +57,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime created a site as luxurious as the trips we plan. It captures our personal service beautifully and enquiries from the right clients are up.",
+    quote: "Websy Lime created a site as luxurious as the trips we plan. It captures our personal service beautifully and enquiries from the right clients are up.",
     name: "Charlotte Reeves",
     role: "Founder",
     business: "Motion Travel",
@@ -65,7 +65,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime understood exactly how we needed to come across. The new site reflects the seriousness of our work and has already opened doors with the right clients.",
+    quote: "Websy Lime understood exactly how we needed to come across. The new site reflects the seriousness of our work and has already opened doors with the right clients.",
     name: "Daniel Machado",
     role: "Managing Partner",
     business: "Machado Advisory Partners",
@@ -73,7 +73,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime made our deep tech understandable and credible. The site has opened conversations with exactly the defense and industry partners we wanted.",
+    quote: "Websy Lime made our deep tech understandable and credible. The site has opened conversations with exactly the defense and industry partners we wanted.",
     name: "Daniel Okafor",
     role: "Co-Founder",
     business: "Teom AI",
@@ -81,7 +81,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime built a site that reflects our scale and professionalism. Landlords and tenants both find what they need, and enquiries are up across the board.",
+    quote: "Websy Lime built a site that reflects our scale and professionalism. Landlords and tenants both find what they need, and enquiries are up across the board.",
     name: "Daniel Price",
     role: "Director",
     business: "Stay Property Management",
@@ -89,7 +89,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime built us a site that actually sells. Enquiries from serious food entrepreneurs have jumped, and the build packages are crystal clear now.",
+    quote: "Websy Lime built us a site that actually sells. Enquiries from serious food entrepreneurs have jumped, and the build packages are crystal clear now.",
     name: "Danny Carter",
     role: "Founder",
     business: "Saucy Grills",
@@ -97,7 +97,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime delivered a website that conveys real clinical trust. Our services are clear, and enquiries have grown since launch.",
+    quote: "Websy Lime delivered a website that conveys real clinical trust. Our services are clear, and enquiries have grown since launch.",
     name: "Dr. Faisal Omar",
     role: "Director",
     business: "TFO Medical",
@@ -121,7 +121,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime captured our technical expertise and forward thinking. The site positions us exactly as the modern maritime partner we are.",
+    quote: "Websy Lime captured our technical expertise and forward thinking. The site positions us exactly as the modern maritime partner we are.",
     name: "Erik Hansen",
     role: "Director",
     business: "Hunsea Shipping",
@@ -161,7 +161,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime created a website as refined as the art we deal in. The presentation is stunning and serious collectors are reaching out for appointments.",
+    quote: "Websy Lime created a website as refined as the art we deal in. The presentation is stunning and serious collectors are reaching out for appointments.",
     name: "Henry Grant",
     role: "Founder",
     business: "HGC Fine Art",
@@ -169,7 +169,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime gave us a platform that's a joy to run. Updating events takes minutes now, and our traffic has gone through the roof.",
+    quote: "Websy Lime gave us a platform that's a joy to run. Updating events takes minutes now, and our traffic has gone through the roof.",
     name: "James Cole",
     role: "Editor",
     business: "Watford Actually",
@@ -177,7 +177,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime translated a complex methodology into a clear, investor-grade site. The right founders now understand our value immediately.",
+    quote: "Websy Lime translated a complex methodology into a clear, investor-grade site. The right founders now understand our value immediately.",
     name: "James Whitfield",
     role: "Founder",
     business: "Hello Scaleup",
@@ -185,7 +185,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime gave us a website worthy of our history. Clients find the help they need faster, and enquiries have risen noticeably since launch.",
+    quote: "Websy Lime gave us a website worthy of our history. Clients find the help they need faster, and enquiries have risen noticeably since launch.",
     name: "Jonathan Powell",
     role: "Partner",
     business: "Powell Spencer & Partners",
@@ -249,7 +249,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime made our service easy to understand and even easier to book. Maintenance bookings have climbed steadily since launch.",
+    quote: "Websy Lime made our service easy to understand and even easier to book. Maintenance bookings have climbed steadily since launch.",
     name: "Mark Ellis",
     role: "Director",
     business: "Reliable Renewables",
@@ -257,7 +257,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime captured exactly who we are. The site now reflects our global reach and has measurably increased enquiries from both clients and candidates.",
+    quote: "Websy Lime captured exactly who we are. The site now reflects our global reach and has measurably increased enquiries from both clients and candidates.",
     name: "Michael Anderson",
     role: "Founder",
     business: "Anchor Conzult",
@@ -265,7 +265,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime captured the warmth I want people to feel. Clients tell me the website is what gave them the courage to reach out.",
+    quote: "Websy Lime captured the warmth I want people to feel. Clients tell me the website is what gave them the courage to reach out.",
     name: "Michelle Flynn",
     role: "Founder & Grief Coach",
     business: "SeeShell Therapy",
@@ -281,7 +281,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime gave us a website that conveys real authority. Commissioners now understand our work immediately and enquiries have grown.",
+    quote: "Websy Lime gave us a website that conveys real authority. Commissioners now understand our work immediately and enquiries have grown.",
     name: "Patricia Owusu",
     role: "Director",
     business: "Tiswa",
@@ -297,7 +297,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime built a site that puts nervous learners at ease. Booking is simple and lessons are filling up faster than ever.",
+    quote: "Websy Lime built a site that puts nervous learners at ease. Booking is simple and lessons are filling up faster than ever.",
     name: "Paul Salmons",
     role: "Owner & Instructor",
     business: "Paul Salmons School of Motoring",
@@ -305,7 +305,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime captured the calm at the heart of my practice. Clients say the website feels healing in itself, and bookings have grown steadily.",
+    quote: "Websy Lime captured the calm at the heart of my practice. Clients say the website feels healing in itself, and bookings have grown steadily.",
     name: "Priya Sharma",
     role: "Founder & Reiki Practitioner",
     business: "Mañjarī Reiki",
@@ -321,7 +321,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime gave us a website worthy of the homes we build. The galleries showcase our craftsmanship and enquiries from the right clients are up.",
+    quote: "Websy Lime gave us a website worthy of the homes we build. The galleries showcase our craftsmanship and enquiries from the right clients are up.",
     name: "Richard Hall",
     role: "Director",
     business: "Hallmark Contractors",
@@ -329,7 +329,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime made our work easy to understand. The new site explains what we do far better than we ever could, and the leads have followed.",
+    quote: "Websy Lime made our work easy to understand. The new site explains what we do far better than we ever could, and the leads have followed.",
     name: "Robert Hughes",
     role: "Founder",
     business: "Alpine Online",
@@ -345,7 +345,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime made a stressful service feel simple and reassuring. Expats tell us the website is what convinced them to reach out, and enquiries are up.",
+    quote: "Websy Lime made a stressful service feel simple and reassuring. Expats tell us the website is what convinced them to reach out, and enquiries are up.",
     name: "Sanne de Vries",
     role: "Founder",
     business: "Mrs Housing",
@@ -369,7 +369,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Websylime created a website as gentle and respectful as the ceremonies I lead. Families tell me it gave them comfort and confidence to get in touch.",
+    quote: "Websy Lime created a website as gentle and respectful as the ceremonies I lead. Families tell me it gave them comfort and confidence to get in touch.",
     name: "Susan Wright",
     role: "Funeral Celebrant",
     business: "Funeral Celebrant Enfield",

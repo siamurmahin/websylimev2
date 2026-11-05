@@ -22,7 +22,7 @@ export function Avatar({ t, className }: { t: Testimonial; className?: string })
       {t.photo ? (
         <Image src={t.photo} alt={t.name} fill sizes="48px" className="object-cover" />
       ) : (
-        <span aria-hidden className="text-sm font-bold text-lime-strong">
+        <span aria-hidden className="text-sm font-bold text-foreground">
           {initials(t.name)}
         </span>
       )}

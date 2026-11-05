@@ -85,7 +85,7 @@ export function LegalPage({ doc }: { doc: LegalDoc }) {
               {doc.sections.map((s, i) => (
                 <section key={s.id} id={s.id} aria-labelledby={`${s.id}-title`} className="scroll-mt-28 border-b py-9 last:border-b-0">
                   <h2 id={`${s.id}-title`} className="flex items-baseline gap-3 font-display text-[clamp(1.35rem,2.2vw,1.75rem)] leading-tight font-bold tracking-[-0.025em] text-foreground">
-                    <span className="font-mono text-sm font-semibold text-lime-strong tabular-nums dark:text-lime">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-mono text-sm font-semibold text-foreground tabular-nums">{String(i + 1).padStart(2, "0")}</span>
                     {s.title}
                   </h2>
                   {s.body.map((b, j) =>

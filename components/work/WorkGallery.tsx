@@ -191,7 +191,7 @@ function ProjectCard({ project: p, study, onOpen }: { project: PortfolioItem; st
         {image}
         <span className="flex flex-1 flex-col p-5 sm:p-6">
           {meta}
-          <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-lime-strong dark:text-lime">
+          <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-foreground">
             <Expand className="size-4" aria-hidden />
             {w.viewLabel}
           </span>
@@ -206,14 +206,16 @@ function ProjectCard({ project: p, study, onOpen }: { project: PortfolioItem; st
         {meta}
         <h2 className="mt-2 font-display text-xl leading-snug font-bold tracking-[-0.02em] text-balance">{study.headline}</h2>
         <span className="mt-4 flex items-baseline gap-2">
-          <span className="font-display text-2xl font-bold tracking-[-0.03em] text-lime-strong dark:text-lime">
+          <span className="font-display text-2xl font-bold tracking-[-0.03em] text-foreground">
             <Copy text={study.stat.value} />
           </span>
           <span className="text-sm text-muted-foreground">{study.stat.label}</span>
         </span>
-        <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-lime-strong dark:text-lime">
+        <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-foreground">
           {w.readMore}
-          <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
+          <span className="grid size-6 place-items-center rounded-full bg-lime text-ink transition-transform duration-300 group-hover:translate-x-1">
+            <ArrowRight className="size-3.5" aria-hidden />
+          </span>
         </span>
       </span>
     </Link>

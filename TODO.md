@@ -53,7 +53,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [ ] "Leads generated" stat removed until there is a tracked real number (e.g. from WebsyChat + form/call tracking). Add it back in `home.results.stats`.
 
 ### Collaboration
-- [ ] `Changes turned around in [2] days, not weeks.` — confirm the real revision turnaround
+- [x] Changes turned around within 2 days
 - [ ] "Book a free call" button uses the booking link placeholder
 
 ### Featured Work
@@ -67,7 +67,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 ### Testimonials
 - [x] 45 real testimonials in `content/testimonials.ts` (from testimonial.txt), each linked to its site screenshot
 - [ ] Client headshots (`photo`) — initials show until then; confirm permission to show name + photo
-- [ ] Quotes spell the brand "Websylime" — keep as written or change to "Websy Lime"?
+- [x] Quotes now spell the brand "Websy Lime"
 
 ### Pricing
 - [x] Homepage shows the 3 All-in-One Growth plans (from Trevor sheet + your edits): $1,299 / $1,999 / $2,699 (was $2,999)

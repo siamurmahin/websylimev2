@@ -109,7 +109,7 @@ export default async function CaseStudyPage(props: PageProps<"/work/[slug]">) {
               href={s.liveUrl}
               target="_blank"
               rel="nofollow noopener noreferrer"
-              className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-lime-strong outline-none hover:underline focus-visible:ring-2 focus-visible:ring-lime/60 dark:text-lime"
+              className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground outline-none hover:underline focus-visible:ring-2 focus-visible:ring-lime/60"
             >
               {t.visit}
               <ArrowUpRight className="size-4" aria-hidden />
@@ -175,7 +175,7 @@ export default async function CaseStudyPage(props: PageProps<"/work/[slug]">) {
                 </ul>
                 <Link
                   href={t.growthCta.href}
-                  className="group mt-6 inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-lime-strong outline-none hover:underline focus-visible:ring-2 focus-visible:ring-ring/60 dark:text-lime"
+                  className="group mt-6 inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-foreground outline-none hover:underline focus-visible:ring-2 focus-visible:ring-ring/60"
                 >
                   {t.growthCta.label}
                   <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
@@ -218,7 +218,7 @@ export default async function CaseStudyPage(props: PageProps<"/work/[slug]">) {
           >
             <Shot src={next.image} alt={`${next.label} website design`} sizes="(min-width: 640px) 240px, 100vw" className="sm:w-60 sm:shrink-0" />
             <div className="flex-1">
-              <p className="text-xs font-bold tracking-[0.14em] text-lime-strong uppercase dark:text-lime">{t.nextLabel}</p>
+              <p className="text-xs font-bold tracking-[0.14em] text-foreground uppercase">{t.nextLabel}</p>
               <p className="mt-1 text-sm font-semibold text-muted-foreground">{next.label}</p>
               <p className="mt-1 font-display text-xl leading-snug font-bold tracking-[-0.02em] sm:text-2xl">
                 {next.headline}

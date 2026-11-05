@@ -74,7 +74,7 @@ function Revision() {
       </div>
       <p className="mt-3 flex items-center gap-1.5 text-sm font-semibold">
         <Zap className="size-4 text-lime-strong dark:text-lime" aria-hidden />
-        {v.revision.label}: <Copy text="[2] days" />
+        {v.revision.label}: 2 days
       </p>
     </div>
   );

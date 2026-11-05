@@ -33,11 +33,12 @@ export function AboutStats() {
   return (
     <section aria-label={h.eyebrow} className="pt-10 sm:pt-14">
       <FadeUp className="container-site">
-        <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+        <ul className="grid grid-cols-2 gap-x-6 gap-y-10 border-y py-10 lg:grid-cols-4 lg:gap-0 lg:divide-x">
           {h.stats.map((s) => (
-            <li key={s.label} className="rounded-[1.5rem] border bg-surface p-5 sm:p-6">
-              <span className="inline-block rounded-xl bg-lime px-2.5 py-0.5 font-display text-3xl font-bold tracking-[-0.04em] whitespace-nowrap text-ink sm:text-5xl">{s.value}</span>
-              <span className="mt-3 block text-sm leading-snug text-muted-foreground">{s.label}</span>
+            <li key={s.label} className="lg:px-8 lg:first:pl-0 lg:last:pr-0">
+              <span aria-hidden className="mb-5 block h-1 w-8 rounded-full bg-lime" />
+              <span className="block font-display text-5xl leading-none font-bold tracking-[-0.045em] whitespace-nowrap text-foreground sm:text-6xl">{s.value}</span>
+              <span className="mt-3 block text-[15px] leading-snug text-muted-foreground">{s.label}</span>
             </li>
           ))}
         </ul>
@@ -201,7 +202,7 @@ export function AboutTeam() {
                 name={m.name}
                 photo={m.photo}
                 className="size-14 rounded-xl bg-lime-soft transition-colors duration-300 group-hover:bg-lime"
-                textClass="text-lg text-lime-strong transition-colors duration-300 group-hover:text-ink dark:text-lime"
+                textClass="text-lg text-foreground transition-colors duration-300 group-hover:text-ink"
               />
               <div className="min-w-0">
                 <p className="font-display text-lg leading-snug font-bold tracking-[-0.02em]">{m.name}</p>

@@ -112,7 +112,7 @@ export function Footer() {
                         <span className="whitespace-nowrap text-muted-foreground/60">{l.label}</span>
                       )}
                       {l.badge && (
-                        <span className="rounded-full bg-lime-soft px-1.5 py-px text-[10px] font-semibold text-lime-strong">{l.badge}</span>
+                        <span className="rounded-full bg-lime-soft px-1.5 py-px text-[10px] font-semibold text-foreground">{l.badge}</span>
                       )}
                     </li>
                   ))}
@@ -170,7 +170,7 @@ function Newsletter() {
       </div>
 
       {sent ? (
-        <p role="status" className="inline-flex items-center gap-2 text-sm font-semibold text-lime-strong">
+        <p role="status" className="inline-flex items-center gap-2 text-sm font-semibold text-foreground">
           <Check className="size-4" aria-hidden />
           {n.success}
         </p>

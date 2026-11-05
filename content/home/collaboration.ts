@@ -9,7 +9,7 @@ export const collaboration = {
   points: [
     { title: "One dedicated point of contact", body: "One person who knows your business. No ticket queues.", icon: "userRound" },
     { title: "Clear weekly updates", body: "A short update every week: what's done, what's next.", icon: "calendarCheck" },
-    { title: "Fast revisions", body: "Changes turned around in [2] days, not weeks.", icon: "zap" },
+    { title: "Fast revisions", body: "Changes turned around within 2 days.", icon: "zap" },
     { title: "You approve, we execute", body: "Nothing goes live without your OK.", icon: "badgeCheck" },
   ] as { title: string; body: string; icon: IconKey }[],
   // Mini UI on each stacked card (CollaborationStack.tsx)

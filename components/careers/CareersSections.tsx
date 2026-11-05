@@ -125,7 +125,7 @@ export function CareersRoles() {
               <li key={role.id} id={role.id} data-reveal className="scroll-mt-28 rounded-[1.75rem] border bg-surface p-6 sm:p-8">
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                   <div>
-                    <p className="text-xs font-bold tracking-[0.14em] text-lime-strong uppercase dark:text-lime">{role.team}</p>
+                    <p className="text-xs font-bold tracking-[0.14em] text-foreground uppercase">{role.team}</p>
                     <h3 className="mt-1 font-display text-2xl font-bold tracking-[-0.03em]">{role.title}</h3>
                     <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground">
                       <span className="inline-flex items-center gap-1.5">

@@ -34,7 +34,7 @@ export function Pricing({ needSiteLink = true }: { needSiteLink?: boolean } = {}
                   {p.needSite.label}
                   <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
                 </span>
-                <span className="hidden rounded-full bg-lime-soft px-2 py-0.5 text-xs font-semibold text-lime-strong sm:inline">{p.needSite.note}</span>
+                <span className="hidden rounded-full bg-lime-soft px-2 py-0.5 text-xs font-semibold text-foreground sm:inline">{p.needSite.note}</span>
               </Link>
             </div>
           )}
@@ -45,7 +45,7 @@ export function Pricing({ needSiteLink = true }: { needSiteLink?: boolean } = {}
         <div data-reveal className="mt-10 flex flex-col items-center gap-2 text-center">
           <Link
             href={href(p.compare.href)}
-            className="group inline-flex items-center gap-1.5 text-sm font-semibold outline-none hover:text-lime-strong focus-visible:ring-2 focus-visible:ring-ring/60 dark:hover:text-lime"
+            className="group inline-flex items-center gap-1.5 text-sm font-semibold outline-none hover:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring/60"
           >
             {p.compare.label}
             <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />

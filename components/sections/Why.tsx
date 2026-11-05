@@ -29,7 +29,7 @@ function Tasks() {
               <Icon className="size-3.5" aria-hidden />
             </span>
             <span className="flex-1 text-sm font-medium">{t.label}</span>
-            <span className={cn("rounded-full px-2 py-0.5 text-[11px] font-semibold", done ? "bg-lime-soft text-lime-strong" : "bg-muted text-muted-foreground")}>
+            <span className={cn("rounded-full px-2 py-0.5 text-[11px] font-semibold", done ? "bg-lime-soft text-foreground" : "bg-muted text-muted-foreground")}>
               {t.status}
             </span>
           </li>

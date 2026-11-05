@@ -132,7 +132,7 @@ export function WebsyChatDemo() {
               <BellRing className="size-4" aria-hidden />
             </span>
             <div className="leading-tight">
-              <p className="text-xs font-bold text-lime-strong dark:text-lime">{d.lead.title}</p>
+              <p className="text-xs font-bold text-foreground">{d.lead.title}</p>
               <p className="text-sm font-semibold">{d.lead.body}</p>
             </div>
           </div>

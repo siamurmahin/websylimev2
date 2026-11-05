@@ -22,7 +22,7 @@ export function BlogNewsletter() {
               <Mail className="size-5" aria-hidden />
             </span>
             <div>
-              <p className="text-xs font-bold tracking-[0.14em] text-lime-strong uppercase dark:text-lime">{b.eyebrow}</p>
+              <p className="text-xs font-bold tracking-[0.14em] text-foreground uppercase">{b.eyebrow}</p>
               <h2 id="blog-nl-title" className="mt-1 font-display text-2xl font-bold tracking-[-0.03em] sm:text-3xl">
                 {b.headline}
               </h2>
@@ -31,7 +31,7 @@ export function BlogNewsletter() {
           </div>
 
           {sent ? (
-            <p role="status" className="inline-flex items-center gap-2 font-semibold text-lime-strong dark:text-lime">
+            <p role="status" className="inline-flex items-center gap-2 font-semibold text-foreground">
               <Check className="size-5" aria-hidden />
               {n.success}
             </p>
