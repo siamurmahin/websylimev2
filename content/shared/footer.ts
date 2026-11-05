@@ -19,6 +19,7 @@ export const footer = {
         { label: "All-in-One Growth", href: "/services/growth" },
         { label: "Graphic Design", href: "/services/graphic-design" },
         { label: "Video Editing", href: "/services/video-editing", badge: "Soon" },
+        { label: "For Home Services", href: "/industries" },
         { label: "Pricing", href: "/pricing" },
       ],
     },

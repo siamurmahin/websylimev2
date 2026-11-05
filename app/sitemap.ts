@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/content/site";
 import { posts } from "@/content/blog/posts";
 import { caseStudies } from "@/content/case-studies";
+import { industries } from "@/content/industries";
 
 // Only pages that actually exist — listing unbuilt routes would send search
 // engines to 404s. Add each page here as it's built (see TODO.md).
@@ -12,6 +13,7 @@ const PAGES: { path: string; priority: number; changeFrequency: MetadataRoute.Si
   { path: "/services/graphic-design", priority: 0.8, changeFrequency: "monthly" },
   { path: "/services/video-editing", priority: 0.5, changeFrequency: "monthly" },
   { path: "/products/websychat", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/industries", priority: 0.9, changeFrequency: "monthly" },
   { path: "/faq", priority: 0.6, changeFrequency: "monthly" },
   { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
   { path: "/careers", priority: 0.4, changeFrequency: "monthly" },
@@ -37,6 +39,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "yearly",
     priority: 0.6,
   }));
+  // every trade
+  const trades: MetadataRoute.Sitemap = industries.map((i) => ({
+    url: new URL(`/industries/${i.slug}`, site.meta.url).toString(),
+    changeFrequency: "monthly",
+    priority: 0.9,
+  }));
   // every blog post
   const blogPosts: MetadataRoute.Sitemap = posts.map((p) => ({
     url: new URL(`/blog/${p.slug}`, site.meta.url).toString(),
@@ -44,5 +52,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "yearly",
     priority: 0.6,
   }));
-  return [...pages, ...studies, ...blogPosts];
+  return [...pages, ...trades, ...studies, ...blogPosts];
 }

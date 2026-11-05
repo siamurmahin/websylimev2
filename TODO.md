@@ -226,6 +226,12 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [ ] Get permission from each client before publishing their story and quote
 - [ ] Hero photo is AI-generated (no faces) — swap for a real photo later
 
+## Home service pages (`/industries`, copy in `content/industries.ts`)
+- [x] Plumbers, electricians, pest control and contractors, plus an index page. Copy is unique per trade
+- [ ] Confirm "We also work with HVAC, roofing, cleaning, landscaping" on /industries is true
+- [ ] Add a real plumbing/electrical client as a case study, then link it from those pages (no plumber or pest control project in the portfolio yet)
+- [ ] Hero photos are AI-generated (no people); swap for real ones later
+
 ## Careers page (`/careers`, roles at `#roles`, form at `#apply`, copy in `content/pages/careers.ts`)
 - [ ] Open roles: `roles.items` is empty, so the page shows "No open roles right now". Add a role by copying the example in the file
 - [ ] Confirm perks (`[Work from anywhere]`, `[Flexible hours]`, `[Paid time off]`, `[Learning budget]` …) and hero point `[Remote-first]` — remove any that aren't true
