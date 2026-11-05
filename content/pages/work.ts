@@ -4,15 +4,15 @@
 
 export const work = {
   meta: {
-    title: "Our Work",
-    description: "Real websites we've built for real businesses — law firms, clinics, contractors, coaches and more.",
+    title: "Website Design Portfolio & Case Studies",
+    description: "Websites we've built for law firms, clinics, contractors and more, with case studies on what was holding each business back and what changed.",
   },
 
   hero: {
     eyebrow: "Our work",
     headline: "Real sites for real businesses.",
     headlineAccent: "real businesses.",
-    subheadline: "Every project here is a live client website. Have a look around — then let's build yours.",
+    subheadline: "Every project is a live client website. Read what was holding each business back, what we built and what changed.",
     primaryCta: { label: "See the work", href: "#gallery" },
     secondaryCta: { label: "Book a free call", href: "/book-a-call" },
     // {n} = number of websites in content/portfolio.ts (counted automatically)
@@ -27,6 +27,7 @@ export const work = {
   showMore: "Show more projects",
   perPage: 12,
   viewLabel: "View",
+  readMore: "Read the case study",
 
   designEmpty: {
     title: "Graphic design portfolio coming soon",
@@ -34,5 +35,5 @@ export const work = {
     cta: { label: "Book a free call", href: "/book-a-call" },
   },
 
-  lightbox: { close: "Close", study: "Read the case study", start: "Want one like this?", startCta: "Let's Build Yours" },
+  lightbox: { close: "Close", start: "Want one like this?", startCta: "Let's Build Yours" },
 };

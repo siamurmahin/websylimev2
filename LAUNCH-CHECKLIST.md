@@ -73,11 +73,10 @@ There are **137 different placeholder texts** across the site. All of them show 
 | Page / area | What to fill in | File |
 |---|---|---|
 | **Homepage hero** | "Only `[7]` spots left for `[Q1 2027]`" (must be true or removed), 5 client avatar names | `content/home/hero.ts`, `final-cta.ts` |
-| **Homepage numbers** | `[2017]` (the About page says 2024, so pick one), `[800]`, `[650]` | `content/home/results.ts`, `hero.ts` |
+| **Homepage numbers** | `[800]`, `[650]` | `content/home/results.ts`, `hero.ts` |
 | **Trust bar** | 8 real client logos | `content/home/trust-bar.ts` |
 | **Charity (2%)** | `[Charity / cause name]`, yearly update line | `content/home/pricing.ts`, `results.ts`, `faq.ts` |
 | **Case studies (45)** | ⚠ confirm every result and quote, get each client's permission, decide on 5 on hold (see `TODO.md`) | `content/case-studies.ts` |
-| **About** | founder name + story, 4 team members (name, role, photo), timeline `[Year]`s | `content/pages/about.ts` |
 | **Contact** | opening hours `[Mon–Fri, 9am–6pm ET]`, reply time `[1]` business day | `content/pages/contact.ts` |
 | **FAQ answers** | 13 "confirm…" answers (hosting, ownership, cancellation, WebsyChat…) | `content/home/faq.ts` |
 | **Website Design** | hosting `[the first 12 months]`, timeline | `content/services/website-design.ts` |
@@ -89,7 +88,6 @@ There are **137 different placeholder texts** across the site. All of them show 
 
 **Open decisions** (also at the top of `TODO.md`):
 - the hero headline
-- the start year (2017 or 2024)
 - rewriting the template-sounding lines
 - showing or hiding Video Editing
 
@@ -113,7 +111,6 @@ There are **137 different placeholder texts** across the site. All of them show 
 | `websychat-hero.webp` | WebsyChat |
 | `faq-hero.webp` | FAQ |
 | `blog-hero.webp` | Blog |
-| `case-studies-hero.webp` | Case Studies |
 | `careers-hero.webp` | Careers |
 | `legal-hero.webp` | Privacy + Terms |
 | `blog/missed-calls.webp`, `blog/google-reviews.webp`, `blog/website-signs.webp` | blog post covers |
@@ -123,7 +120,7 @@ All are in `public/images/`. Replacements should be **≥2400px wide**, and on i
 ### Missing (currently shows initials or an icon)
 
 - [ ] **Founder photo.** It appears on the "Book a free call" card everywhere, and on the About team section.
-- [ ] **3 team photos + names** (About page)
+- [ ] **Team photos** (About page, 8 people; initials show until then)
 - [ ] **5 client avatars** (homepage hero, next to the star rating)
 - [ ] **8 client logos** (homepage trust bar): transparent SVG/PNG
 - [ ] **Graphic design portfolio:** 0 items right now, so `/work#graphic-design` and the Graphic Design page show an empty state. Add your designs in `content/design-portfolio.ts`.

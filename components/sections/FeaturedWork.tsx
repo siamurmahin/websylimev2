@@ -102,7 +102,7 @@ export function FeaturedWork() {
           <Link
             key={project.slug}
             // a case study if there is one, otherwise the project on the Work page
-            href={project.hasStudy ? `/case-studies/${project.slug}` : `/work#${project.slug}`}
+            href={project.hasStudy ? `/work/${project.slug}` : `/work#${project.slug}`}
             onPointerEnter={(e) => {
               if (e.pointerType !== "mouse") return;
               // start the bubble right under the cursor instead of flying in from 0,0

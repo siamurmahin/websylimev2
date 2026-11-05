@@ -4,24 +4,23 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Quote } from "lucide-react";
 import { site } from "@/content/site";
 import { Shot, Stats, stories, Tags } from "@/components/case-studies/shared";
-import { CaseStudyCta } from "@/components/case-studies/CaseStudyList";
+import { CaseStudyCta } from "@/components/case-studies/CaseStudyCta";
 import { FadeUp } from "@/components/motion/SplitReveal";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Copy } from "@/lib/copy";
 
-const p = site.caseStudiesPage;
-const t = p.study;
+const t = site.caseStudiesPage.study;
 
 export function generateStaticParams() {
   return stories.map((s) => ({ slug: s.slug }));
 }
 
-export async function generateMetadata(props: PageProps<"/case-studies/[slug]">): Promise<Metadata> {
+export async function generateMetadata(props: PageProps<"/work/[slug]">): Promise<Metadata> {
   const { slug } = await props.params;
   const s = stories.find((x) => x.slug === slug);
   if (!s) return {};
-  const url = `/case-studies/${s.slug}`;
+  const url = `/work/${s.slug}`;
   const title = s.title;
   const description = s.summary;
   return {
@@ -40,7 +39,7 @@ export const instant = false;
  * One case study: header + screenshot → stats band → challenge / what we did /
  * results with a facts sidebar → client quote → next story → CTA band → final CTA.
  */
-export default async function CaseStudyPage(props: PageProps<"/case-studies/[slug]">) {
+export default async function CaseStudyPage(props: PageProps<"/work/[slug]">) {
   const { slug } = await props.params;
   const i = stories.findIndex((x) => x.slug === slug);
   if (i === -1) notFound();
@@ -56,7 +55,7 @@ export default async function CaseStudyPage(props: PageProps<"/case-studies/[slu
     { label: t.facts.launched, value: s.launched },
     ...(s.growth ? [{ label: t.facts.plan, value: `[${s.growth.plan}]` }] : []),
   ];
-  const url = new URL(`/case-studies/${s.slug}`, site.meta.url).toString();
+  const url = new URL(`/work/${s.slug}`, site.meta.url).toString();
 
   return (
     <main id="main" className="relative">
@@ -77,7 +76,7 @@ export default async function CaseStudyPage(props: PageProps<"/case-studies/[slu
               "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: t.home, item: site.meta.url },
-                { "@type": "ListItem", position: 2, name: t.list, item: new URL("/case-studies", site.meta.url).toString() },
+                { "@type": "ListItem", position: 2, name: t.list, item: new URL("/work", site.meta.url).toString() },
                 { "@type": "ListItem", position: 3, name: s.title, item: url },
               ],
             },
@@ -89,7 +88,7 @@ export default async function CaseStudyPage(props: PageProps<"/case-studies/[slu
         <div className="container-site pt-8 sm:pt-12">
           <FadeUp className="mx-auto max-w-3xl text-center">
             <Link
-              href="/case-studies"
+              href="/work"
               className="group inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground outline-none hover:text-foreground focus-visible:ring-2 focus-visible:ring-lime/60"
             >
               <ArrowLeft className="size-4 transition-transform duration-300 group-hover:-translate-x-0.5" aria-hidden />
@@ -214,7 +213,7 @@ export default async function CaseStudyPage(props: PageProps<"/case-studies/[slu
       {next && (
         <section aria-label={t.nextLabel} className="container-site pb-14 sm:pb-20">
           <Link
-            href={`/case-studies/${next.slug}`}
+            href={`/work/${next.slug}`}
             className="group mx-auto flex max-w-5xl flex-col gap-5 rounded-[1.75rem] border bg-surface p-5 outline-none transition-[border-color] duration-500 hover:border-lime/60 focus-visible:ring-3 focus-visible:ring-ring/50 sm:flex-row sm:items-center sm:p-6"
           >
             <Shot src={next.image} alt={`${next.label} website design`} sizes="(min-width: 640px) 240px, 100vw" className="sm:w-60 sm:shrink-0" />

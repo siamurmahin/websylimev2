@@ -9,6 +9,7 @@
 // slug, the title, the first paragraph and at least one H2. Keyword research
 // notes + ideas for next posts: content/blog/KEYWORDS.md.
 // Starter drafts — review and edit before launch (see TODO.md).
+import { postsFromOldSite } from "@/content/blog/from-old-site";
 
 export type BlogBlock =
   | { type: "p" | "h2" | "h3"; text: string }
@@ -42,7 +43,7 @@ export type BlogPost = {
   faq: { q: string; a: string }[];
 };
 
-export const posts: BlogPost[] = [
+const writtenHere: BlogPost[] = [
   {
     slug: "missed-call-text-back",
     title: "Missed call text back: how small businesses stop losing leads",
@@ -127,7 +128,7 @@ export const posts: BlogPost[] = [
           "**Customers find you online?** Make sure your website captures leads 24/7 with forms, booking and chat.",
         ],
       },
-      { type: "p", text: "If your website isn't bringing in calls or messages at all, start there — our guide to [why a website doesn't get leads](/blog/website-not-getting-leads) walks through the most common fixes." },
+      { type: "p", text: "If your website isn't bringing in calls or messages at all, start there — our guide to [why a website doesn't get leads](/blog/why-your-website-isnt-getting-leads) walks through the most common fixes." },
 
       { type: "h2", text: "Start with one change this week" },
       { type: "p", text: "You don't need a big new system. Turn on missed call text back, update your voicemail, and check that your website makes it easy to get in touch. Each small step means fewer lost jobs. If you'd like help setting any of this up, [book a free call](/book-a-call) and we'll talk it through." },
@@ -233,7 +234,7 @@ export const posts: BlogPost[] = [
       },
 
       { type: "h2", text: "Next steps" },
-      { type: "p", text: "Get your review link today, write one template you're comfortable with, and ask your next three happy customers. Reviews work even better when your website turns those visitors into calls — see our guide on [getting more leads from your website](/blog/website-not-getting-leads). And if you'd rather have it done for you, our [Growth plans](/services/growth) include Google profile updates every month." },
+      { type: "p", text: "Get your review link today, write one template you're comfortable with, and ask your next three happy customers. Reviews work even better when your website turns those visitors into calls — see our guide on [getting more leads from your website](/blog/why-your-website-isnt-getting-leads). And if you'd rather have it done for you, our [Growth plans](/services/growth) include Google profile updates every month." },
     ],
     faq: [
       { q: "How do I get more Google reviews for my business?", a: "Ask every happy customer right after the job, send them your direct Google review link by text or email, add a review QR code where customers can see it, and make asking part of your routine." },
@@ -243,18 +244,18 @@ export const posts: BlogPost[] = [
     ],
   },
   {
-    slug: "website-not-getting-leads",
-    title: "Website not getting leads? 7 fixes to get more leads from your website",
-    seoTitle: "Website Not Getting Leads? 7 Fixes That Work",
-    metaDescription: "Website not getting leads? Learn why visitors leave without calling, and 7 simple fixes to get more leads from your small business website.",
-    keyword: "website not getting leads",
-    related: ["how to get more leads from your website", "why is my website not converting", "why is my website not getting traffic", "when to redesign a website", "website conversion rate"],
-    excerpt: "Visitors land on your site, look around and leave without calling. Here's why it happens — and 7 fixes to get more leads from your website.",
+    slug: "why-your-website-isnt-getting-leads",
+    title: "Why your website isn't getting leads (and how to fix it)",
+    seoTitle: "Why Your Website Isn't Getting Leads: 9 Fixes",
+    metaDescription: "Website not getting leads? Learn why visitors leave without calling, and 9 simple fixes to get more leads from your small business website.",
+    keyword: "why your website isn't getting leads",
+    related: ["website not getting leads", "how to get more leads from your website", "why is my website not converting", "why is my website not getting traffic", "when to redesign a website", "website conversion rate"],
+    excerpt: "Visitors land on your site, look around and leave without calling. Here's why it happens — and 9 fixes to get more leads from your website.",
     category: "Websites",
-    date: "2026-10-09",
-    updated: "2026-10-23",
-    readTime: "5 min read",
-    author: "Websy Lime team",
+    date: "2026-03-25",
+    updated: "2026-11-05",
+    readTime: "6 min read",
+    author: "Md Anisur Rahman",
     image: { src: "/images/blog/website-signs.webp", alt: "A laptop and phone on a desk showing a slow, cluttered website" },
     cta: {
       title: "Need a website that brings in calls?",
@@ -263,8 +264,8 @@ export const posts: BlogPost[] = [
       href: "/services/website-design",
     },
     body: [
-      { type: "p", text: "You have a website. People visit it. But the phone isn't ringing and the contact form is quiet. If your **website is not getting leads**, you're not alone — and the fix is often simpler than you think." },
-      { type: "p", text: "This guide covers the two main reasons small business websites don't bring in work, and seven practical fixes to get more leads from your website." },
+      { type: "p", text: "You have a website. People visit it. But the phone isn't ringing and the contact form is quiet. If you're wondering **why your website isn't getting leads**, you're not alone — and the fix is often simpler than you think." },
+      { type: "p", text: "This guide covers the two main reasons small business websites don't bring in work, and nine practical fixes to get more leads from your website." },
 
       { type: "h2", text: "First: is it a traffic problem or a conversion problem?" },
       { type: "p", text: "There are only two reasons a website doesn't produce leads:" },
@@ -275,7 +276,7 @@ export const posts: BlogPost[] = [
           "**People visit, but don't get in touch** (a conversion problem).",
         ],
       },
-      { type: "p", text: "Free tools like Google Analytics and Google Search Console show how many people visit and what they searched for. If visits are very low, focus on getting found (fix 7). If people visit but leave, start with fixes 1–6." },
+      { type: "p", text: "Free tools like Google Analytics and Google Search Console show how many people visit and what they searched for. If visits are very low, focus on getting found (fixes 7 and 8). If people visit but leave, start with fixes 1–6." },
 
       { type: "h2", text: "Why is my website not converting?" },
       { type: "p", text: "Your conversion rate is the share of visitors who take an action — call, book, or send a message. When it's low, the cause is almost always one of the issues below." },
@@ -299,14 +300,21 @@ export const posts: BlogPost[] = [
       { type: "h3", text: "6. There's no proof you're good" },
       { type: "p", text: "People want to see that others trust you. Show real photos of your work, a few genuine reviews, and any licences or guarantees you offer. Our guide on [how to get more Google reviews](/blog/how-to-get-more-google-reviews) shows how to build that proof quickly." },
 
-      { type: "h3", text: "7. People can't find you on Google" },
-      { type: "p", text: "If hardly anyone visits, your site may not be showing up when people search. Make sure each service has its own page, each page has a clear title that says the service and area, and your Google Business Profile links to your website. Regular, helpful content and up-to-date business details help too." },
+      { type: "h3", text: "7. You're talking about yourself, not the customer" },
+      { type: "p", text: "\"We are a leading provider of...\" doesn't sell. People care about their own problem. Lead with the result you deliver, then explain how you do it. A slow website is often a symptom, too: here are [10 ways to speed it up](/blog/website-speed-and-seo)." },
+
+      { type: "h3", text: "8. People can't find you on Google" },
+      { type: "p", text: "If hardly anyone visits, your site may not be showing up when people search. Make sure each service has its own page, each page has a clear title that says the service and area, and your Google Business Profile links to your website. Regular, helpful content and up-to-date business details help too. Our [small business SEO checklist](/blog/small-business-seo-checklist) walks you through it." },
+      { type: "p", text: "Plenty of visits but no leads can also mean you're attracting the wrong people. Target what your buyers search for, not only the words with the most traffic." },
+
+      { type: "h3", text: "9. There's no way to follow up" },
+      { type: "p", text: "Most visitors aren't ready to buy on their first visit. Give them a reason to stay in touch, like a useful guide or a newsletter, so they remember you when the time comes." },
 
       { type: "h2", text: "Catch leads after hours" },
       { type: "p", text: "Lots of people browse in the evening, when you're not answering the phone. Give them a way to reach you anyway: a simple form, online booking, or a chat assistant like [WebsyChat](/products/websychat) that answers questions and takes their details. And when you do miss calls, [missed call text back](/blog/missed-call-text-back) keeps those leads warm." },
 
       { type: "h2", text: "When to redesign a website instead of fixing it" },
-      { type: "p", text: "Small fixes go a long way. But a redesign is often quicker and cheaper than patching if your site:" },
+      { type: "p", text: "Small fixes go a long way. But a redesign is often quicker and cheaper than patching if your site (see all [7 signs it needs a redesign](/blog/signs-your-website-needs-a-redesign)):" },
       {
         type: "ul",
         items: [
@@ -340,3 +348,6 @@ export const posts: BlogPost[] = [
     ],
   },
 ];
+
+/** All posts, newest first. */
+export const posts: BlogPost[] = [...writtenHere, ...postsFromOldSite].sort((a, b) => b.date.localeCompare(a.date));

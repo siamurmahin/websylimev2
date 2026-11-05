@@ -42,7 +42,6 @@ export const footer = {
       title: "Resources",
       links: [
         { label: "Our Work", href: "/work" },
-        { label: "Case Studies", href: "/case-studies" },
         { label: "Blog", href: "/blog" },
         { label: "FAQ", href: "/faq" },
       ],

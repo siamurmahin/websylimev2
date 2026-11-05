@@ -1,32 +1,9 @@
-// Page → caseStudiesPage (/case-studies and each case study page).
+// Each case study page (/work/[slug]). The list of work is the Work page (content/pages/work.ts).
 // The stories themselves live in content/case-studies.ts.
 // Edit the text below. [Square brackets] = placeholder still to fill in (see TODO.md).
 
 export const caseStudiesPage = {
-  meta: {
-    title: "Website Design Case Studies",
-    description: "Website design case studies by industry: what was holding each business back, what we built, and how inquiries and sales changed.",
-  },
-
-  // Section 1 — hero with photo
-  hero: {
-    eyebrow: "Case studies",
-    headline: "Real businesses. Real results.",
-    headlineAccent: "Real results.",
-    subheadline: "What was holding each business back, what we built, and what changed after launch — in plain English.",
-    primaryCta: { label: "Read the stories", href: "#stories" },
-    secondaryCta: { label: "See all our work", href: "/work" },
-    points: ["45 case studies", "Sorted by industry", "Plain-English stories"],
-    // Illustrative photo (AI-generated, no faces) — swap for a real photo later.
-    image: { src: "/images/case-studies-hero.webp", alt: "A laptop and tablet showing website designs on a bright studio table" },
-  },
-
-  // Section 2 — stories
-  readMore: "Read the case study",
-  allLabel: "All industries",
-  moreLabel: "Show more",
-
-  // Section 3 — CTA band
+  // CTA band
   cta: {
     title: "Want a story like this?",
     body: "Tell us about your business. We'll reply with a plan and a clear price.",
@@ -36,7 +13,7 @@ export const caseStudiesPage = {
 
   // Case study page
   study: {
-    back: "All case studies",
+    back: "All work",
     visit: "Visit the live site",
     facts: { industry: "Industry", location: "Location", services: "Services", launched: "Launched", plan: "Monthly plan" },
     challengeTitle: "The challenge",
@@ -52,6 +29,6 @@ export const caseStudiesPage = {
     },
     nextLabel: "Next case study",
     home: "Home",
-    list: "Case studies",
+    list: "Work",
   },
 };

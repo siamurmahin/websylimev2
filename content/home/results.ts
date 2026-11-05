@@ -4,13 +4,13 @@ export const results = {
   eyebrow: "The numbers",
   headline: "Results that speak.",
   // Numbers count up on scroll. `count: false` shows the value as-is (e.g. a year).
-  // Start year: plan stats say 2017, the About timeline says 2024 — confirm (TODO.md).
+  // 2017: the founder started solo. Websy Lime opened as a team in 2024 (see the About timeline).
   body: "No vanity metrics. Just what happens when one team owns your whole online presence.",
   cta: { label: "See the work behind the numbers", href: "/work" },
   // Small labels inside the tile graphics
   graphics: {
     ring: "9 in 10",
-    timelineStart: "[2017]",
+    timelineStart: "2017",
     timelineEnd: "Today",
     flowFrom: "Your project",
     // Where the 2% goes — same placeholder as the pricing charity card
@@ -22,7 +22,7 @@ export const results = {
   stats: [
     { value: "90%", label: "of clients stay with us", visual: "ring" },
     { value: "[800]+", label: "websites launched", visual: "grid" },
-    { value: "Since [2017]", label: "helping businesses grow", count: false, visual: "timeline" },
+    { value: "Since 2017", label: "helping businesses grow", count: false, visual: "timeline" },
     { value: "2%", label: "of every project goes to charity", visual: "heart" },
   ] as {
     value: string;

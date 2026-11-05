@@ -5,11 +5,11 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { useLenis } from "lenis/react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, CalendarDays, ChevronDown, Expand, Palette, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, CalendarDays, ChevronDown, Expand, Palette, X } from "lucide-react";
 import { site } from "@/content/site";
 import { portfolio, type PortfolioItem } from "@/content/portfolio";
 import { designPortfolio } from "@/content/design-portfolio";
-import { isPlaceholder } from "@/lib/copy";
+import { Copy, isPlaceholder } from "@/lib/copy";
 import { cn } from "@/lib/utils";
 
 const w = site.work;
@@ -20,38 +20,47 @@ const CATEGORIES = [...new Set(portfolio.map((p) => p.category).filter((c) => !i
 type Tab = "websites" | "design";
 const DESIGN_HASH = "graphic-design";
 
+/** Card data for projects with a case study. Newest first. Sent from the server, so no client details reach the browser. */
+export type StudyCards = Record<string, { headline: string; stat: { value: string; label: string } }>;
+
 /**
- * Work gallery: Websites / Graphic design switch, optional category chips, a
- * grid that shows `perPage` at a time with "Show more", and a lightbox
- * (native <dialog>) to see a site large. /work#<slug> opens that project.
+ * Work gallery: Websites / Graphic design switch, category chips, and a grid
+ * that shows `perPage` at a time with "Show more". Hidden cards stay in the HTML
+ * (display: none), so search engines still see every link. A card opens its case
+ * study; projects without one open a lightbox (native <dialog>, /work#<slug>).
  */
-export function WorkGallery() {
+export function WorkGallery({ studies }: { studies: StudyCards }) {
   const [tab, setTab] = useState<Tab>("websites");
   const [cat, setCat] = useState<string>(w.allLabel);
   const [shown, setShown] = useState(w.perPage);
   const [open, setOpen] = useState<PortfolioItem | null>(null);
   const reduce = useReducedMotion();
 
-  const list = useMemo(() => (cat === w.allLabel ? portfolio : portfolio.filter((p) => p.category === cat)), [cat]);
-  const visible = list.slice(0, shown);
+  // Case studies first, newest first (the order of `studies`)
+  const ordered = useMemo(() => {
+    const keys = Object.keys(studies);
+    const rank = (slug: string) => (keys.includes(slug) ? keys.indexOf(slug) : keys.length);
+    return [...portfolio].sort((a, b) => rank(a.slug) - rank(b.slug));
+  }, [studies]);
+  const list = useMemo(() => (cat === w.allLabel ? ordered : ordered.filter((p) => p.category === cat)), [cat, ordered]);
 
-  // /work#chiropractor-website-design → make sure it's shown, then open it.
+  // /work#<slug> → make sure a project without a case study is shown, then open it.
   // /work#graphic-design → Graphic design tab (header menu, Graphic Design page)
   useEffect(() => {
     const openFromHash = () => {
       const slug = decodeURIComponent(window.location.hash.slice(1));
       if (slug === DESIGN_HASH) return setTab("design");
-      const i = portfolio.findIndex((p) => p.slug === slug);
+      const i = ordered.findIndex((p) => p.slug === slug && !p.hasStudy);
       if (i < 0) return;
       setTab("websites");
       setCat(w.allLabel);
       setShown((n) => Math.max(n, i + 1));
-      setOpen(portfolio[i]);
+      setOpen(ordered[i]);
     };
     openFromHash();
     window.addEventListener("hashchange", openFromHash);
     return () => window.removeEventListener("hashchange", openFromHash);
-  }, []);
+  }, [ordered]);
 
   return (
     <section id="gallery" aria-label={w.tabs.websites} className="container-site scroll-mt-20 pt-14 pb-16 sm:pt-20 sm:pb-20">
@@ -117,43 +126,15 @@ export function WorkGallery() {
 
       {tab === "websites" ? (
         <>
-          <ul className="mt-10 grid grid-cols-1 gap-x-5 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
-            {visible.map((p, i) => (
-              <motion.li
-                key={p.slug}
-                id={p.slug}
-                className="scroll-mt-28"
-                initial={reduce || i < w.perPage ? false : { opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              >
-                <button type="button" onClick={() => setOpen(p)} className="group block w-full rounded-[1.5rem] text-left outline-none focus-visible:ring-3 focus-visible:ring-ring/50">
-                  <span className="relative block overflow-hidden rounded-[1.25rem] border bg-surface-2 transition-[border-color] duration-500 group-hover:border-lime/60">
-                    <Image
-                      src={p.image}
-                      alt={`${p.label} website`}
-                      width={1170}
-                      height={630}
-                      sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
-                      className="aspect-[1170/630] h-auto w-full object-cover object-top transition-transform duration-[900ms] ease-out-expo group-hover:scale-[1.04]"
-                    />
-                    <span
-                      aria-hidden
-                      className="absolute right-3 bottom-3 inline-flex items-center gap-1.5 rounded-full bg-ink/85 px-3 py-1.5 text-xs font-semibold text-white opacity-0 backdrop-blur transition-[opacity,translate] duration-300 group-hover:opacity-100 sm:translate-y-1 sm:group-hover:translate-y-0"
-                    >
-                      <Expand className="size-3.5" />
-                      {w.viewLabel}
-                    </span>
-                  </span>
-                  <span className="mt-3.5 flex items-center justify-between gap-3 px-1">
-                    <span className="font-display text-lg font-bold tracking-[-0.02em]">{p.label}</span>
-                    {!isPlaceholder(p.category) && (
-                      <span className="shrink-0 rounded-full border px-2.5 py-0.5 text-xs font-semibold text-muted-foreground">{p.category}</span>
-                    )}
-                  </span>
-                </button>
-              </motion.li>
-            ))}
+          <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {ordered.map((p) => {
+              const i = list.indexOf(p);
+              return (
+                <li key={p.slug} id={p.slug} className={cn("scroll-mt-28", (i < 0 || i >= shown) && "hidden")}>
+                  <ProjectCard project={p} study={studies[p.slug]} onOpen={() => setOpen(p)} />
+                </li>
+              );
+            })}
           </ul>
 
           {shown < list.length && (
@@ -174,8 +155,66 @@ export function WorkGallery() {
         <DesignEmpty />
       )}
 
-      <Lightbox item={open} list={visible} onChange={setOpen} />
+      <Lightbox item={open} list={list.filter((p) => !p.hasStudy)} onChange={setOpen} />
     </section>
+  );
+}
+
+function ProjectCard({ project: p, study, onOpen }: { project: PortfolioItem; study?: StudyCards[string]; onOpen: () => void }) {
+  const cls =
+    "group flex h-full w-full flex-col overflow-hidden rounded-[1.5rem] border bg-surface text-left outline-none transition-[border-color,translate] duration-500 ease-out-expo hover:-translate-y-1 hover:border-lime/60 focus-visible:ring-3 focus-visible:ring-ring/50";
+  const image = (
+    <span className="block overflow-hidden bg-surface-2">
+      <Image
+        src={p.image}
+        alt={`${p.label} website design`}
+        width={1170}
+        height={630}
+        quality={90}
+        sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+        className="aspect-[1170/630] h-auto w-full object-cover object-top transition-transform duration-700 ease-out-expo group-hover:scale-[1.03]"
+      />
+    </span>
+  );
+  const meta = (
+    <span className="flex items-start justify-between gap-3 text-sm font-semibold text-muted-foreground">
+      {p.label}
+      <span className="shrink-0 rounded-full border px-2.5 py-0.5 text-xs">{p.category}</span>
+    </span>
+  );
+
+  if (!study) {
+    return (
+      <button type="button" onClick={onOpen} className={cls}>
+        {image}
+        <span className="flex flex-1 flex-col p-5 sm:p-6">
+          {meta}
+          <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-lime-strong dark:text-lime">
+            <Expand className="size-4" aria-hidden />
+            {w.viewLabel}
+          </span>
+        </span>
+      </button>
+    );
+  }
+  return (
+    <Link href={`/work/${p.slug}`} className={cls}>
+      {image}
+      <span className="flex flex-1 flex-col p-5 sm:p-6">
+        {meta}
+        <h2 className="mt-2 font-display text-xl leading-snug font-bold tracking-[-0.02em] text-balance">{study.headline}</h2>
+        <span className="mt-4 flex items-baseline gap-2">
+          <span className="font-display text-2xl font-bold tracking-[-0.03em] text-lime-strong dark:text-lime">
+            <Copy text={study.stat.value} />
+          </span>
+          <span className="text-sm text-muted-foreground">{study.stat.label}</span>
+        </span>
+        <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-lime-strong dark:text-lime">
+          {w.readMore}
+          <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
+        </span>
+      </span>
+    </Link>
   );
 }
 
@@ -299,15 +338,6 @@ function Lightbox({ item, list, onChange }: { item: PortfolioItem | null; list: 
               </button>
             </div>
             <div className="flex flex-wrap items-center gap-2">
-              {item.hasStudy && (
-                <Link
-                  href={`/case-studies/${item.slug}`}
-                  className="inline-flex h-11 items-center gap-2 rounded-full border border-white/20 px-5 text-sm font-semibold outline-none transition-colors hover:border-lime hover:text-lime focus-visible:ring-3 focus-visible:ring-lime/50"
-                >
-                  {l.study}
-                  <ArrowUpRight className="size-4" aria-hidden />
-                </Link>
-              )}
               <Link
                 href="/start-project?service=website-design"
                 className="inline-flex h-11 items-center gap-2 rounded-full bg-lime px-5 text-sm font-semibold text-ink outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-lime/50"

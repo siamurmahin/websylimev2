@@ -25,9 +25,15 @@ Market: **USA first, UK second.** Write in US English; mention UK where it matte
 
 | Slug | Main keyword | Related keywords (from autocomplete) | Links to |
 |---|---|---|---|
-| `/blog/missed-call-text-back` | missed call text back | missed call text back service / software / automation, answering service for small business, ai receptionist for small business, how to get more calls for my business | WebsyChat, website-not-getting-leads, Book a Call |
-| `/blog/how-to-get-more-google-reviews` | how to get more google reviews | …for my business, …from customers, how to ask for google reviews (from customers / via email / in person / template), google review link, google review qr code, what to say when asking for a google review | Growth, website-not-getting-leads |
-| `/blog/website-not-getting-leads` | website not getting leads | how to get more leads from your website, why is my website not converting, why is my website not getting traffic, when to redesign a website, website conversion rate | Website Design, WebsyChat, missed-call-text-back, google reviews post, Book a Call, Start Project |
+| `/blog/missed-call-text-back` | missed call text back | missed call text back service / software / automation, answering service for small business, ai receptionist for small business, how to get more calls for my business | WebsyChat, why-your-website-isnt-getting-leads, Book a Call |
+| `/blog/how-to-get-more-google-reviews` | how to get more google reviews | …for my business, …from customers, how to ask for google reviews (from customers / via email / in person / template), google review link, google review qr code, what to say when asking for a google review | Growth, why-your-website-isnt-getting-leads |
+| `/blog/why-your-website-isnt-getting-leads` | why your website isnt getting leads | how to get more leads from your website, why is my website not converting, why is my website not getting traffic, when to redesign a website, website conversion rate | Website Design, WebsyChat, missed-call-text-back, google reviews post, Book a Call, Start Project |
+
+## Carried over from the old site (same URLs, don't change them)
+
+These 10 URLs were live on www.websylime.com, so they may already have search history. Check them in Google Search Console after launch. Their keywords are in `content/blog/from-old-site.ts`.
+
+Not carried over (redirected in `next.config.ts`): the 2 Wix posts, the 4 agency posts and 9 tag pages.
 
 ## Next posts (ideas, all seen in US autocomplete)
 

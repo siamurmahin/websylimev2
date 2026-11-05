@@ -1,27 +1,8 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { site } from "@/content/site";
-import { CaseStudyGrid } from "@/components/case-studies/CaseStudyGrid";
-import { stories } from "@/components/case-studies/shared";
 
 const p = site.caseStudiesPage;
-
-/** /case-studies stories (#stories). Only the card fields reach the browser. */
-export function CaseStudyList() {
-  const cards = stories.map((s) => ({
-    slug: s.slug,
-    label: s.label,
-    category: s.project.category,
-    image: s.image,
-    headline: s.headline,
-    stat: s.stats[0],
-  }));
-  return (
-    <section id="stories" aria-label="Case studies" className="scroll-mt-16 py-14 sm:py-20">
-      <CaseStudyGrid stories={cards} allLabel={p.allLabel} moreLabel={p.moreLabel} readMore={p.readMore} />
-    </section>
-  );
-}
 
 /** "Want a story like this?" dark band with the two usual CTAs. */
 export function CaseStudyCta() {

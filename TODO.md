@@ -9,7 +9,7 @@ ratings, client counts, testimonials and stats must all be real.
 - [ ] **Hero headline** — currently "Websites that turn visitors into buyers." (very close to the Designfast template H1). Edit in `content/home/hero.ts`.
 - [ ] **Website Design packages** — names, prices, features for all 3.
 - [ ] **Charity** — which charity / cause receives the 2%.
-- [ ] **Company start year** — stats say "Since 2017", About timeline says started 2024. Pick one.
+- [x] **Company start year** — founder started solo in 2017; Websy Lime opened as a team in 2024.
 - [ ] **Template-sounding lines** — "Your scalable, dedicated design team", "Seamless collaboration", "Don't take our word for it" match Designfast section titles. Rewrite in our own voice.
 - [ ] **Video Editing** — show with "Coming Soon" badge (current) or hide (`hidden: true` in `header.nav → services → Video Editing`).
 
@@ -49,7 +49,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 ### Results
 - [x] Client retention: 90% (confirmed)
 - [ ] `[800]+` websites launched — confirm real count
-- [ ] Start year `Since [2017]` (see open decisions)
+- [x] Start year `Since 2017`
 - [ ] "Leads generated" stat removed until there is a tracked real number (e.g. from WebsyChat + form/call tracking). Add it back in `home.results.stats`.
 
 ### Collaboration
@@ -167,8 +167,9 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [ ] Hero photo is **AI-generated** (no faces) — swap for a real team/workspace photo later: `public/images/about-hero.webp`
 - [x] Story → timeline → values → team → 3 real client quotes → final CTA
 - [ ] **Founder story** paragraph `[Founder story …]`
-- [ ] **Timeline years** `[2024]` `[Year]` `[Year]` `[2026]` — and settle the start year (homepage Results says `Since [2017]`)
-- [ ] **Team:** real names, roles and photos (`public/team/…`, set `photo`) — or remove the section if you prefer not to show the team yet
+- [x] Timeline years confirmed by the owner: 2017, 2024, 2025, 2026
+- [x] **Team:** 8 names and roles from the old site's team page
+- [ ] **Team photos** later: `public/team/…`, set `photo` in `content/pages/about.ts` (initials show until then)
 
 ## Graphic Design page (`/services/graphic-design`, copy in `content/services/graphic-design.ts`)
 - [x] Photo hero → what we design (`#social` `#ads` `#branding` `#print`) → design work → 3 monthly plans `#plans` → how it works → "we post it too" Growth banner → design FAQ → final CTA
@@ -213,7 +214,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [ ] Hero photo + 3 cover photos are AI-generated (no faces) — swap for real photos later
 - [ ] Newsletter band (`#newsletter`) isn't saved anywhere yet — connect the same newsletter provider as the footer
 
-## Case Studies (`/case-studies`, stories at `/case-studies/[slug]`, copy in `content/pages/case-studies.ts`, stories in `content/case-studies.ts`)
+## Case Studies (merged into Work: list at `/work`, stories at `/work/[slug]`, copy in `content/pages/case-studies.ts`, stories in `content/case-studies.ts`)
 - [x] 45 case studies written from the "portfolio content" files. SEO targets the industry, never the client: no client names in text, titles, URLs, image file names or structured data; live-site links are nofollow; quotes show first name + initial. Private client list: `content/case-study-clients.md`
 - [ ] ⚠ **Replace every [bracketed] number with the client's real result before launch, and confirm the 14 "Growing after launch" stories (Growth plan, social, Google Ads) with each client.** They are realistic estimates, not client data (also on homepage Featured Work). The source files' numbers looked templated, and for at least 4 clients the file guessed the business type. Publishing unconfirmed numbers or testimonials is a legal risk (US FTC, UK CMA). If a client has no number, remove that stat
 - [ ] Confirm each quote with the client. One says "Sales nearly tripled" (sports nutrition), which doesn't fit the estimates

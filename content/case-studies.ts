@@ -1,5 +1,5 @@
 /**
- * Case studies (/case-studies and /case-studies/[slug]). Newest first.
+ * Case studies (/work/[slug]; the list is the Work page). Newest first.
  * `slug` matches a website in content/portfolio.ts (screenshot + group).
  *
  * SEO rule: we rank for the industry ("chiropractor website design"), never for

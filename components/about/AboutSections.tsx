@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Quote, UserRound } from "lucide-react";
+import { Quote } from "lucide-react";
 import { site } from "@/content/site";
 import { portfolio } from "@/content/portfolio";
 import { testimonials } from "@/content/testimonials";
@@ -7,7 +7,7 @@ import { icons } from "@/components/icons";
 import { FadeUp } from "@/components/motion/SplitReveal";
 import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import { Avatar, byline } from "@/components/sections/testimonials/shared";
-import { Copy, isPlaceholder } from "@/lib/copy";
+import { Copy } from "@/lib/copy";
 import { cn } from "@/lib/utils";
 
 const a = site.about;
@@ -91,7 +91,7 @@ export function AboutTimeline() {
             </h2>
           </div>
 
-          <ol className="relative mt-12 grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-5">
+          <ol className="relative mt-12 grid grid-cols-1 gap-8 lg:grid-cols-6 lg:gap-5">
             {/* the line: vertical on phones/tablets, horizontal on desktop */}
             <span aria-hidden className="absolute top-2 bottom-2 left-[7px] w-px bg-white/15 lg:top-[7px] lg:right-0 lg:bottom-auto lg:left-0 lg:h-px lg:w-auto" />
             {t.items.map((it, i) => {
@@ -151,9 +151,26 @@ export function AboutValues() {
   );
 }
 
-/** Team cards. Photo null → a neutral icon (initials once the real name is in). */
+/** A member's photo, or their initials until one is added. */
+function TeamMark({ name, photo, className, textClass }: { name: string; photo: string | null; className: string; textClass: string }) {
+  const words = name.split(/\s+/);
+  const initials = (words[0][0] + words[words.length - 1][0]).toUpperCase();
+  return (
+    <span aria-hidden={!photo} className={cn("relative grid shrink-0 place-items-center overflow-hidden", className)}>
+      {photo ? (
+        <Image src={photo} alt={name} fill sizes="96px" quality={90} className="object-cover" />
+      ) : (
+        <span className={cn("font-display font-bold tracking-[-0.03em]", textClass)}>{initials}</span>
+      )}
+    </span>
+  );
+}
+
+/** Team: founders on two large dark cards, everyone else on a grid. Works with or without photos. */
 export function AboutTeam() {
   const t = a.team;
+  const founders = t.members.filter((m) => m.founder);
+  const others = t.members.filter((m) => !m.founder);
   return (
     <section aria-labelledby="ab-team-title" className="py-14 sm:py-20">
       <StaggerReveal className="container-site">
@@ -162,37 +179,40 @@ export function AboutTeam() {
           <h2 id="ab-team-title" className={h2}>
             {t.headline}
           </h2>
+          <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{t.subheadline}</p>
         </div>
-        <ul className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4">
-          {t.members.map((m, i) => {
-            const initials = isPlaceholder(m.name)
-              ? null
-              : m.name
-                  .split(/\s+/)
-                  .slice(0, 2)
-                  .map((w) => w[0])
-                  .join("")
-                  .toUpperCase();
-            return (
-              <li key={i} data-reveal className="rounded-[1.5rem] border bg-surface p-4 sm:p-5">
-                <div className="relative grid aspect-[4/5] place-items-center overflow-hidden rounded-[1.1rem] bg-[radial-gradient(80%_80%_at_30%_20%,var(--lime-soft),transparent_70%),var(--surface-2)]">
-                  {m.photo ? (
-                    <Image src={m.photo} alt={m.name} fill sizes="(min-width: 1024px) 280px, 45vw" quality={90} className="object-cover" />
-                  ) : initials ? (
-                    <span className="font-display text-4xl font-bold text-lime-strong dark:text-lime">{initials}</span>
-                  ) : (
-                    <UserRound className="size-12 text-muted-foreground/40" aria-hidden />
-                  )}
-                </div>
-                <p className="mt-4 font-display text-lg font-bold tracking-[-0.02em]">
-                  <Copy text={m.name} />
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  <Copy text={m.role} />
-                </p>
-              </li>
-            );
-          })}
+
+        <ul className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {founders.map((m) => (
+            <li key={m.name} data-reveal className="flex items-center gap-5 rounded-[1.5rem] bg-ink p-6 text-white sm:gap-6 sm:p-8 dark:border dark:border-white/10 dark:bg-surface">
+              <TeamMark name={m.name} photo={m.photo} className="size-20 rounded-2xl bg-lime sm:size-24" textClass="text-3xl text-ink sm:text-4xl" />
+              <div className="min-w-0">
+                <p className="font-display text-xl font-bold tracking-[-0.02em] sm:text-2xl">{m.name}</p>
+                <p className="mt-1 text-[15px] text-white/65">{m.role}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+
+        <ul className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {others.map((m) => (
+            <li
+              key={m.name}
+              data-reveal
+              className="group flex items-center gap-4 rounded-[1.5rem] border bg-surface p-5 transition-[border-color,translate] duration-500 ease-out-expo hover:-translate-y-1 hover:border-lime/60"
+            >
+              <TeamMark
+                name={m.name}
+                photo={m.photo}
+                className="size-14 rounded-xl bg-lime-soft transition-colors duration-300 group-hover:bg-lime"
+                textClass="text-lg text-lime-strong transition-colors duration-300 group-hover:text-ink dark:text-lime"
+              />
+              <div className="min-w-0">
+                <p className="font-display text-lg leading-snug font-bold tracking-[-0.02em]">{m.name}</p>
+                <p className="text-sm text-muted-foreground">{m.role}</p>
+              </div>
+            </li>
+          ))}
         </ul>
       </StaggerReveal>
     </section>

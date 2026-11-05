@@ -14,7 +14,6 @@ const PAGES: { path: string; priority: number; changeFrequency: MetadataRoute.Si
   { path: "/products/websychat", priority: 0.8, changeFrequency: "monthly" },
   { path: "/faq", priority: 0.6, changeFrequency: "monthly" },
   { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
-  { path: "/case-studies", priority: 0.8, changeFrequency: "monthly" },
   { path: "/careers", priority: 0.4, changeFrequency: "monthly" },
   { path: "/privacy", priority: 0.2, changeFrequency: "yearly" },
   { path: "/terms", priority: 0.2, changeFrequency: "yearly" },
@@ -34,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   // every case study
   const studies: MetadataRoute.Sitemap = caseStudies.map((c) => ({
-    url: new URL(`/case-studies/${c.slug}`, site.meta.url).toString(),
+    url: new URL(`/work/${c.slug}`, site.meta.url).toString(),
     changeFrequency: "yearly",
     priority: 0.6,
   }));

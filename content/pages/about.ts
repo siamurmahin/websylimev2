@@ -32,20 +32,21 @@ export const about = {
     eyebrow: "Our story",
     headline: "Why we started.",
     paragraphs: [
+      "It started in 2017 with one person: Siamur Rahman Mahin, building websites solo. In 2024, Websy Lime opened as a team.",
       "Most small business owners we met were juggling a web designer, a social media freelancer and someone for ads — and still not getting calls.",
       "So we built the team we wished they had: one place for your website, your social presence and your growth, with one point of contact and plain-English updates.",
-      "[Founder story — a few lines about who started Websy Lime and why.]",
     ],
   },
 
   timeline: {
     eyebrow: "Our story so far",
-    headline: "From first site to Websy Lime v2.",
+    headline: "From one person to Websy Lime v2.",
     items: [
-      { year: "[2024]", title: "The first websites", body: "We start building websites for local businesses." },
-      { year: "[Year]", title: "More clients, more services", body: "Social media, Google and growth plans join the websites." },
-      { year: "[Year]", title: "WebsyChat launches", body: "Our AI assistant that answers visitors and captures leads 24/7." },
-      { year: "[2026]", title: "Websy Lime LLC", body: "We register in the US to serve American clients better." },
+      { year: "2017", title: "It starts with one person", body: "Founder Siamur Rahman Mahin starts building websites solo." },
+      { year: "2024", title: "Websy Lime opens", body: "Websy Lime opens and starts working as a team." },
+      { year: "2025", title: "More clients, more services", body: "Social media, Google and growth plans join the websites." },
+      { year: "2026", title: "WebsyChat launches", body: "Our AI assistant that answers visitors and captures leads 24/7." },
+      { year: "2026", title: "Websy Lime LLC", body: "We register in the US to serve American clients better." },
       { year: "Today", title: "Websy Lime v2", body: "A new site, clearer plans and the same promise: one team, one invoice." },
     ],
   },
@@ -64,12 +65,17 @@ export const about = {
   team: {
     eyebrow: "The team",
     headline: "The people behind your project.",
-    // Add real names, roles and photos (public/team/…). Photo null → initials.
+    subheadline: "One team that designs, builds and markets in-house, so nothing gets handed off to a stranger.",
+    // Founders get the large cards. Add a photo later (public/team/…): null → initials.
     members: [
-      { name: "[Founder name]", role: "[Founder & CEO]", photo: null as string | null },
-      { name: "[Team member]", role: "[Lead designer]", photo: null as string | null },
-      { name: "[Team member]", role: "[Growth & marketing]", photo: null as string | null },
-      { name: "[Team member]", role: "[Project manager]", photo: null as string | null },
+      { name: "Siamur Rahman Mahin", role: "Founder & Web Developer", founder: true, photo: null as string | null },
+      { name: "Md Anisur Rahman", role: "Co-Founder & Audit Manager", founder: true, photo: null as string | null },
+      { name: "Taizul Islam Taz", role: "Web Designer", founder: false, photo: null as string | null },
+      { name: "Siamur Rahman Muhin", role: "Web Analyst", founder: false, photo: null as string | null },
+      { name: "Tawhidul Islam Rifat", role: "Graphic Designer", founder: false, photo: null as string | null },
+      { name: "Rafil Hossain", role: "Video Editor & Lead Expert", founder: false, photo: null as string | null },
+      { name: "Nafiul Islam", role: "Web Designer", founder: false, photo: null as string | null },
+      { name: "Fardin Islam", role: "Digital Marketer", founder: false, photo: null as string | null },
     ],
   },
 

@@ -1,7 +1,7 @@
 // Shared across the site → meta.
 // Edit the text below. [Square brackets] = placeholder still to fill in (see TODO.md).
 export const meta = {
-  url: "https://websylime.com", // [confirm production domain]
+  url: "https://www.websylime.com",
   title: "Websy Lime — Websites that turn visitors into buyers",
   description:
     "Your website, social presence and growth — handled by one dedicated team. You run the business. We handle everything online.",

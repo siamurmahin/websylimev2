@@ -12,7 +12,7 @@ export const header = {
     note: "30-min chat · no pressure",
     href: "/book-a-call",
     // Founder photo makes it personal; null shows a calendar icon
-    avatar: { src: null as string | null, alt: "[Founder name]" },
+    avatar: { src: null as string | null, alt: "Siamur Rahman Mahin" },
   },
   skipLink: "Skip to content",
   openMenu: "Open menu",
@@ -119,7 +119,7 @@ export const header = {
         // A case study from content/case-studies.ts
         title: "A website for a home renovation contractor",
         description: "How a photo-led website helped a high-end contractor show its craft.",
-        href: "/case-studies/home-renovation-contractor-website-design",
+        href: "/work/home-renovation-contractor-website-design",
         cta: "Read the case study",
         image: "/work/home-renovation-contractor-website-design.webp",
         imageAlt: "Home renovation contractor website",
@@ -148,7 +148,7 @@ export const header = {
       label: "Company",
       links: [
         { label: "About Us", href: "/about", description: "Who we are and how we work." },
-        { label: "Our Story", href: "/about#story", description: "From 2024 to Websy Lime v2." },
+        { label: "Our Story", href: "/about#story", description: "From 2017 to Websy Lime v2." },
         { label: "Careers", href: "/careers", description: "Join the team." },
         { label: "Contact", href: "/contact", description: "Say hello. We reply fast." },
       ],
@@ -159,7 +159,6 @@ export const header = {
       label: "Resources",
       links: [
         { label: "Blog", href: "/blog", description: "Plain-English tips to grow online." },
-        { label: "Case Studies", href: "/case-studies", description: "Real results for real businesses." },
         { label: "FAQ", href: "/faq", description: "Quick answers to common questions." },
       ],
     },
