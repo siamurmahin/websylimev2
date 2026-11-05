@@ -150,7 +150,7 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* ---------- header + cover ---------- */}
-      <header className="pt-header">
+      <header className="pt-page-top">
         <div className="container-site pt-8 sm:pt-12">
           <FadeUp className="mx-auto max-w-3xl">
             <Link

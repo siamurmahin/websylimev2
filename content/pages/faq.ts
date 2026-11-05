@@ -26,7 +26,7 @@ export const faqPage = {
     label: "Search questions",
     placeholder: "Search, e.g. hosting or cancel",
     all: "All",
-    empty: { title: "No answers for that yet.", body: "Ask us and we'll reply within [1 business day].", cta: { label: "Ask a question", href: "/contact" } },
+    empty: { title: "No answers for that yet.", body: "Ask us and we'll reply within 1 business day.", cta: { label: "Ask a question", href: "/contact" } },
   },
   topicsTitle: "Topics",
 

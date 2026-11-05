@@ -208,7 +208,8 @@ export const legal = {
             type: "ul",
             items: [
               "Quotes are valid for [30 days].",
-              "Website projects: [50%] deposit to start, the rest before launch. [Confirm.]",
+              "Website projects: 50% deposit to start, the rest before launch.",
+              "All-in-One Growth plans: pay the full month up front, or in two payments, the first on day one and the rest 15 days later.",
               "Monthly plans are billed in advance each month and renew automatically.",
               "Invoices are due within [7 days]. We may pause work on overdue accounts.",
               "Prices are in USD and don't include any taxes that apply.",
@@ -220,7 +221,7 @@ export const legal = {
         id: "cancellation",
         title: "Monthly plans and cancelling",
         body: [
-          { type: "p", text: "You can cancel a monthly plan anytime with [30 days'] notice by emailing us. There's no long-term contract [— confirm any minimum term]. We don't refund months that have already started. Unused work (like designs or posts) doesn't roll over to the next month unless your plan says it does." },
+          { type: "p", text: "You can cancel a monthly plan anytime with [30 days'] notice by emailing us. There's no long-term contract [— confirm any minimum term]. We don't refund months that have already started. Graphic Design plans can be cancelled anytime, at least 7 days before the next billing date. Unused work (like designs or posts) doesn't roll over to the next month unless your plan says it does." },
         ],
       },
       {
@@ -266,7 +267,7 @@ export const legal = {
         id: "hosting",
         title: "Hosting",
         body: [
-          { type: "p", text: "Website packages include hosting and SSL for [the first 12 months — confirm]. After that, hosting renews at [price — confirm] unless you move your site elsewhere — we'll help you move it if you want to. We aim for reliable uptime but can't guarantee the site will never go down." },
+          { type: "p", text: "Website packages include hosting and SSL for the first 12 months. We don't sell hosting on its own. After that, hosting renews at [price — confirm] unless you move your site elsewhere — we'll help you move it if you want to. We aim for reliable uptime but can't guarantee the site will never go down." },
         ],
       },
       {

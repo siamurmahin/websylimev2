@@ -53,7 +53,7 @@ export default async function CaseStudyPage(props: PageProps<"/work/[slug]">) {
     ...(s.location ? [{ label: t.facts.location, value: s.location }] : []),
     { label: t.facts.services, value: s.services.join(", ") },
     { label: t.facts.launched, value: s.launched },
-    ...(s.growth ? [{ label: t.facts.plan, value: `[${s.growth.plan}]` }] : []),
+    ...(s.growth ? [{ label: t.facts.plan, value: s.growth.plan }] : []),
   ];
   const url = new URL(`/work/${s.slug}`, site.meta.url).toString();
 
@@ -84,7 +84,7 @@ export default async function CaseStudyPage(props: PageProps<"/work/[slug]">) {
         }}
       />
       {/* ---------- header + screenshot ---------- */}
-      <header className="pt-header">
+      <header className="pt-page-top">
         <div className="container-site pt-8 sm:pt-12">
           <FadeUp className="mx-auto max-w-3xl text-center">
             <Link

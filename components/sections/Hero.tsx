@@ -14,7 +14,7 @@ export function Hero() {
   const { socialProof } = hero;
 
   return (
-    <section id="hero" aria-label="Introduction" className="relative isolate overflow-hidden pt-header">
+    <section id="hero" aria-label="Introduction" className="relative isolate overflow-hidden pt-page-top">
       {/* ---------- background ---------- */}
       <div
         aria-hidden

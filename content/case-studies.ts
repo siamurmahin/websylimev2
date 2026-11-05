@@ -8,9 +8,10 @@
  * The slug → client list is in content/case-study-clients.md (not published).
  *
  * Everything in [brackets] is a realistic ESTIMATE, not client data, including the
- * growth stories. It shows in
- * orange until replaced with the client's real number (see TODO.md). Don't remove
- * the brackets without a confirmed number. Quotes need confirming too.
+ * growth stories. The owner chose to show these without the orange mark for now, so
+ * `caseStudies` below strips the brackets before anything renders. Keep them here:
+ * they're the record of which numbers still need confirming with the client. When a
+ * number is confirmed, replace it and drop its brackets. See TODO.md.
  */
 
 export type CaseStudy = {
@@ -39,7 +40,7 @@ export type CaseStudy = {
   liveUrl: string;
 };
 
-export const caseStudies: CaseStudy[] = [
+const drafts: CaseStudy[] = [
   {
     slug: "driving-school-website-design",
     label: "Driving school",
@@ -775,3 +776,15 @@ export const caseStudies: CaseStudy[] = [
     liveUrl: "https://www.machadoadvisorypartners.co.uk/",
   },
 ];
+
+/** Removes the [estimate] brackets from every string in a study. */
+function unmark<T>(value: T): T {
+  if (typeof value === "string") return value.replace(/\[([^\]]+)\]/g, "$1") as T;
+  if (Array.isArray(value)) return value.map(unmark) as T;
+  if (value && typeof value === "object") {
+    return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, unmark(v)])) as T;
+  }
+  return value;
+}
+
+export const caseStudies: CaseStudy[] = drafts.map(unmark);

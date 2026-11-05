@@ -8,6 +8,7 @@ import { ArrowRight, ChevronDown, Menu } from "lucide-react";
 import { site, type NavItem } from "@/content/site";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/layout/Logo";
+import { PromoBar } from "@/components/layout/PromoBar";
 import { DropdownPanel, MegaPanel, PANEL_WIDTH, ProductsPanel } from "@/components/layout/MegaMenu";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
@@ -196,6 +197,8 @@ export function Header() {
             />
           )}
         </AnimatePresence>
+
+        <PromoBar collapsed={scrolled} />
 
         <div className="container-site">
           <div

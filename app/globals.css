@@ -61,6 +61,8 @@
   --container-site: 80rem;
   --spacing-header: 4.5rem;
   --spacing-header-compact: 3.75rem;
+  /* Top of the page: header height + the promo bar */
+  --spacing-page-top: calc(4.5rem + var(--promo-h));
 
   /* Motion */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -195,6 +197,16 @@
   --border: rgb(255 255 255 / 0.08);
   --input: rgb(255 255 255 / 0.12);
   --ring: var(--lime);
+}
+
+:root {
+  --promo-h: 2.5rem;
+}
+html[data-promo="off"] {
+  --promo-h: 0rem;
+}
+html[data-promo="off"] .promo-bar {
+  display: none;
 }
 
 @layer base {

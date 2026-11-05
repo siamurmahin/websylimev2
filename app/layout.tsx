@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { BottomBlur } from "@/components/layout/BottomBlur";
 import { BookCallFloat } from "@/components/layout/BookCallFloat";
 import { themeScript } from "@/lib/theme";
+import { promoScript } from "@/lib/promo";
 import { InlineScript } from "@/components/InlineScript";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteSchema } from "@/lib/schema";
@@ -80,6 +81,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <head>
         <InlineScript html={themeScript} />
+        <InlineScript html={promoScript} />
       </head>
       <body className="min-h-dvh">
         <JsonLd data={siteSchema()} />

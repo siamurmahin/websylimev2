@@ -13,8 +13,8 @@ export const results = {
     timelineStart: "2017",
     timelineEnd: "Today",
     flowFrom: "Your project",
-    // Where the 2% goes — same placeholder as the pricing charity card
-    flowTo: "[Charity / cause name]",
+    // Where the 2% goes
+    flowTo: "Children in need",
   },
   // `visual` picks the mini graphic on each tile (components/sections/Results.tsx).
   // "Leads generated" was replaced: it needs a tracked real number. Add it back

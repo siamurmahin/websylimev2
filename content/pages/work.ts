@@ -30,7 +30,7 @@ export const work = {
 
   designEmpty: {
     title: "Graphic design portfolio coming soon",
-    body: "Social posts, ads and branding work will live here. Want to see examples now? Ask us on a call.",
+    body: "We'll upload our social posts, ads and branding work here soon. Want to see examples now? Ask us on a call.",
     cta: { label: "Book a free call", href: "/book-a-call" },
   },
 

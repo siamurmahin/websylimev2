@@ -27,7 +27,7 @@ export function PhotoHero({ data: h }: { data: PhotoHeroData }) {
   const PrimaryIcon = h.primaryCta.href.startsWith("#") ? ArrowDown : ArrowRight;
 
   return (
-    <section aria-label={h.headline} className="pt-header">
+    <section aria-label={h.headline} className="pt-page-top">
       <div className="container-site pt-4 sm:pt-6">
         <div className="relative isolate overflow-hidden rounded-[2rem] bg-ink sm:rounded-[2.5rem]">
           <Image

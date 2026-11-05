@@ -3,7 +3,7 @@
 import type { IconKey } from "@/content/types";
 export const process = {
   eyebrow: "How it works",
-  headline: "From idea to impact in [2] weeks.",
+  headline: "From idea to impact in 2 weeks.",
   cta: { label: "Start step 1", href: "/start-project" },
   // `gets` = what you walk away with at each step
   steps: [

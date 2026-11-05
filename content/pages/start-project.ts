@@ -17,7 +17,7 @@ export const startProject = {
     subheadline: "Tell us what you need in three quick steps. A real person replies — no sales script, no pressure.",
     primaryCta: { label: "Start now", href: "#project-form" },
     secondaryCta: { label: "Book a free call", href: "/book-a-call" },
-    points: ["About a minute", "No login needed", "Reply within [1] business day"],
+    points: ["About a minute", "No login needed", "Usually reply within 12 hours"],
     // Illustrative photo (AI-generated) — not our actual team. Swap for a real team photo later.
     image: { src: "/images/start-project-hero.webp", alt: "A small team working together around a laptop in a bright office" },
   },
@@ -28,7 +28,7 @@ export const startProject = {
   next: {
     title: "What happens next",
     steps: [
-      { title: "We reply", body: "Within [1] business day, from a real person." },
+      { title: "We reply", body: "Usually within 12 hours, always within 1 business day, from a real person." },
       { title: "A free call", body: "A quick chat about your business and goals." },
       { title: "A clear plan", body: "What we'll build, the price and the timeline." },
     ],
@@ -68,9 +68,9 @@ export const startProject = {
           ],
           // ids match content/services/graphic-design.ts plans
           "graphic-design": [
-            { id: "design-starter", label: "[Starter]", body: "[8] designs / month" },
-            { id: "design-pro", label: "[Pro]", body: "[16] designs / month" },
-            { id: "design-brand", label: "[Brand]", body: "[30] designs / month" },
+            { id: "design-starter", label: "Essentials", body: "8 designs / month" },
+            { id: "design-pro", label: "Pro", body: "16 designs / month" },
+            { id: "design-brand", label: "Studio", body: "30 designs / month" },
             { id: "one-off", label: "One-off design", body: "A logo, flyer or single project." },
           ],
         },
@@ -103,7 +103,7 @@ export const startProject = {
     },
     success: {
       title: "Thanks, {name} — we've got it.",
-      body: "We'll reply within [1] business day. Want to talk sooner?",
+      body: "We usually reply within 12 hours, and always within 1 business day. Want to talk sooner?",
       cta: "Book a free call",
       home: "Back to home",
     },

@@ -27,7 +27,7 @@ export const careers = {
     subheadline: "We're a small team that builds websites and helps local businesses grow online. If you care about doing good work and explaining it simply, we'd like to meet you.",
     primaryCta: { label: "See open roles", href: "#roles" },
     secondaryCta: { label: "Send us your work", href: "#apply" },
-    points: ["[Remote-first]", "Small, friendly team", "Real clients from day one"],
+    points: ["Remote-first", "Small, friendly team", "Real clients from day one"],
     // Illustrative photo (AI-generated, no faces — not our real office). Swap for a real photo later.
     image: { src: "/images/careers-hero.webp", alt: "A bright studio desk with laptops, a monitor, headphones and coffee" },
   },
@@ -48,7 +48,7 @@ export const careers = {
   perks: {
     eyebrow: "What you get",
     headline: "The basics, done right.",
-    items: ["[Work from anywhere]", "[Flexible hours]", "[Paid time off]", "[Learning budget]", "[Latest tools and software]", "[2% of revenue goes to charity]"],
+    items: ["Work from anywhere", "[Flexible hours]", "[Paid time off]", "[Learning budget]", "[Latest tools and software]", "2% of every project goes to charity"],
   },
 
   // Section 4 — open roles. Add a role by copying the example below into `items`.
@@ -84,6 +84,6 @@ export const careers = {
     areas: ["Web design", "Development", "Marketing & SEO", "Graphic design", "Video", "Something else"],
     submit: "Send application",
     note: "We'll only use your details to reply to you about working with us.",
-    success: { title: "Thanks, {name}!", body: "We've got your application. If it's a fit, we'll be in touch within [2 weeks].", again: "Send another" },
+    success: { title: "Thanks, {name}!", body: "We've got your application. If it's a fit, we'll be in touch within 2 weeks.", again: "Send another" },
   },
 };

@@ -14,6 +14,7 @@ const PAGES: { path: string; priority: number; changeFrequency: MetadataRoute.Si
   { path: "/services/video-editing", priority: 0.5, changeFrequency: "monthly" },
   { path: "/products/websychat", priority: 0.8, changeFrequency: "monthly" },
   { path: "/industries", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/free-website-design", priority: 0.8, changeFrequency: "monthly" },
   { path: "/faq", priority: 0.6, changeFrequency: "monthly" },
   { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
   { path: "/careers", priority: 0.4, changeFrequency: "monthly" },

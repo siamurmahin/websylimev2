@@ -19,7 +19,7 @@ export const websiteDesign = {
     subheadline: "Fast, mobile-first websites that turn local visitors into calls, bookings and quote requests. Hosting included.",
     primaryCta: { label: "Let's Build Yours", href: "/start-project?service=website-design" },
     secondaryCta: { label: "See packages", href: "#packages" },
-    points: ["Hosting included", "From $[X]", "Live in about [2] weeks"],
+    points: ["Hosting included", "From $799", "Live in about 2 weeks"],
     // Illustrative photo (AI-generated, no people) — swap for a real client photo later.
     image: { src: "/images/website-design-hero.webp", alt: "A small business counter with a tablet and phone showing a modern website" },
   },
@@ -72,11 +72,11 @@ export const websiteDesign = {
     eyebrow: "Every website includes",
     headline: "No surprises. Just a site that works.",
     items: [
-      { title: "Hosting + SSL included", body: "For [the first 12 months — confirm terms]. No separate hosting bill." },
+      { title: "Hosting + SSL included", body: "For the first 12 months. No separate hosting bill." },
       { title: "Speed & security updates", body: "We keep WordPress and plugins up to date while we host it." },
       { title: "You own your website", body: "Your site, your content, your domain." },
       { title: "Clear price, clear timeline", body: "You know the cost and the launch date before we start." },
-      { title: "Revisions included", body: "[1–2] rounds of changes, depending on the package." },
+      { title: "Revisions included", body: "1–2 rounds of changes, depending on the package." },
       { title: "Nothing goes live without your OK", body: "You review everything before launch." },
     ],
   },

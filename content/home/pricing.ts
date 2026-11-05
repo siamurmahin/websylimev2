@@ -58,16 +58,15 @@ export const pricing = {
   charity: {
     eyebrow: "Our promise",
     title: "Every project gives back.",
-    body: "2% of everything we earn goes to charity. When you grow with us, you help someone else grow too.",
-    partner: "[Charity / cause name]",
+    body: "2% of what you pay goes to orphaned children and people without a home. It's given in your name, because your project is what pays for it.",
+    partner: "Orphaned children and people without a home",
     partnerLabel: "Supporting",
     flowFrom: "Your plan",
     steps: [
       { title: "You grow", body: "You pick a plan and we get to work." },
-      { title: "2% is set aside", body: "From every payment, automatically." },
-      { title: "It goes to good", body: "Donated to [Charity / cause name]." },
+      { title: "2% is set aside", body: "From every payment. You don't pay anything extra." },
+      { title: "It goes out in your name", body: "School costs, meals, and warm clothes for winter." },
     ],
-    // Plan suggests a yearly public update for credibility — confirm before launch
-    report: "[We share a yearly giving update]",
+    report: "We keep it small and direct",
   },
 };

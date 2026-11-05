@@ -23,7 +23,7 @@ The detailed item-by-item list lives in `TODO.md`. This file is the summary to w
 
 ## 🔴 1. Must do before launch (the site won't work properly without these)
 
-### 1a. Forms — none of the 6 forms send anywhere yet
+### 1a. Forms — none of the 7 forms send anywhere yet
 
 Every form validates and shows a "Thank you" message, but the details **aren't saved or sent anywhere**. You choose the tool; I'll connect it.
 
@@ -34,6 +34,7 @@ Every form validates and shows a "Thank you" message, but the details **aren't s
 | 3 | **Careers application** | `/careers#apply` | name, email, skills, portfolio link, message | hiring inbox |
 | 4 | **Footer newsletter** | bottom of **every page** | email | newsletter tool |
 | 5 | **Blog newsletter** | `/blog`, all 3 posts | email | the same newsletter tool |
+| 7 | **Free design application** | `/free-website-design#apply` | name, business, email, phone, website, about | your email |
 | 6 | **Video Editing waitlist** | `/services/video-editing#waitlist` | email, video types | newsletter tool (with a "video waitlist" tag) |
 
 **What you need to decide:**
@@ -50,8 +51,8 @@ None left. Cal.com, WebsyChat sign-up, email, phone, WhatsApp and social links a
 
 ### 1d. Prices (shown to customers)
 
-- [ ] **Website Design:** names `[Launch]` / `[Business]` / `[Store]` and prices `$[X]` (Website Design page + Pricing page + header menu)
-- [ ] **Graphic Design:** `[Starter]` / `[Pro]` / `[Brand]`, prices `$[X]` and design counts
+- [x] **Website Design:** Launchpad $799, Local Pro $1,999, Storefront $3,499
+- [x] **Graphic Design:** Essentials $299, Pro $549, Studio $899
 - [ ] Growth and WebsyChat plans already show real prices ✓
 
 ### 1e. Legal
@@ -73,14 +74,11 @@ There are **137 different placeholder texts** across the site. All of them show 
 | Page / area | What to fill in | File |
 |---|---|---|
 | **Trust bar** | 8 real client logos | `content/home/trust-bar.ts` |
-| **Charity (2%)** | `[Charity / cause name]`, yearly update line | `content/home/pricing.ts`, `results.ts`, `faq.ts` |
-| **Case studies (45)** | ⚠ confirm every result and quote, get each client's permission, decide on 5 on hold (see `TODO.md`) | `content/case-studies.ts` |
-| **Contact** | opening hours `[Mon–Fri, 9am–6pm ET]`, reply time `[1]` business day | `content/pages/contact.ts` |
+| **Case studies (45)** | ⚠ orange mark is off, numbers are still estimates: confirm every result and quote, get each client's permission, decide on 5 on hold (see `TODO.md`) | `content/case-studies.ts` |
 | **FAQ answers** | 13 "confirm…" answers (hosting, ownership, cancellation, WebsyChat…) | `content/home/faq.ts` |
 | **Website Design** | hosting `[the first 12 months]`, timeline | `content/services/website-design.ts` |
 | **Graphic Design** | delivery `[2–3]` days, revisions, notice period | `content/services/graphic-design.ts` |
-| **Video Editing** | launch date `[soon]`, early-access price | `content/services/video-editing.ts` |
-| **Careers** | which perks are true, reply time `[2 weeks]` | `content/pages/careers.ts` |
+| **Careers** | flexible hours, paid time off, learning budget, tools: confirm or remove | `content/pages/careers.ts` |
 | **Header menu card** | "Hallmark Contractors — `[headline result]`" | `content/shared/header.ts` |
 | **Blog** | read and edit the 3 posts, real publish dates | `content/blog/posts.ts` |
 
@@ -118,7 +116,6 @@ All are in `public/images/`. Replacements should be **≥2400px wide**, and on i
 
 - [ ] **Founder photo.** It appears on the "Book a free call" card everywhere, and on the About team section.
 - [ ] **Team photos** (About page, 8 people; initials show until then)
-- [ ] ⚠ **5 hero avatar photos:** confirm they're real clients with permission, or remove them (`content/home/hero.ts`)
 - [ ] **8 client logos** (homepage trust bar): transparent SVG/PNG
 - [ ] **Graphic design portfolio:** 0 items right now, so `/work#graphic-design` and the Graphic Design page show an empty state. Add your designs in `content/design-portfolio.ts`.
 - [ ] Optional: bigger (≥2400px) screenshots for the 3 case studies

@@ -11,11 +11,11 @@ export const featuredWork = {
   cursorLabel: "View",
   // {n} = projects in content/portfolio.ts not shown above (counted automatically)
   ctaCard: { title: "{n} more projects", body: "Contractors, home trades, clinics, law firms and more." },
-  // Pick 3–4 projects by slug from content/portfolio.ts (TODO.md: choose the best + add real results)
+  // Pick 3–4 projects by slug from content/portfolio.ts (results are estimates until confirmed, see TODO.md)
   items: [
-    { slug: "home-renovation-contractor-website-design", tags: ["Website Design", "Home services"], result: "[9] project inquiries a month" },
-    { slug: "heat-pump-company-website-design", tags: ["Website Design", "Home services"], result: "[30] service bookings a month" },
-    { slug: "flooring-company-website-design", tags: ["Website Design", "Home services"], result: "[20] quote requests a month" },
-    { slug: "grab-hire-company-website-design", tags: ["Website Design", "Construction"], result: "[70] quote requests a month" },
+    { slug: "home-renovation-contractor-website-design", tags: ["Website Design", "Home services"], result: "9 project inquiries a month" },
+    { slug: "heat-pump-company-website-design", tags: ["Website Design", "Home services"], result: "30 service bookings a month" },
+    { slug: "flooring-company-website-design", tags: ["Website Design", "Home services"], result: "20 quote requests a month" },
+    { slug: "grab-hire-company-website-design", tags: ["Website Design", "Construction"], result: "70 quote requests a month" },
   ],
 };

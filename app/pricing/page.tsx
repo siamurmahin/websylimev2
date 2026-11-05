@@ -27,7 +27,7 @@ export default function PricingPage() {
   return (
     <main id="main" className="relative isolate overflow-hidden">
       {/* hero: grid + glow, plans start just below */}
-      <section aria-label={h.headline} className="relative pt-header">
+      <section aria-label={h.headline} className="relative pt-page-top">
         <div
           aria-hidden
           className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] [mask-image:radial-gradient(60%_60%_at_50%_30%,black,transparent_75%)] bg-[size:56px_56px] opacity-70"

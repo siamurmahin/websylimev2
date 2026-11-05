@@ -20,6 +20,7 @@ export const footer = {
         { label: "Graphic Design", href: "/services/graphic-design" },
         { label: "Video Editing", href: "/services/video-editing", badge: "Soon" },
         { label: "For Home Services", href: "/industries" },
+        { label: "Free Website Design", href: "/free-website-design" },
         { label: "Pricing", href: "/pricing" },
       ],
     },

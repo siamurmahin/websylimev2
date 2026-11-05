@@ -17,7 +17,7 @@ export const videoEditing = {
     subheadline: "Short-form edits, ads and promo videos for your business. We're getting ready — join the waitlist to hear first.",
     primaryCta: { label: "Join the waitlist", href: "#waitlist" },
     secondaryCta: { label: "Book a free call", href: "/book-a-call" },
-    points: ["Launching [soon]", "Early access for the waitlist", "No spam — one email when we launch"],
+    points: ["Launching soon", "Early access for the waitlist", "No spam — one email when we launch"],
     // Illustrative photo (AI-generated, no faces) — swap for a real photo later.
     image: { src: "/images/video-editing-hero.webp", alt: "Hands editing a video timeline on a monitor, with a phone showing a vertical video" },
   },
@@ -39,7 +39,7 @@ export const videoEditing = {
     eyebrow: "Waitlist",
     headline: "Be first in line.",
     subheadline: "Leave your email and we'll tell you the moment Video Editing launches — with early-access pricing for the waitlist.",
-    perks: ["Early-access pricing [— confirm]", "First pick of start dates", "One email when we launch, nothing else"],
+    perks: ["First pick of start dates", "One email when we launch, nothing else"],
     form: {
       email: { label: "Email", placeholder: "you@business.com", error: "Please enter a valid email." },
       typesTitle: "What would you like? (optional)",

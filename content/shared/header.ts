@@ -30,19 +30,19 @@ export const header = {
           href: "/services/website-design",
           links: [
             {
-              label: "[Launch]",
+              label: "Launchpad",
               href: "/services/website-design#landing",
-              description: "One page, one offer. Great for coaches.",
+              description: "A one-page website for one offer or a simple start.",
               icon: "layout",
             },
             {
-              label: "[Business]",
+              label: "Local Pro",
               href: "/services/website-design#business",
               description: "A full website for home service and local businesses.",
               icon: "rocket",
             },
             {
-              label: "[Store]",
+              label: "Storefront",
               href: "/services/website-design#store",
               description: "An online store to sell your products.",
               icon: "shoppingBag",
@@ -159,6 +159,7 @@ export const header = {
       label: "Resources",
       links: [
         { label: "For Home Services", href: "/industries", description: "Plumbers, electricians, HVAC, roofing and more." },
+        { label: "Free Website Design", href: "/free-website-design", description: "10 businesses a month. Apply here." },
         { label: "Blog", href: "/blog", description: "Plain-English tips to grow online." },
         { label: "FAQ", href: "/faq", description: "Quick answers to common questions." },
       ],

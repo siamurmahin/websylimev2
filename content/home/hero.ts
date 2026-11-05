@@ -18,9 +18,8 @@ export const hero = {
     rating: 5,
     ratingLabel: "Rated 5 out of 5",
     text: "Trusted by 300+ business owners",
-    // TODO.md: before launch, confirm these are real clients who agreed to appear
-    // here. This row says "these people trust us". If not, set src to null and
-    // alt to the client's name to show their initials.
+    // Owner confirmed these photos. To show initials instead, set src to null and
+    // alt to the client's name.
     avatars: [
       { src: "/clients/client-1.webp" as string | null, alt: "Websy Lime client" },
       { src: "/clients/client-2.webp" as string | null, alt: "Websy Lime client" },

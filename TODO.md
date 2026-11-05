@@ -7,8 +7,8 @@ ratings, client counts, testimonials and stats must all be real.
 ## Open decisions (from the plan)
 
 - [x] **Hero headline** — "More calls for home service businesses."
-- [ ] **Website Design packages** — names, prices, features for all 3.
-- [ ] **Charity** — which charity / cause receives the 2%.
+- [x] **Website Design packages** — Launchpad $799, Local Pro $1,999, Storefront $3,499 (`content/pages/pricing.ts`).
+- [x] **Charity** — orphaned children (school, meals) and winter clothes for people without a home, given in the client's name.
 - [x] **Company start year** — founder started solo in 2017; Websy Lime opened as a team in 2024.
 - [ ] **Template-sounding lines** — "Your scalable, dedicated design team", "Seamless collaboration", "Don't take our word for it" match Designfast section titles. Rewrite in our own voice.
 - [ ] **Video Editing** — show with "Coming Soon" badge (current) or hide (`hidden: true` in `header.nav → services → Video Editing`).
@@ -35,7 +35,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 ### Hero
 - [x] Badge: `Only 7 spots left for Q1 2027` confirmed by owner. Keep the number true, and update it when spots fill or the quarter changes (`content/home/hero.ts`, `final-cta.ts`)
 - [x] Social proof: `Trusted by 300+ business owners`
-- [ ] ⚠ **Before launch: confirm the 5 hero avatar photos are real clients who agreed to appear there.** They were supplied without names. If not, remove them (`content/home/hero.ts`); showing strangers as clients is a legal and trust risk → `public/clients/`, set `home.hero.socialProof.avatars[].src`
+- [x] 5 hero avatar photos confirmed by owner → `public/clients/`, set `home.hero.socialProof.avatars[].src`
 
 ### Portfolio strip (between Hero and Trust Bar)
 - [x] 50 screenshots copied to `public/work/`, listed in `content/portfolio.ts`
@@ -175,7 +175,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [x] Photo hero → what we design (`#social` `#ads` `#branding` `#print`) → design work → 3 monthly plans `#plans` → how it works → "we post it too" Growth banner → design FAQ → final CTA
 - [x] "Get started" pre-selects the plan in Start Project (`?package=design-pro`); the form also offers "One-off design"
 - [x] Header "Graphic portfolio" now opens `/work#graphic-design` (Graphic design tab) instead of an unbuilt page
-- [ ] **Plans:** names `[Starter]` `[Pro]` `[Brand]`, prices `$[X]/month`, designs per month `[8]` `[16]` `[30]`, revisions and turnaround — confirm (also in `content/pages/start-project.ts` → details "graphic-design")
+- [x] **Plans:** Essentials $299 (8), Pro $549 (16), Studio $899 (30), 7 days' notice to cancel. Old note: prices `$[X]/month`, designs per month `[8]` `[16]` `[30]`, revisions and turnaround — confirm (also in `content/pages/start-project.ts` → details "graphic-design")
 - [ ] Hero points: `From $[X]/month`, `Ready in [2–3] business days`, `Unlimited [revisions]` — confirm
 - [ ] Cancel / notice terms (plans footnote) and FAQ: how requests are sent, do unused designs roll over
 - [ ] **Design portfolio:** add real work to `content/design-portfolio.ts` (images in `public/design/`) — the page shows "coming soon" until then
@@ -216,7 +216,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 
 ## Case Studies (merged into Work: list at `/work`, stories at `/work/[slug]`, copy in `content/pages/case-studies.ts`, stories in `content/case-studies.ts`)
 - [x] 45 case studies written from the "portfolio content" files. SEO targets the industry, never the client: no client names in text, titles, URLs, image file names or structured data; live-site links are nofollow; quotes show first name + initial. Private client list: `content/case-study-clients.md`
-- [ ] ⚠ **Replace every [bracketed] number with the client's real result before launch, and confirm the 14 "Growing after launch" stories (Growth plan, social, Google Ads) with each client.** They are realistic estimates, not client data (also on homepage Featured Work). The source files' numbers looked templated, and for at least 4 clients the file guessed the business type. Publishing unconfirmed numbers or testimonials is a legal risk (US FTC, UK CMA). If a client has no number, remove that stat
+- [ ] ⚠ **The orange mark is off, but these numbers are still estimates (brackets kept in `content/case-studies.ts`). Replace every one with the client's real result before launch, and confirm the 14 "Growing after launch" stories (Growth plan, social, Google Ads) with each client.** They are realistic estimates, not client data (also on homepage Featured Work). The source files' numbers looked templated, and for at least 4 clients the file guessed the business type. Publishing unconfirmed numbers or testimonials is a legal risk (US FTC, UK CMA). If a client has no number, remove that stat
 - [ ] Confirm each quote with the client. One says "Sales nearly tripled" (sports nutrition), which doesn't fit the estimates
 - [ ] On hold, no case study yet (business type was wrong or unverifiable in the source file; shown on /work only): FourthWall Agency (actually employer branding), TFO Medical (actually healthcare recruitment), Tide and Tail (actually pet and farm supplies store), Virtuous Earth Solutions (actually regenerative farming for smallholders), Red Rose Care (site blocks automated visits)
 - [ ] Their testimonials are still on the site and don't match the real business (e.g. Tide and Tail: "Bookings have jumped", but it's a shop). Check or remove them in `content/testimonials.ts`
@@ -228,9 +228,14 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 
 ## Home service pages (`/industries`, copy in `content/industries.ts`)
 - [x] Plumbers, electricians, HVAC, roofing, pest control and contractors, plus an index page. Copy is unique per trade
-- [ ] Confirm "We also work with cleaning, landscaping" on /industries is true
+- [x] "We also work with cleaning, landscaping" confirmed by owner
 - [ ] Add a real plumbing/electrical client as a case study, then link it from those pages (no plumber or pest control project in the portfolio yet)
 - [ ] Hero photos are AI-generated (no people); swap for real ones later
+
+## Free website design (`/free-website-design`, bar + page copy in `content/pages/free-design.ts`)
+- [ ] **Form isn't connected**: applications aren't sent anywhere yet. Connect with the other forms when email moves to Hostinger
+- [ ] Owner to confirm the assumptions: the free design is a homepage only; the design stays with us unless they build with us; how quickly the design is delivered (not stated on the page)
+- [ ] Hero uses the Website Design photo (Higgsfield was out of credits). Give it its own photo later
 
 ## Careers page (`/careers`, roles at `#roles`, form at `#apply`, copy in `content/pages/careers.ts`)
 - [ ] Open roles: `roles.items` is empty, so the page shows "No open roles right now". Add a role by copying the example in the file

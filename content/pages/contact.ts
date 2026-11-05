@@ -16,7 +16,7 @@ export const contact = {
     subheadline: "A question, an idea or just a quick hello — a real person reads every message.",
     primaryCta: { label: "Send a message", href: "#message" },
     secondaryCta: { label: "Book a free call", href: "/book-a-call" },
-    points: ["Reply within [1] business day", "Real people, no bots", "No sales pressure"],
+    points: ["Usually reply within 12 hours", "Real people, no bots", "No sales pressure"],
     // Illustrative photo (AI-generated, no faces) — swap for a real photo later.
     image: { src: "/images/contact-hero.webp", alt: "Hands holding a phone with a friendly chat open, next to a laptop and a lime-green mug" },
   },
@@ -31,7 +31,7 @@ export const contact = {
     phone: { title: "Call us" },
     call: { title: "Book a free call", body: "30 minutes with a real person.", href: "/book-a-call" },
   },
-  hours: { label: "Hours", value: "[Mon–Fri, 9am–6pm ET]" },
+  hours: { label: "Hours", value: "Mon–Fri, 9am–6pm ET" },
   projectNote: { text: "Want a price for a new website or plan?", label: "Start your project", href: "/start-project" },
 
   form: {
@@ -50,7 +50,7 @@ export const contact = {
     submit: "Send message",
     success: {
       title: "Thanks, {name} — message sent.",
-      body: "We'll reply within [1] business day. Want to talk sooner?",
+      body: "We usually reply within 12 hours, and always within 1 business day. Want to talk sooner?",
       cta: "Book a free call",
       again: "Send another message",
     },

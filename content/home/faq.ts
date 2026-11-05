@@ -12,7 +12,7 @@ export const faq = {
     {
       category: "Websites",
       q: "How long does a website take?",
-      a: "Most websites go live in about [2] weeks. Bigger builds with more pages or custom features take longer — we'll give you a clear timeline before we start.",
+      a: "Most websites go live in about 2 weeks. Bigger builds with more pages or custom features take longer — we'll give you a clear timeline before we start.",
     },
     {
       category: "Websites",
@@ -22,7 +22,7 @@ export const faq = {
     {
       category: "Websites",
       q: "Is hosting really included?",
-      a: "Yes — hosting and SSL security are included for [the first 12 months — confirm terms], with no separate hosting bill. Your domain name is separate. [After that: confirm the renewal price.]",
+      a: "Yes. Hosting and SSL security are included for the first 12 months, with no separate hosting bill. Your domain name is separate. We don't sell hosting on its own, only with websites we build. [After that: confirm the renewal price.]",
     },
     {
       category: "Websites",
@@ -48,12 +48,12 @@ export const faq = {
     {
       category: "Graphic design",
       q: "How do I ask for a design?",
-      a: "Send us a short request — what it's for and any text or photos. We'll design it and send it back in about [2–3] business days. [Confirm how requests are sent: email, WhatsApp or a request form.]",
+      a: "Send us a short request — what it's for and any text or photos. We'll design it and send it back in about 2–3 business days. [Confirm how requests are sent: email, WhatsApp or a request form.]",
     },
     {
       category: "Graphic design",
       q: "Do unused designs roll over to next month?",
-      a: "[Confirm — e.g. unused designs don't roll over, but you can save requests up within the month.]",
+      a: "No. Unused designs don't roll over to the next month.",
     },
     {
       category: "Graphic design",
@@ -139,7 +139,7 @@ export const faq = {
     {
       category: "General",
       q: "How quickly do you reply?",
-      a: "We reply to every message within [1 business day] — usually much faster.",
+      a: "WhatsApp is the fastest way to reach us. We usually answer email within 12 hours, and always within 1 business day.",
     },
     {
       category: "General",
@@ -149,7 +149,7 @@ export const faq = {
     {
       category: "General",
       q: "How does the 2% charity work?",
-      a: "2% of every payment is set aside automatically and donated to [Charity / cause name]. You don't pay anything extra.",
+      a: "2% of what you pay goes to school costs and meals for orphaned children, and warm winter clothes for people without a home. It's given in your name, and you don't pay anything extra. We're a small company, so we keep it small and direct.",
     },
   ],
   call: {
