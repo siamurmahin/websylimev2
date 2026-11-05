@@ -71,7 +71,7 @@ function Block({ block }: { block: BlogBlock }) {
         <ol className="mt-5 space-y-2.5">
           {block.items.map((it, i) => (
             <li key={it} className="flex gap-3">
-              <span aria-hidden className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-lime-soft font-mono text-xs font-bold text-lime-strong">
+              <span aria-hidden className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-lime font-mono text-xs font-bold text-ink">
                 {i + 1}
               </span>
               <span>

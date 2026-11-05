@@ -66,7 +66,7 @@ export default function StartProjectPage() {
           <ol className="mt-4 space-y-4">
             {sp.next.steps.map((s, i) => (
               <li key={s.title} className="flex gap-3.5">
-                <span className="grid size-8 shrink-0 place-items-center rounded-full bg-lime-soft font-mono text-xs font-bold text-lime-strong">
+                <span className="grid size-8 shrink-0 place-items-center rounded-full bg-lime font-mono text-xs font-bold text-ink">
                   {i + 1}
                 </span>
                 <span>
