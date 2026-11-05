@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Bug, Check, ChevronDown, HardHat, Wrench, Zap, type LucideIcon } from "lucide-react";
+import { ArrowRight, Bug, Check, ChevronDown, Fan, HardHat, House, Wrench, Zap, type LucideIcon } from "lucide-react";
 import { icons } from "@/components/icons";
 import { StaggerReveal } from "@/components/motion/StaggerReveal";
 import { Shot, stories } from "@/components/case-studies/shared";
@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const p = industriesPage;
 
-const TRADE_ICONS: Record<string, LucideIcon> = { plumbers: Wrench, electricians: Zap, "pest-control": Bug, contractors: HardHat };
+const TRADE_ICONS: Record<string, LucideIcon> = { plumbers: Wrench, electricians: Zap, "pest-control": Bug, contractors: HardHat, hvac: Fan, roofing: House };
 
 function Eyebrow({ children, dark = false }: { children: React.ReactNode; dark?: boolean }) {
   return (
@@ -228,7 +228,7 @@ export function IndustryGrid() {
             {g.headline}
           </h2>
         </div>
-        <ul className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <ul className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {industries.map((i) => {
             const Icon = TRADE_ICONS[i.slug] ?? Wrench;
             return (

@@ -193,6 +193,112 @@ export const industries: Industry[] = [
     ],
   },
   {
+    slug: "hvac",
+    name: "HVAC",
+    keyword: "hvac website design",
+    meta: {
+      title: "HVAC Website Design",
+      description: "HVAC websites built for busy seasons: fast calls when the AC or heat quits, clear service pages and maintenance plans. Hosting included.",
+    },
+    card: "For no-heat and no-AC calls in peak season, and maintenance plans the rest of the year.",
+    hero: {
+      eyebrow: "HVAC website design",
+      headline: "HVAC websites that stay busy all year.",
+      headlineAccent: "busy all year.",
+      subheadline: "When the AC dies in July, people call whoever they find first. We build HVAC websites that win those calls, then sell maintenance plans for the slow months.",
+      points: ["Fast calls when systems fail", "Maintenance plans explained", "Hosting included"],
+      image: { src: "/images/industries/hvac.webp", alt: "A modern outdoor air conditioning unit beside a bright home" },
+    },
+    pains: {
+      headline: "Slammed in July, quiet in October.",
+      items: [
+        { icon: "calendarX", title: "Your work comes and goes with the weather", body: "Peak weeks are full, then the phone goes quiet. Your site does nothing to smooth out the slow months." },
+        { icon: "phoneMissed", title: "Urgent calls slip away", body: "A family with no heat won't dig through your menu. If they can't call in a tap, they try the next company." },
+        { icon: "receipt", title: "Replacements are a hard sell", body: "A new system is a big purchase. Without clear options and financing details, people stall or go with whoever explains it best." },
+      ],
+    },
+    included: {
+      headline: "Built for peak season and the slow months.",
+      subheadline: "Win the urgent repair today, then keep that customer for the next ten years.",
+      items: [
+        { icon: "zap", title: "Repairs up front", body: "Tap-to-call on every page, with clear routes for no-heat and no-AC emergencies." },
+        { icon: "calendarCheck", title: "Maintenance plans", body: "A simple page on what a tune-up plan covers and why it's worth it, to bring in steady work between seasons." },
+        { icon: "layout", title: "Replacement pages", body: "System options, financing and what to expect, so homeowners feel ready to ask for a quote." },
+        { icon: "mapPin", title: "The areas you cover", body: "Service and town pages, so you show up when people search for HVAC repair nearby." },
+      ],
+    },
+    pages: {
+      headline: "The pages an HVAC site needs.",
+      subheadline: "Tell us what you want more of, whether that's installs or service plans, and we'll lead with it.",
+      items: ["Home", "AC repair", "Heating repair", "System replacement", "Maintenance plans", "Financing", "Service areas", "Book a service"],
+    },
+    extra: {
+      title: "Keep the phone busy in the off-season",
+      body: "Our monthly Growth plans keep your Google profile active and can run Google Ads for tune-ups and installs before the rush starts.",
+      link: { label: "See Growth plans", href: "/services/growth" },
+    },
+    related: ["heat-pump-company-website-design", "property-inspection-company-website-design", "home-renovation-contractor-website-design"],
+    faq: [
+      { q: "What should an HVAC website include?", a: "Tap-to-call on every page, separate pages for repair, replacement and maintenance, the areas you cover, financing details if you offer them, and real reviews." },
+      { q: "How can a website help during the slow season?", a: "A clear maintenance plan page gives past customers a reason to book in spring and fall. Pages on system replacement also bring in planned work that doesn't depend on a breakdown." },
+      { q: "Should I show prices on my HVAC website?", a: "Exact prices are hard before an inspection, but a starting price for a tune-up or a service call builds trust and cuts down on calls from people who aren't a fit." },
+      { q: "Can you add online booking to an HVAC website?", a: "Yes. A simple booking or request form lets people ask for service any time, which helps when you can't get to the phone during a busy week." },
+    ],
+  },
+  {
+    slug: "roofing",
+    name: "Roofing",
+    keyword: "roofing website design",
+    meta: {
+      title: "Roofing Website Design",
+      description: "Roofing websites that win big-ticket jobs: real project photos, storm damage pages, financing and free inspection forms. Hosting included.",
+    },
+    card: "For storm damage calls and full replacements, where trust decides who gets the job.",
+    hero: {
+      eyebrow: "Roofing website design",
+      headline: "Roofing websites that win the inspection.",
+      headlineAccent: "win the inspection.",
+      subheadline: "A new roof is one of the biggest bills a homeowner gets. We build websites that show why you're the safe choice, and make booking an inspection easy.",
+      points: ["Free inspection forms", "Real project photos", "Hosting included"],
+      image: { src: "/images/industries/roofing.webp", alt: "A neat new shingle roof at golden hour with a hammer and tape measure" },
+    },
+    pains: {
+      headline: "Homeowners don't trust what they can't check.",
+      items: [
+        { icon: "users", title: "Storm chasers made people wary", body: "After bad weather, door-knockers are everywhere. Homeowners look you up to see if you're local and legitimate." },
+        { icon: "image", title: "Your best roofs aren't on your site", body: "Nobody can judge a roof from a paragraph. Without real project photos, you look the same as everyone else." },
+        { icon: "hourglass", title: "They need time to decide", body: "A roof is rarely a same-day decision. If your site gives them no easy first step, they forget you before they're ready." },
+      ],
+    },
+    included: {
+      headline: "Built to earn trust on a big decision.",
+      subheadline: "The goal isn't selling a roof online. It's getting invited to take a look.",
+      items: [
+        { icon: "calendarCheck", title: "Easy inspection requests", body: "A short form on every page, so booking a look at the roof feels like a small step." },
+        { icon: "image", title: "Real project galleries", body: "Before-and-after photos by roof type and area, so neighbors can see work close to home." },
+        { icon: "badgeCheck", title: "Local proof", body: "Your address, license, insurance, warranties and reviews from nearby homeowners." },
+        { icon: "zap", title: "Storm damage pages", body: "Clear help for leaks and storm damage, including what to do first and how insurance claims work." },
+      ],
+    },
+    pages: {
+      headline: "The pages a roofing site needs.",
+      subheadline: "We'll build around the work you want most, whether that's repairs, replacements or commercial jobs.",
+      items: ["Home", "Roof replacement", "Roof repair", "Storm damage", "Commercial roofing", "Project gallery", "Financing", "Free inspection"],
+    },
+    extra: {
+      title: "Stay visible when the next storm hits",
+      body: "Our monthly Growth plans add local pages, reply to reviews and can run Google Ads, so you're easy to find when people need a roofer fast.",
+      link: { label: "See Growth plans", href: "/services/growth" },
+    },
+    related: ["home-renovation-contractor-website-design", "luxury-construction-company-website-design", "gate-fencing-company-website-design"],
+    faq: [
+      { q: "What makes a good roofing website?", a: "Real project photos, a simple inspection form, your license and insurance details, local reviews and clear pages for repair, replacement and storm damage." },
+      { q: "How do I get more roofing leads from my website?", a: "Offer an easy first step like a free inspection, show roofs near the visitor, and put reviews beside your forms. Page speed and a good phone experience matter too." },
+      { q: "Should my roofing website have a storm damage page?", a: "Yes. People search for help right after bad weather. A clear page on what to do first and how you help with insurance claims can bring in urgent work." },
+      { q: "Do I need photos of my own jobs?", a: "They help a lot. Homeowners want to see your real work, and clear phone photos usually beat stock images. Start taking before-and-after shots on your next job." },
+    ],
+  },
+  {
     slug: "contractors",
     name: "Contractors & Construction",
     keyword: "website design for contractors",
@@ -251,13 +357,13 @@ export const industries: Industry[] = [
 export const industriesPage = {
   meta: {
     title: "Website Design for Home Service Businesses",
-    description: "Websites for plumbers, electricians, pest control companies and contractors, built to bring in calls. See what we build for your trade.",
+    description: "Websites for plumbers, electricians, HVAC, roofers, pest control companies and contractors, built to bring in calls. See what we build for your trade.",
   },
   hero: {
     eyebrow: "Home service websites",
     headline: "Websites built for the trades.",
     headlineAccent: "for the trades.",
-    subheadline: "Plumbers, electricians, pest control and construction companies all win work differently. Your website should reflect how people hire you.",
+    subheadline: "Plumbers, HVAC companies, roofers and contractors all win work differently. Your website should reflect how people hire you.",
     primaryCta: { label: "Find your trade", href: "#trades" },
     secondaryCta: { label: "Book a free call", href: "/book-a-call" },
     points: ["Built around how you get hired", "Tap-to-call and quote forms", "Hosting included"],
@@ -269,7 +375,7 @@ export const industriesPage = {
     headline: "Pick your trade.",
     cta: "See what we build",
     otherTitle: "Don't see your trade?",
-    otherBody: "We also work with HVAC, roofing, cleaning, landscaping and other home service companies. Tell us about your business and we'll show you what we'd build.",
+    otherBody: "We also work with cleaning, landscaping and other home service companies. Tell us about your business and we'll show you what we'd build.",
     otherCta: { label: "Book a free call", href: "/book-a-call" },
   },
   // Shared wording on each trade page

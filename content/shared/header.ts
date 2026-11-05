@@ -158,7 +158,7 @@ export const header = {
       id: "resources",
       label: "Resources",
       links: [
-        { label: "For Home Services", href: "/industries", description: "Plumbers, electricians, pest control, contractors." },
+        { label: "For Home Services", href: "/industries", description: "Plumbers, electricians, HVAC, roofing and more." },
         { label: "Blog", href: "/blog", description: "Plain-English tips to grow online." },
         { label: "FAQ", href: "/faq", description: "Quick answers to common questions." },
       ],

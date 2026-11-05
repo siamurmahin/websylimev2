@@ -35,7 +35,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 ### Hero
 - [ ] Badge: `Only [7] spots left for [Q1 2027]`
 - [x] Social proof: `Trusted by 300+ business owners`
-- [ ] 5 client avatar photos + names `[Client 1..5 name]` → `public/clients/`, set `home.hero.socialProof.avatars[].src`
+- [ ] ⚠ **Before launch: confirm the 5 hero avatar photos are real clients who agreed to appear there.** They were supplied without names. If not, remove them (`content/home/hero.ts`); showing strangers as clients is a legal and trust risk → `public/clients/`, set `home.hero.socialProof.avatars[].src`
 
 ### Portfolio strip (between Hero and Trust Bar)
 - [x] 50 screenshots copied to `public/work/`, listed in `content/portfolio.ts`
@@ -227,8 +227,8 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [ ] Hero photo is AI-generated (no faces) — swap for a real photo later
 
 ## Home service pages (`/industries`, copy in `content/industries.ts`)
-- [x] Plumbers, electricians, pest control and contractors, plus an index page. Copy is unique per trade
-- [ ] Confirm "We also work with HVAC, roofing, cleaning, landscaping" on /industries is true
+- [x] Plumbers, electricians, HVAC, roofing, pest control and contractors, plus an index page. Copy is unique per trade
+- [ ] Confirm "We also work with cleaning, landscaping" on /industries is true
 - [ ] Add a real plumbing/electrical client as a case study, then link it from those pages (no plumber or pest control project in the portfolio yet)
 - [ ] Hero photos are AI-generated (no people); swap for real ones later
 

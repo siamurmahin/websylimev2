@@ -36,6 +36,8 @@ Market: **USA first, UK second.** Write in US English; mention UK where it matte
 | `/industries/plumbers` | website design for plumbers | plumbing website design, plumbing website examples |
 | `/industries/electricians` | electrician website design | electrician web design, website for electricians, electrical website ideas |
 | `/industries/pest-control` | pest control website design | pest control web design, pest control websites |
+| `/industries/hvac` | hvac website design | hvac web design, website design for hvac company, hvac website examples |
+| `/industries/roofing` | roofing website design | website design for roofers, website design for roofing company, roofing website examples |
 | `/industries/contractors` | website design for contractors | website design for construction company, contractor website examples, construction company website design |
 
 ## Carried over from the old site (same URLs, don't change them)

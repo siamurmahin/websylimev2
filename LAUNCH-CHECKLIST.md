@@ -72,7 +72,7 @@ There are **137 different placeholder texts** across the site. All of them show 
 
 | Page / area | What to fill in | File |
 |---|---|---|
-| **Homepage hero** | "Only `[7]` spots left for `[Q1 2027]`" (must be true or removed), 5 client avatar names | `content/home/hero.ts`, `final-cta.ts` |
+| **Homepage hero** | "Only `[7]` spots left for `[Q1 2027]`" (must be true or removed) | `content/home/hero.ts`, `final-cta.ts` |
 | **Trust bar** | 8 real client logos | `content/home/trust-bar.ts` |
 | **Charity (2%)** | `[Charity / cause name]`, yearly update line | `content/home/pricing.ts`, `results.ts`, `faq.ts` |
 | **Case studies (45)** | ⚠ confirm every result and quote, get each client's permission, decide on 5 on hold (see `TODO.md`) | `content/case-studies.ts` |
@@ -120,7 +120,7 @@ All are in `public/images/`. Replacements should be **≥2400px wide**, and on i
 
 - [ ] **Founder photo.** It appears on the "Book a free call" card everywhere, and on the About team section.
 - [ ] **Team photos** (About page, 8 people; initials show until then)
-- [ ] **5 client avatars** (homepage hero, next to the star rating)
+- [ ] ⚠ **5 hero avatar photos:** confirm they're real clients with permission, or remove them (`content/home/hero.ts`)
 - [ ] **8 client logos** (homepage trust bar): transparent SVG/PNG
 - [ ] **Graphic design portfolio:** 0 items right now, so `/work#graphic-design` and the Graphic Design page show an empty state. Add your designs in `content/design-portfolio.ts`.
 - [ ] Optional: bigger (≥2400px) screenshots for the 3 case studies

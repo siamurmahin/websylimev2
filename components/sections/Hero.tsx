@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Check, Star, User } from "lucide-react";
+import { ArrowRight, Check, Star } from "lucide-react";
 import { site } from "@/content/site";
 import { Button } from "@/components/ui/button";
 import { FadeUp, SplitReveal } from "@/components/motion/SplitReveal";
 import { Magnetic } from "@/components/motion/Magnetic";
 import { PointerGlow } from "@/components/motion/PointerGlow";
 import { Copy, href, plain } from "@/lib/copy";
+import { cn } from "@/lib/utils";
 
 export function Hero() {
   const hero = site.home.hero;
@@ -73,16 +74,15 @@ export function Hero() {
                 style={{ zIndex: socialProof.avatars.length - i }}
               >
                 {avatar.src ? (
-                  <Image src={avatar.src} alt={plain(avatar.alt)} fill sizes="40px" className="object-cover" />
+                  <Image src={avatar.src} alt={plain(avatar.alt)} fill sizes="40px" quality={90} className="object-cover" />
                 ) : (
                   <span
-                    className="grid size-full place-items-center text-muted-foreground"
-                    style={{
-                      background: `linear-gradient(140deg, oklch(0.85 0.07 ${110 + i * 45} / 0.55), transparent)`,
-                    }}
-                    title="Placeholder — see TODO.md"
+                    className={cn(
+                      "grid size-full place-items-center font-display text-[13px] font-bold",
+                      i % 2 === 0 ? "bg-lime text-ink" : "bg-ink text-lime dark:bg-surface-2",
+                    )}
                   >
-                    <User className="size-4" aria-hidden />
+                    <span aria-hidden>{avatar.alt.split(" ").map((w) => w[0]).join("")}</span>
                     <span className="sr-only">{plain(avatar.alt)}</span>
                   </span>
                 )}
