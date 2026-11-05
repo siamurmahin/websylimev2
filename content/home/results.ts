@@ -21,7 +21,7 @@ export const results = {
   // here once you have one, e.g. { value: "12,000+", label: "leads generated", visual: "bars" }
   stats: [
     { value: "90%", label: "of clients stay with us", visual: "ring" },
-    { value: "[800]+", label: "websites launched", visual: "grid" },
+    { value: "350+", label: "projects delivered", visual: "grid" },
     { value: "Since 2017", label: "helping businesses grow", count: false, visual: "timeline" },
     { value: "2%", label: "of every project goes to charity", visual: "heart" },
   ] as {

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
-import { portfolio } from "@/content/portfolio";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { WorkGallery, type StudyCards } from "@/components/work/WorkGallery";
 import { stories } from "@/components/case-studies/shared";
@@ -25,7 +24,7 @@ export default function WorkPage() {
   const studies: StudyCards = Object.fromEntries(stories.map((s) => [s.slug, { headline: s.headline, stat: s.stats[0] }]));
   return (
     <main id="main" className="relative">
-      <PhotoHero data={{ ...w.hero, points: w.hero.points.map((p) => p.replace("{n}", String(portfolio.length))) }} />
+      <PhotoHero data={w.hero} />
       <WorkGallery studies={studies} />
       <CaseStudyCta />
       <FinalCta />

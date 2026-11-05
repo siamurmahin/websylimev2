@@ -81,7 +81,7 @@ export const startProject = {
         hint: "So we can point you to the right fit.",
         businessTitle: "What best describes you?",
         business: [
-          { id: "local", label: "Local service business", icon: "mapPin" as IconKey },
+          { id: "local", label: "Home service or local business", icon: "mapPin" as IconKey },
           { id: "coach", label: "Coach or consultant", icon: "userRound" as IconKey },
           { id: "products", label: "I sell products", icon: "shoppingBag" as IconKey },
           { id: "other", label: "Something else", icon: "sparkles" as IconKey },

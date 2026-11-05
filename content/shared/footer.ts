@@ -1,7 +1,7 @@
 // Shared across the site → footer.
 // Edit the text below. [Square brackets] = placeholder still to fill in (see TODO.md).
 export const footer = {
-  blurb: "Websites, social and local growth for service businesses. One team, one invoice.",
+  blurb: "Websites, social and local growth for home service and local businesses. One team, one invoice.",
   contact: {
     email: "hello@websylime.com",
     phone: { label: "+1 725 404 0225", href: "tel:+17254040225" },

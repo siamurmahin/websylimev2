@@ -34,7 +34,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 
 ### Hero
 - [ ] Badge: `Only [7] spots left for [Q1 2027]`
-- [ ] Social proof: `Trusted by [650]+ business owners`
+- [x] Social proof: `Trusted by 300+ business owners`
 - [ ] 5 client avatar photos + names `[Client 1..5 name]` → `public/clients/`, set `home.hero.socialProof.avatars[].src`
 
 ### Portfolio strip (between Hero and Trust Bar)
@@ -48,7 +48,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 
 ### Results
 - [x] Client retention: 90% (confirmed)
-- [ ] `[800]+` websites launched — confirm real count
+- [x] `350+` projects delivered
 - [x] Start year `Since 2017`
 - [ ] "Leads generated" stat removed until there is a tracked real number (e.g. from WebsyChat + form/call tracking). Add it back in `home.results.stats`.
 

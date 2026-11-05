@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Quote } from "lucide-react";
 import { site } from "@/content/site";
-import { portfolio } from "@/content/portfolio";
 import { testimonials } from "@/content/testimonials";
 import { icons } from "@/components/icons";
 import { FadeUp } from "@/components/motion/SplitReveal";
@@ -28,23 +27,17 @@ function Eyebrow({ children, dark }: { children: React.ReactNode; dark?: boolean
 
 const h2 = "mt-5 font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.02] font-bold tracking-[-0.04em] text-balance";
 
-/** Band under the photo hero: four numbers taken from the real data files. */
+/** Band under the photo hero: four headline numbers. */
 export function AboutStats() {
   const h = a.hero;
-  const stats = [
-    { value: String(portfolio.length), label: h.stats.websites },
-    { value: String(testimonials.length), label: h.stats.reviews },
-    { value: "US · UK", label: h.stats.countries },
-    { value: "2%", label: h.stats.charity },
-  ];
   return (
     <section aria-label={h.eyebrow} className="pt-10 sm:pt-14">
       <FadeUp className="container-site">
         <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-          {stats.map((s) => (
+          {h.stats.map((s) => (
             <li key={s.label} className="rounded-[1.5rem] border bg-surface p-5 sm:p-6">
-              <span className="block font-display text-3xl font-bold tracking-[-0.04em] whitespace-nowrap text-lime-strong sm:text-5xl dark:text-lime">{s.value}</span>
-              <span className="mt-2 block text-sm leading-snug text-muted-foreground">{s.label}</span>
+              <span className="inline-block rounded-xl bg-lime px-2.5 py-0.5 font-display text-3xl font-bold tracking-[-0.04em] whitespace-nowrap text-ink sm:text-5xl">{s.value}</span>
+              <span className="mt-3 block text-sm leading-snug text-muted-foreground">{s.label}</span>
             </li>
           ))}
         </ul>
@@ -71,6 +64,9 @@ export function AboutStory() {
               <Copy text={p} />
             </p>
           ))}
+          <p data-reveal className="pt-2 text-[15px]">
+            <span className="font-semibold text-foreground">{s.signature.name}</span> · {s.signature.role}
+          </p>
         </div>
       </StaggerReveal>
     </section>

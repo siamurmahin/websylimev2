@@ -73,7 +73,6 @@ There are **137 different placeholder texts** across the site. All of them show 
 | Page / area | What to fill in | File |
 |---|---|---|
 | **Homepage hero** | "Only `[7]` spots left for `[Q1 2027]`" (must be true or removed), 5 client avatar names | `content/home/hero.ts`, `final-cta.ts` |
-| **Homepage numbers** | `[800]`, `[650]` | `content/home/results.ts`, `hero.ts` |
 | **Trust bar** | 8 real client logos | `content/home/trust-bar.ts` |
 | **Charity (2%)** | `[Charity / cause name]`, yearly update line | `content/home/pricing.ts`, `results.ts`, `faq.ts` |
 | **Case studies (45)** | ⚠ confirm every result and quote, get each client's permission, decide on 5 on hold (see `TODO.md`) | `content/case-studies.ts` |

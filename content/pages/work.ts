@@ -5,7 +5,7 @@
 export const work = {
   meta: {
     title: "Website Design Portfolio & Case Studies",
-    description: "Websites we've built for law firms, clinics, contractors and more, with case studies on what was holding each business back and what changed.",
+    description: "Websites we've built for contractors, home trades, clinics, law firms and more, with case studies on what was holding each business back and what changed.",
   },
 
   hero: {
@@ -15,8 +15,7 @@ export const work = {
     subheadline: "Every project is a live client website. Read what was holding each business back, what we built and what changed.",
     primaryCta: { label: "See the work", href: "#gallery" },
     secondaryCta: { label: "Book a free call", href: "/book-a-call" },
-    // {n} = number of websites in content/portfolio.ts (counted automatically)
-    points: ["{n} client websites", "Law, health, trades, coaching & more", "Built and looked after by us"],
+    points: ["A selection from 350+ projects", "Home services, health, law & more", "Built and looked after by us"],
     // Illustrative photo (AI-generated, no people) — swap for a real studio photo later.
     image: { src: "/images/work-hero.webp", alt: "A designer's desk with a monitor, laptop and phone showing website layouts" },
   },

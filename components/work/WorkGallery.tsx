@@ -7,7 +7,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { useLenis } from "lenis/react";
 import { ArrowLeft, ArrowRight, CalendarDays, ChevronDown, Expand, Palette, X } from "lucide-react";
 import { site } from "@/content/site";
-import { portfolio, type PortfolioItem } from "@/content/portfolio";
+import { FOCUS_CATEGORY, portfolio, type PortfolioItem } from "@/content/portfolio";
 import { designPortfolio } from "@/content/design-portfolio";
 import { Copy, isPlaceholder } from "@/lib/copy";
 import { cn } from "@/lib/utils";
@@ -15,7 +15,9 @@ import { cn } from "@/lib/utils";
 const w = site.work;
 
 // Category chips only once projects have real categories (not "[Category]")
-const CATEGORIES = [...new Set(portfolio.map((p) => p.category).filter((c) => !isPlaceholder(c)))].sort();
+const CATEGORIES = [...new Set(portfolio.map((p) => p.category).filter((c) => !isPlaceholder(c)))].sort((a, b) =>
+  a === FOCUS_CATEGORY ? -1 : b === FOCUS_CATEGORY ? 1 : a.localeCompare(b),
+);
 
 type Tab = "websites" | "design";
 const DESIGN_HASH = "graphic-design";
@@ -36,11 +38,11 @@ export function WorkGallery({ studies }: { studies: StudyCards }) {
   const [open, setOpen] = useState<PortfolioItem | null>(null);
   const reduce = useReducedMotion();
 
-  // Case studies first, newest first (the order of `studies`)
+  // Home services first, then case studies newest first (the order of `studies`), then the rest
   const ordered = useMemo(() => {
     const keys = Object.keys(studies);
-    const rank = (slug: string) => (keys.includes(slug) ? keys.indexOf(slug) : keys.length);
-    return [...portfolio].sort((a, b) => rank(a.slug) - rank(b.slug));
+    const rank = (p: PortfolioItem) => (keys.includes(p.slug) ? keys.indexOf(p.slug) : keys.length) - (p.category === FOCUS_CATEGORY ? keys.length + 1 : 0);
+    return [...portfolio].sort((a, b) => rank(a) - rank(b));
   }, [studies]);
   const list = useMemo(() => (cat === w.allLabel ? ordered : ordered.filter((p) => p.category === cat)), [cat, ordered]);
 

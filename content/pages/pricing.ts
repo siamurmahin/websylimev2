@@ -54,7 +54,7 @@ export const pricingPage = {
       {
         id: "business",
         name: "[Business]",
-        tagline: "A full website for local service businesses.",
+        tagline: "A full website for home service and local businesses.",
         price: "$[X]",
         badge: "Recommended" as string | null,
         values: ["4–5 pages", "Included", "Included", "Included", "Contact + quote form", "Included", "Included", "—", "[2] rounds", "[2] weeks"],

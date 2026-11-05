@@ -38,7 +38,7 @@ export const header = {
             {
               label: "[Business]",
               href: "/services/website-design#business",
-              description: "A full website for local service businesses.",
+              description: "A full website for home service and local businesses.",
               icon: "rocket",
             },
             {
@@ -148,7 +148,7 @@ export const header = {
       label: "Company",
       links: [
         { label: "About Us", href: "/about", description: "Who we are and how we work." },
-        { label: "Our Story", href: "/about#story", description: "From 2017 to Websy Lime v2." },
+        { label: "Our Story", href: "/about#story", description: "From one person to a full team." },
         { label: "Careers", href: "/careers", description: "Join the team." },
         { label: "Contact", href: "/contact", description: "Say hello. We reply fast." },
       ],

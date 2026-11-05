@@ -8,7 +8,7 @@ export const websiteDesign = {
   meta: {
     title: "Website Design",
     description:
-      "Fast, mobile-first WordPress websites for local service businesses — built to turn visitors into calls, bookings and quote requests. Hosting included.",
+      "Fast, mobile-first WordPress websites for home service and local businesses — built to turn visitors into calls, bookings and quote requests. Hosting included.",
   },
 
   // Section 1 — hero with photo (offer first: what, for whom, price, how fast)
@@ -60,7 +60,7 @@ export const websiteDesign = {
     // `plan` = package id in content/pages/pricing.ts
     fits: [
       { who: "I'm a coach or consultant", body: "One page for one offer or a booking call.", plan: "landing", icon: "userRound" as IconKey },
-      { who: "I run a local service business", body: "Services, quote form and found on Google.", plan: "business", icon: "mapPin" as IconKey },
+      { who: "I run a home service or local business", body: "Services, quote form and found on Google.", plan: "business", icon: "mapPin" as IconKey },
       { who: "I sell products", body: "An online store with secure checkout.", plan: "store", icon: "shoppingBag" as IconKey },
     ],
     fitCta: "See {name}",

@@ -14,28 +14,32 @@ export const about = {
     eyebrow: "About Websy Lime",
     headline: "You run the business. We run everything online.",
     headlineAccent: "everything online.",
-    subheadline: "We're a small, dedicated team that builds websites and keeps them growing for local businesses, coaches and service companies.",
+    subheadline: "We're a small, dedicated team that builds websites and keeps them growing for home service companies and other local businesses.",
     primaryCta: { label: "Read our story", href: "#story" },
     secondaryCta: { label: "Book a free call", href: "/book-a-call" },
     // Illustrative photo (AI-generated, hands only — not our real team). Swap for a real team photo later.
     image: { src: "/images/about-hero.webp", alt: "Two people sketching website wireframes together at a laptop" },
-    // Numbers come from the real data files; labels only here.
-    stats: {
-      websites: "client websites in our portfolio",
-      reviews: "client reviews",
-      countries: "where our clients are",
-      charity: "of revenue to charity",
-    },
+    stats: [
+      { value: "350+", label: "projects delivered" },
+      { value: "300+", label: "happy clients" },
+      { value: "9+", label: "years of experience" },
+      { value: "2%", label: "of revenue to charity" },
+    ],
   },
 
+  // Written in the founder's own voice
   story: {
     eyebrow: "Our story",
-    headline: "Why we started.",
+    headline: "How we got here.",
     paragraphs: [
-      "It started in 2017 with one person: Siamur Rahman Mahin, building websites solo. In 2024, Websy Lime opened as a team.",
-      "Most small business owners we met were juggling a web designer, a social media freelancer and someone for ads — and still not getting calls.",
-      "So we built the team we wished they had: one place for your website, your social presence and your growth, with one point of contact and plain-English updates.",
+      "I built my first client websites on my own in 2017. I was the designer, the developer and the person answering the emails.",
+      "Along the way I kept meeting business owners stuck in the same spot. They had one person for the website, another for social media, someone else for ads, and the phone still wasn't ringing. Each part was fine on its own. Nobody was looking at the whole picture.",
+      "In 2024 I stopped working alone and opened Websy Lime with a team. There are eight of us now, and together we've delivered more than 350 projects, mostly in the US and UK.",
+      "Home service businesses are our main focus today: plumbers, electricians, pest control and construction companies, the kind of work where a missed call is a lost job. We also work with clinics, law firms, online stores and plenty of others.",
+      "The work has grown too. We still build the website, and we host it. We can also post on your social media, look after your Google profile and reviews, run your Google Ads and design your graphics. WebsyChat answers your visitors when you can't get to the phone.",
+      "What hasn't changed is how we like to work. You get one team and one invoice, and every month you hear what we did in plain English. You shouldn't have to think about your website every week. That's our job.",
     ],
+    signature: { name: "Siamur Rahman Mahin", role: "Founder" },
   },
 
   timeline: {
