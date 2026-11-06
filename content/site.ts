@@ -42,6 +42,7 @@ import { about } from "@/content/pages/about";
 import { contact } from "@/content/pages/contact";
 import { freeDesign } from "@/content/pages/free-design";
 import { getStarted } from "@/content/pages/get-started";
+import { gives } from "@/content/pages/gives";
 import { faqPage } from "@/content/pages/faq";
 import { blog } from "@/content/pages/blog";
 import { caseStudiesPage } from "@/content/pages/case-studies";
@@ -68,6 +69,7 @@ export const site = {
   contact,
   freeDesign,
   getStarted,
+  gives,
   faqPage,
   blog,
   caseStudiesPage,

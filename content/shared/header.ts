@@ -149,6 +149,7 @@ export const header = {
       links: [
         { label: "About Us", href: "/about", description: "Who we are and how we work." },
         { label: "Our Story", href: "/about#story", description: "From one person to a full team." },
+        { label: "Websy Lime Gives", href: "/gives", description: "Where our 2% goes, with proof." },
         { label: "Careers", href: "/careers", description: "Join the team." },
         { label: "Contact", href: "/contact", description: "Say hello. We reply fast." },
       ],

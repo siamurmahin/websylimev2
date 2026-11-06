@@ -62,7 +62,7 @@ export const about = {
       { title: "Honest by default", body: "Real numbers, clear prices, no promises we can't keep.", icon: "badgeCheck" as IconKey },
       { title: "One team owns it", body: "One point of contact who knows your business.", icon: "users" as IconKey },
       { title: "Plain English", body: "Clear updates on what we did and what's next.", icon: "chat" as IconKey },
-      { title: "We give back", body: "2% of everything we earn goes to charity.", icon: "sprout" as IconKey },
+      { title: "We give back", body: "2% of our revenue goes to charity.", icon: "sprout" as IconKey },
     ],
   },
 

@@ -139,10 +139,10 @@ export function Footer() {
             ))}
           </div>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-            <span className="inline-flex items-center gap-1.5">
+            <Link href="/gives" className="inline-flex items-center gap-1.5 rounded-sm underline-offset-4 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-ring/50">
               <HeartHandshake className="size-4 text-rose-500" aria-hidden />
               {f.charityLine}
-            </span>
+            </Link>
             <button
               type="button"
               onClick={toTop}

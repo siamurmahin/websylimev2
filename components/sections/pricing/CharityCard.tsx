@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { HeartHandshake, Heart, Sprout } from "lucide-react";
 import { CountUp } from "@/components/motion/CountUp";
 import { Copy } from "@/lib/copy";
@@ -88,9 +89,9 @@ export function CharityCard() {
             {c.partnerLabel}: <Copy text={c.partner} />
           </span>
           <span aria-hidden>·</span>
-          <span>
-            <Copy text={c.report} />
-          </span>
+          <Link href={c.report.href} className="rounded-sm font-semibold text-foreground underline underline-offset-4 outline-none focus-visible:ring-2 focus-visible:ring-ring/50">
+            {c.report.label}
+          </Link>
         </div>
       </div>
     </div>

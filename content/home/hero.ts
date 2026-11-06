@@ -28,5 +28,5 @@ export const hero = {
       { src: "/clients/client-5.webp" as string | null, alt: "Websy Lime client" },
     ],
   },
-  trustLine: ["No long contracts", "Fast turnaround", "2% of every project goes to charity"],
+  trustLine: ["No long contracts", "Fast turnaround", "2% of revenue goes to charity"],
 };

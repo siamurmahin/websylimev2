@@ -243,6 +243,12 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [ ] Owner to choose how deposits are paid (Stripe, PayPal or bank transfer)
 - [ ] Follow-up for people who send details but don't book, and tracking of each step
 
+## Websy Lime Gives (`/gives`, copy and record in `content/pages/gives.ts`)
+- [ ] ⚠ **Add the first real donation before launch**: date, amount, what it paid for, and a photo or receipt. Until then the page says the first report is on its way
+- [ ] Owner to confirm that no children's faces or names are shown
+- [ ] ⚠ **Client contributions:** the page says existing clients can contribute. Get Stripe's written answer before taking them on the service account, and ask the lawyer about state charity rules
+- [ ] The site says "2% of revenue" now. Lawyer to check the wording
+
 ## Careers page (`/careers`, roles at `#roles`, form at `#apply`, copy in `content/pages/careers.ts`)
 - [ ] Open roles: `roles.items` is empty, so the page shows "No open roles right now". Add a role by copying the example in the file
 - [ ] Confirm perks (`[Work from anywhere]`, `[Flexible hours]`, `[Paid time off]`, `[Learning budget]` …) and hero point `[Remote-first]` — remove any that aren't true

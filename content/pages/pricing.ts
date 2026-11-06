@@ -82,7 +82,7 @@ export const pricingPage = {
       "One dedicated point of contact",
       "Clear updates, in plain English",
       "Nothing goes live without your OK",
-      "2% of what you pay goes to charity",
+      "2% of our revenue goes to charity",
     ],
   },
 
