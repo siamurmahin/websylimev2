@@ -55,9 +55,9 @@ export const startProject = {
         detailTitle: "Which fits best?",
         details: {
           "website-design": [
-            { id: "landing", label: "Landing page", body: "One page, one offer." },
-            { id: "business", label: "Business website", body: "4–5 pages." },
-            { id: "store", label: "Online store", body: "Sell products (WooCommerce)." },
+            { id: "landing", label: "Launchpad", body: "One page. $799." },
+            { id: "business", label: "Local Pro", body: "4–5 pages. $1,999." },
+            { id: "store", label: "Storefront", body: "Online store. $3,499." },
             { id: "unsure", label: "Not sure", body: "Help me decide." },
           ],
           growth: [
@@ -68,9 +68,9 @@ export const startProject = {
           ],
           // ids match content/services/graphic-design.ts plans
           "graphic-design": [
-            { id: "design-starter", label: "Essentials", body: "8 designs / month" },
-            { id: "design-pro", label: "Pro", body: "16 designs / month" },
-            { id: "design-brand", label: "Studio", body: "30 designs / month" },
+            { id: "design-starter", label: "Essentials", body: "8 designs. $299 / month" },
+            { id: "design-pro", label: "Pro", body: "16 designs. $549 / month" },
+            { id: "design-brand", label: "Studio", body: "30 designs. $899 / month" },
             { id: "one-off", label: "One-off design", body: "A logo, flyer or single project." },
           ],
         },

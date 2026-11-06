@@ -27,7 +27,7 @@ export function BookCallFloat() {
   // which lists "Book a free call" itself and where the pill covers the form,
   // or on Careers (for applicants, not customers)
   const pathname = usePathname();
-  const onBookingPage = pathname === link || pathname === "/contact" || pathname === "/careers";
+  const onBookingPage = pathname === link || pathname === "/contact" || pathname === "/careers" || pathname === "/get-started";
 
   useMotionValueEvent(scrollY, "change", (y) => setVisible(y > window.innerHeight * 0.6));
 

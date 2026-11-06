@@ -191,7 +191,7 @@ export function growthCards(p: {
     wasPrice: plan.wasPrice ? money(plan.wasPrice) : null,
     badge: plan.badge,
     featured: plan.badge === "Recommended",
-    href: `/start-project?package=${plan.id}`,
+    href: `/get-started?plan=${plan.id}`,
     values: plan.values,
   }));
 }

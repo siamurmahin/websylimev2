@@ -23,7 +23,7 @@ The detailed item-by-item list lives in `TODO.md`. This file is the summary to w
 
 ## 🔴 1. Must do before launch (the site won't work properly without these)
 
-### 1a. Forms — none of the 7 forms send anywhere yet
+### 1a. Forms — none of the 8 forms send anywhere yet
 
 Every form validates and shows a "Thank you" message, but the details **aren't saved or sent anywhere**. You choose the tool; I'll connect it.
 
@@ -34,6 +34,7 @@ Every form validates and shows a "Thank you" message, but the details **aren't s
 | 3 | **Careers application** | `/careers#apply` | name, email, skills, portfolio link, message | hiring inbox |
 | 4 | **Footer newsletter** | bottom of **every page** | email | newsletter tool |
 | 5 | **Blog newsletter** | `/blog`, all 3 posts | email | the same newsletter tool |
+| 8 | **Get Started** | `/get-started` (every plan's button) | name, business, email, phone, website, plan | your email |
 | 7 | **Free design application** | `/free-website-design#apply` | name, business, email, phone, website, about | your email |
 | 6 | **Video Editing waitlist** | `/services/video-editing#waitlist` | email, video types | newsletter tool (with a "video waitlist" tag) |
 

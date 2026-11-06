@@ -16,6 +16,6 @@ export const websiteCards: PlanCardData[] = web.plans.map((plan) => ({
   per: web.perLabel,
   badge: plan.badge,
   featured: plan.badge === "Recommended",
-  href: `/start-project?package=${plan.id}`,
+  href: `/get-started?plan=${plan.id}`,
   values: plan.values,
 }));

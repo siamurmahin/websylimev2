@@ -237,6 +237,12 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [x] Owner confirmed: homepage only, within 2 days, the client can keep the design or have us build it
 - [ ] Hero uses the Website Design photo (Higgsfield was out of credits). Give it its own photo later
 
+## Get Started (`/get-started?plan=…`, copy in `content/pages/get-started.ts`)
+- [ ] **Form isn't connected**: details aren't sent anywhere yet, only to the calendar if they book. Connect with the other forms
+- [ ] Graphic Design starts on WhatsApp: owner to confirm (a call stays available)
+- [ ] Owner to choose how deposits are paid (Stripe, PayPal or bank transfer)
+- [ ] Follow-up for people who send details but don't book, and tracking of each step
+
 ## Careers page (`/careers`, roles at `#roles`, form at `#apply`, copy in `content/pages/careers.ts`)
 - [ ] Open roles: `roles.items` is empty, so the page shows "No open roles right now". Add a role by copying the example in the file
 - [ ] Confirm perks (`[Work from anywhere]`, `[Flexible hours]`, `[Paid time off]`, `[Learning budget]` …) and hero point `[Remote-first]` — remove any that aren't true

@@ -154,7 +154,7 @@ const planCards: PlanCardData[] = g.plans.items.map((p) => ({
   per: g.plans.per,
   badge: p.badge,
   featured: p.badge === "Recommended",
-  href: `/start-project?package=${p.id}`,
+  href: `/get-started?plan=${p.id}`,
   values: p.values,
 }));
 

@@ -8,13 +8,17 @@ import { isPlaceholder } from "@/lib/copy";
 
 const b = site.bookACall;
 
+/** Fills in the booking form, so nobody types their details twice. */
+export type Prefill = { name: string; email: string; notes: string };
+
 /** "websylime/intro-call" or "https://cal.com/websylime/intro-call" → embeddable URL. */
-function embedUrl(link: string, theme: "light" | "dark") {
+function embedUrl(link: string, theme: "light" | "dark", prefill?: Prefill) {
   const path = link.replace(/^https?:\/\/(app\.)?cal\.com\//, "").replace(/^\/+|\/+$/g, "");
   const url = new URL(`https://cal.com/${path}`);
   url.searchParams.set("embed", "true");
   url.searchParams.set("theme", theme);
   url.searchParams.set("layout", "month_view");
+  Object.entries(prefill ?? {}).forEach(([k, v]) => url.searchParams.set(k, v));
   return url.toString();
 }
 
@@ -32,7 +36,7 @@ const getServerTheme = () => "light" as const;
  * site. Until `bookACall.calLink` is filled in, a "coming soon" card points
  * to the Start Project form instead.
  */
-export function CalEmbed() {
+export function CalEmbed({ prefill }: { prefill?: Prefill }) {
   const theme = useSyncExternalStore(subscribe, getTheme, getServerTheme);
 
   if (isPlaceholder(b.calLink)) return <ComingSoon />;
@@ -40,7 +44,7 @@ export function CalEmbed() {
   return (
     <iframe
       key={theme}
-      src={embedUrl(b.calLink, theme)}
+      src={embedUrl(b.calLink, theme, prefill)}
       title={b.calendar.frameTitle}
       loading="lazy"
       className="block h-[46rem] w-full rounded-2xl border-0 bg-background sm:h-[42rem]"

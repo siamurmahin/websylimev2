@@ -12,7 +12,7 @@ import { Copy, href } from "@/lib/copy";
 
 const sp = site.startProject;
 // One real client quote for reassurance next to the form
-const quote = testimonials.find((t) => t.name === "Hannah Reid") ?? testimonials[0];
+const quote = testimonials.find((t) => t.name === "Richard Hall") ?? testimonials[0];
 
 export const metadata: Metadata = {
   title: sp.meta.title,
