@@ -50,7 +50,7 @@ export const getStarted = {
     call: {
       title: "Thanks, {name}. Now pick a time.",
       body: "Choose a time for your free 30-minute call about {plan}.",
-      whatsappText: "Would rather message us?",
+      whatsappText: "No time that works, or need to talk sooner?",
     },
     whatsapp: {
       title: "Thanks, {name}. Let's get started.",

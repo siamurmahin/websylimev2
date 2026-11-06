@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, MessageCircle } from "lucide-react";
 import { site } from "@/content/site";
 import { icons } from "@/components/icons";
 import { PhotoHero } from "@/components/sections/PhotoHero";
@@ -91,6 +91,18 @@ export default function BookACallPage() {
           <div className="rounded-[2rem] border bg-surface p-3 shadow-[0_30px_70px_-45px_rgb(0_0_0/0.35)] sm:p-4 dark:shadow-none">
             <CalEmbed />
           </div>
+          <p className="mt-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-sm text-muted-foreground">
+            {b.whatsappInstead.text}
+            <a
+              href={site.footer.contact.whatsapp.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-sm font-semibold text-foreground underline underline-offset-4 outline-none focus-visible:ring-2 focus-visible:ring-ring/50"
+            >
+              <MessageCircle className="size-4" aria-hidden />
+              {b.whatsappInstead.label}
+            </a>
+          </p>
         </FadeUp>
       </section>
     </main>

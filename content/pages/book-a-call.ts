@@ -41,6 +41,8 @@ export const bookACall = {
     "A rough price and timeline",
   ],
   writeInstead: { text: "Prefer to write?", label: "Send us your project", href: "/start-project" },
+  // Calls need 12 hours' notice (set in Cal.com), so sooner goes to WhatsApp
+  whatsappInstead: { text: "No time that works, or need to talk sooner?", label: "Message us on WhatsApp" },
   calendar: {
     title: "Pick a time",
     frameTitle: "Book a call with Websy Lime",
