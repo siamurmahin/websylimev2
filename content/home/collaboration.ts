@@ -7,7 +7,7 @@ export const collaboration = {
   body: "You get a team that runs itself. We keep you in the loop — you only step in to say yes.",
   cta: { label: "Book a free call", href: "/book-a-call" },
   points: [
-    { title: "One dedicated point of contact", body: "One person who knows your business. No ticket queues.", icon: "userRound" },
+    { title: "One dedicated point of contact", body: "One person who knows your business, on WhatsApp and email. No ticket queues.", icon: "userRound" },
     { title: "Clear weekly updates", body: "A short update every week: what's done, what's next.", icon: "calendarCheck" },
     { title: "Fast revisions", body: "Changes turned around within 2 days.", icon: "zap" },
     { title: "You approve, we execute", body: "Nothing goes live without your OK.", icon: "badgeCheck" },

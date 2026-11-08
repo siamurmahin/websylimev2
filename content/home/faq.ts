@@ -32,7 +32,7 @@ export const faq = {
     {
       category: "Websites",
       q: "Can I update the website myself?",
-      a: "Yes. We'll show you how to change text and photos yourself. Prefer not to? We can make updates for you, or a Growth plan handles it every month.",
+      a: "Yes. We'll show you how to change text and photos yourself. Prefer not to? Send changes to your dedicated contact on WhatsApp or by email, or a Growth plan handles it every month.",
     },
     {
       category: "Websites",
@@ -48,7 +48,7 @@ export const faq = {
     {
       category: "Graphic design",
       q: "How do I ask for a design?",
-      a: "Send us a short request — what it's for and any text or photos. We'll design it and send it back in about 2–3 business days. [Confirm how requests are sent: email, WhatsApp or a request form.]",
+      a: "You get one dedicated contact. Send them a short request on WhatsApp or by email: what it's for and any text or photos. We'll design it and send it back in about 2–3 business days.",
     },
     {
       category: "Graphic design",
@@ -124,7 +124,7 @@ export const faq = {
     {
       category: "Billing",
       q: "Can I cancel anytime?",
-      a: "[Confirm cancellation terms — e.g. cancel with 30 days' notice, no long-term contract.]",
+      a: "Yes. There's no long-term contract or minimum term. Monthly plans need 30 days' notice, and Graphic Design plans need 7 days before your next billing date.",
     },
     {
       category: "Billing",

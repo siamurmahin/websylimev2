@@ -27,7 +27,8 @@ function PlaceholderLogo({ name, index }: { name: string; index: number }) {
 }
 
 export function TrustBar() {
-  const { label, logos } = site.home.trustBar;
+  const { label, logos, hidden } = site.home.trustBar;
+  if (hidden) return null;
 
   return (
     <section aria-label={label} className="relative border-y bg-surface/50">

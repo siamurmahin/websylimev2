@@ -79,7 +79,7 @@ export const pricingPage = {
   included: {
     title: "Included with every plan",
     items: [
-      "One dedicated point of contact",
+      "One dedicated contact on WhatsApp and email",
       "Clear updates, in plain English",
       "Nothing goes live without your OK",
       "2% of our revenue goes to charity",

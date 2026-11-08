@@ -29,6 +29,12 @@ export const record: Donation[] = [
   // },
 ];
 
+// Planned, not done yet. When one happens, delete it here and add it to `record` above.
+export const upcoming: { when: string; title: string }[] = [
+  { when: "Late November", title: "Qurans for orphaned hifz students at a madrasa in Bangladesh" },
+  { when: "Early December", title: "Blankets and warm clothes for homeless people" },
+];
+
 export const gives = {
   meta: {
     title: "Websy Lime Gives",
@@ -49,7 +55,7 @@ export const gives = {
     headline: "What we're working toward.",
     subheadline: "These are our goals. What we've actually done is in the record below.",
     items: [
-      { icon: "school", title: "Sponsor 10 children a year", body: "Sponsor at least 10 orphaned children in Bangladesh every year, covering their full yearly costs: education, food, clothing and daily necessities." },
+      { icon: "school", title: "Grow to 10 children a year", body: "Our goal is to sponsor 10 orphaned children in Bangladesh every year, covering their education, food, clothing and daily needs." },
       { icon: "grow", title: "Support more each year", body: "As our fund grows, support more children each year." },
       { icon: "clothes", title: "Keep people warm", body: "Every winter, provide warm clothes, blankets and other essentials for homeless people." },
     ],
@@ -68,6 +74,7 @@ export const gives = {
     eyebrow: "Our giving record",
     headline: "What we've given.",
     subheadline: "Every donation, with its date and amount.",
+    upcomingTitle: "Coming up",
     totalLabel: "Given so far",
     countLabel: "Donations",
     empty: {

@@ -38,7 +38,7 @@ export const legal = {
       secondaryCta: { label: "Contact us", href: "/contact" },
       points: ["We never sell your data", "Only what we need", "Delete it anytime"],
     },
-    updated: "[Month DD, 2026]",
+    updated: "November 8, 2026",
     summary: [
       "We only collect what you give us (like your name and email) and basic, anonymous site usage.",
       "We use it to reply to you, do the work you hire us for, and improve our website.",
@@ -62,7 +62,7 @@ export const legal = {
             type: "ul",
             items: [
               "What you give us — your name, email, phone number, business details and message when you fill in a form (contact, start a project, careers, newsletter or waitlist), book a call, or chat with WebsyChat.",
-              "What your browser tells us — basic technical data like your device, browser, pages visited and rough location (country or city), collected through [analytics tool — confirm, e.g. Google Analytics or Plausible] and cookies.",
+              "What your browser tells us — basic technical data like your device, browser, pages visited and rough location (country or city), which our hosting provider records to keep the site running and secure.",
             ],
           },
           { type: "p", text: "We don't ask for sensitive information (like health or financial details) and we ask you not to send it to us." },
@@ -93,12 +93,13 @@ export const legal = {
           {
             type: "ul",
             items: [
-              "Website hosting — [hosting provider — confirm]",
-              "Email and newsletter — [email provider — confirm]",
+              "Website hosting — Hostinger",
+              "Email — Hostinger",
+              "Booking calls — Cal.com",
+              "Messages — WhatsApp",
               "Call booking — Cal.com",
-              "Payments and invoices — [payment provider — confirm, e.g. Stripe]",
-              "Analytics — [analytics tool — confirm]",
-              "WebsyChat AI — [AI / chat provider — confirm]",
+              "Payments and invoices — Stripe",
+              "WebsyChat — our AI chat provider",
             ],
           },
           { type: "p", text: "We may also share information if the law requires it." },
@@ -108,7 +109,7 @@ export const legal = {
         id: "cookies",
         title: "Cookies",
         body: [
-          { type: "p", text: "Cookies are small files saved in your browser. We use them to remember settings (like light or dark mode) and to measure how our site is used. [Confirm whether analytics cookies are used and whether a cookie banner is needed.]" },
+          { type: "p", text: "We don't use advertising or tracking cookies. Your browser saves a few small settings on your device, like light or dark mode. If we add analytics later, we'll update this page first." },
           { type: "p", text: "You can block or delete cookies in your browser settings. The site will still work." },
         ],
       },
@@ -116,7 +117,7 @@ export const legal = {
         id: "how-long",
         title: "How long we keep it",
         body: [
-          { type: "p", text: "We keep your information only as long as we need it: enquiries for up to [2 years], client records for as long as the law requires for tax and accounting [e.g. 7 years], and newsletter details until you unsubscribe." },
+          { type: "p", text: "We keep your information only as long as we need it: enquiries for up to 2 years, client records for as long as the law requires for tax and accounting (usually 7 years), and newsletter details until you unsubscribe." },
         ],
       },
       {
@@ -134,7 +135,7 @@ export const legal = {
               "Send you a copy in a common format",
             ],
           },
-          { type: "p", text: `Just email ${email}. We'll reply within [30 days]. If you're in the UK or EU, you can also complain to your local data protection authority (in the UK, the ICO). If you're in California or another US state with privacy laws, you have similar rights — and we don't sell or “share” personal information for targeted advertising.` },
+          { type: "p", text: `Just email ${email}. We'll reply within 30 days. If you're in the UK or EU, you can also complain to your local data protection authority (in the UK, the ICO). If you're in California or another US state with privacy laws, you have similar rights — and we don't sell or “share” personal information for targeted advertising.` },
         ],
       },
       {
@@ -178,11 +179,11 @@ export const legal = {
       secondaryCta: { label: "Contact us", href: "/contact" },
       points: ["Clear prices", "You own your website", "Cancel monthly plans anytime"],
     },
-    updated: "[Month DD, 2026]",
+    updated: "November 8, 2026",
     summary: [
       "We agree the price and scope with you before we start.",
       "Once your website is paid for in full, it's yours.",
-      "Monthly plans renew each month and you can cancel with [30 days'] notice.",
+      "Monthly plans renew each month and you can cancel with 30 days' notice.",
       "If something goes wrong, talk to us first — we'll work to put it right.",
     ],
     sections: [
@@ -207,11 +208,11 @@ export const legal = {
           {
             type: "ul",
             items: [
-              "Quotes are valid for [30 days].",
+              "Quotes are valid for 30 days.",
               "Website projects: 50% deposit to start, the rest before launch.",
               "All-in-One Growth plans: pay the full month up front, or in two payments, the first on day one and the rest 15 days later.",
               "Monthly plans are billed in advance each month and renew automatically.",
-              "Invoices are due within [7 days]. We may pause work on overdue accounts.",
+              "Invoices are due within 7 days. We may pause work on overdue accounts.",
               "Prices are in USD and don't include any taxes that apply.",
             ],
           },
@@ -221,7 +222,7 @@ export const legal = {
         id: "cancellation",
         title: "Monthly plans and cancelling",
         body: [
-          { type: "p", text: "You can cancel a monthly plan anytime with [30 days'] notice by emailing us. There's no long-term contract [— confirm any minimum term]. We don't refund months that have already started. Graphic Design plans can be cancelled anytime, at least 7 days before the next billing date. Unused work (like designs or posts) doesn't roll over to the next month unless your plan says it does." },
+          { type: "p", text: "You can cancel a monthly plan anytime with 30 days' notice by emailing us. There's no long-term contract and no minimum term. We don't refund months that have already started. Graphic Design plans can be cancelled anytime, at least 7 days before the next billing date. Unused work (like designs or posts) doesn't roll over to the next month unless your plan says it does." },
         ],
       },
       {
@@ -288,21 +289,21 @@ export const legal = {
         id: "liability",
         title: "Limits of liability",
         body: [
-          { type: "p", text: "To the extent the law allows, we're not liable for indirect losses (like lost profits or data), and our total liability for any claim is limited to the amount you paid us in the [3 months] before the claim. Nothing in these terms limits liability that can't be limited by law." },
+          { type: "p", text: "To the extent the law allows, we're not liable for indirect losses (like lost profits or data), and our total liability for any claim is limited to the amount you paid us in the 3 months before the claim. Nothing in these terms limits liability that can't be limited by law." },
         ],
       },
       {
         id: "ending",
         title: "Ending our work together",
         body: [
-          { type: "p", text: "Either of us can end the work if the other seriously breaks these terms and doesn't fix it within [14 days] of being told. You pay for work done up to that point, and we hand over everything you've paid for." },
+          { type: "p", text: "Either of us can end the work if the other seriously breaks these terms and doesn't fix it within 14 days of being told. You pay for work done up to that point, and we hand over everything you've paid for." },
         ],
       },
       {
         id: "law",
         title: "Governing law",
         body: [
-          { type: "p", text: "These terms are governed by the laws of [State — confirm, e.g. Wyoming], USA. If there's a disagreement, we'll first try to sort it out together in good faith." },
+          { type: "p", text: "These terms are governed by the laws of the State of Missouri, USA. If there's a disagreement, we'll first try to sort it out together in good faith." },
         ],
       },
       {

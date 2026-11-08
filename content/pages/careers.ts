@@ -48,7 +48,7 @@ export const careers = {
   perks: {
     eyebrow: "What you get",
     headline: "The basics, done right.",
-    items: ["Work from anywhere", "[Flexible hours]", "[Paid time off]", "[Learning budget]", "[Latest tools and software]", "2% of revenue goes to charity"],
+    items: ["Work from anywhere", "Flexible hours", "Real client projects", "Honest feedback on your work", "Latest tools and software", "2% of revenue goes to charity"],
   },
 
   // Section 4 — open roles. Add a role by copying the example below into `items`.

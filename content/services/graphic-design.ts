@@ -92,7 +92,7 @@ export const graphicDesign = {
     eyebrow: "How it works",
     headline: "Ask. We design. You post.",
     steps: [
-      { title: "Send a request", body: "Tell us what you need — a sale, a new service, a holiday post." },
+      { title: "Send a request", body: "On WhatsApp or by email: a sale, a new service, a holiday post." },
       { title: "We design it", body: "On-brand designs, ready in about 2–3 business days." },
       { title: "Approve & download", body: "Ask for changes, approve, and download ready-to-post files." },
     ],

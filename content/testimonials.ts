@@ -153,7 +153,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    quote: "Our new website is warm, easy to use, and finally feels like us. Bookings have jumped and customers say it's a breeze to get started.",
+    quote: "Our new website is warm, easy to use, and finally feels like us. Orders have jumped and customers say it's a breeze to shop.",
     name: "Hannah Reid",
     role: "Founder",
     business: "Tide and Tail",

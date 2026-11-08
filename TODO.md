@@ -44,7 +44,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [ ] Optional: live `url` for each project
 
 ### Trust Bar
-- [ ] 6–10 real client logos (transparent SVG/PNG) → `public/clients/logos/`, then set `name`, `src`, `width` in `home.trustBar.logos` (8 `[Client N]` placeholders now). Logos are shown in one solid color, so any colored logo works.
+- [ ] (Row hidden for now: `hidden: true` in `content/home/trust-bar.ts`) 6–10 real client logos (transparent SVG/PNG) → `public/clients/logos/`, then set `name`, `src`, `width` in `home.trustBar.logos` (8 `[Client N]` placeholders now). Logos are shown in one solid color, so any colored logo works.
 
 ### Results
 - [x] Client retention: 90% (confirmed)
@@ -216,7 +216,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 
 ## Case Studies (merged into Work: list at `/work`, stories at `/work/[slug]`, copy in `content/pages/case-studies.ts`, stories in `content/case-studies.ts`)
 - [x] 45 case studies written from the "portfolio content" files. SEO targets the industry, never the client: no client names in text, titles, URLs, image file names or structured data; live-site links are nofollow; quotes show first name + initial. Private client list: `content/case-study-clients.md`
-- [ ] ⚠ **The orange mark is off, but these numbers are still estimates (brackets kept in `content/case-studies.ts`). Replace every one with the client's real result before launch, and confirm the 14 "Growing after launch" stories (Growth plan, social, Google Ads) with each client.** They are realistic estimates, not client data (also on homepage Featured Work). The source files' numbers looked templated, and for at least 4 clients the file guessed the business type. Publishing unconfirmed numbers or testimonials is a legal risk (US FTC, UK CMA). If a client has no number, remove that stat
+- [ ] ⚠ **Owner is confirming these with each client (2026-11-08) and says they agree to keep them. Get each OK in writing (email or WhatsApp is fine). The orange mark is off, but these numbers are still estimates (brackets kept in `content/case-studies.ts`). Replace every one with the client's real result before launch, and confirm the 14 "Growing after launch" stories (Growth plan, social, Google Ads) with each client.** They are realistic estimates, not client data (also on homepage Featured Work). The source files' numbers looked templated, and for at least 4 clients the file guessed the business type. Publishing unconfirmed numbers or testimonials is a legal risk (US FTC, UK CMA). If a client has no number, remove that stat
 - [ ] Confirm each quote with the client. One says "Sales nearly tripled" (sports nutrition), which doesn't fit the estimates
 - [ ] On hold, no case study yet (business type was wrong or unverifiable in the source file; shown on /work only): FourthWall Agency (actually employer branding), TFO Medical (actually healthcare recruitment), Tide and Tail (actually pet and farm supplies store), Virtuous Earth Solutions (actually regenerative farming for smallholders), Red Rose Care (site blocks automated visits)
 - [ ] Their testimonials are still on the site and don't match the real business (e.g. Tide and Tail: "Bookings have jumped", but it's a shop). Check or remove them in `content/testimonials.ts`
@@ -239,11 +239,12 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 
 ## Get Started (`/get-started?plan=…`, copy in `content/pages/get-started.ts`)
 - [ ] **Form isn't connected**: details aren't sent anywhere yet, only to the calendar if they book. Connect with the other forms
-- [ ] Graphic Design starts on WhatsApp: owner to confirm (a call stays available)
+- [x] Requests for every service go to one dedicated contact on WhatsApp or email (owner confirmed)
 - [ ] Owner to choose how deposits are paid (Stripe, PayPal or bank transfer)
 - [ ] Follow-up for people who send details but don't book, and tracking of each step
 
 ## Websy Lime Gives (`/gives`, copy and record in `content/pages/gives.ts`)
+- [ ] Planned: late Nov, Qurans for an orphan hifz madrasa; early Dec, blankets. Both show under "Coming up" until done
 - [ ] ⚠ **Add the first real donation before launch**: date, amount, what it paid for, and a photo or receipt. Until then the page says the first report is on its way
 - [ ] Owner to confirm that no children's faces or names are shown
 - [ ] ⚠ **Client contributions:** the page says existing clients can contribute. Get Stripe's written answer before taking them on the service account, and ask the lawyer about state charity rules
@@ -251,7 +252,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 
 ## Careers page (`/careers`, roles at `#roles`, form at `#apply`, copy in `content/pages/careers.ts`)
 - [ ] Open roles: `roles.items` is empty, so the page shows "No open roles right now". Add a role by copying the example in the file
-- [ ] Confirm perks (`[Work from anywhere]`, `[Flexible hours]`, `[Paid time off]`, `[Learning budget]` …) and hero point `[Remote-first]` — remove any that aren't true
+- [x] Careers perks confirmed by owner
 - [ ] Application form isn't sent anywhere yet — connect a hiring inbox / email before launch. Reply time `[2 weeks]`
 - [ ] Hero photo is AI-generated (no faces, not our real office) — swap for a real photo later
 - [ ] "Book a free call" floating pill is hidden on this page (it's for customers)
@@ -260,7 +261,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [ ] ⚠ Both are plain-English starter drafts, NOT legal advice — have a lawyer review them before launch (US LLC with UK/EU clients → GDPR/UK GDPR + US state privacy laws)
 - [ ] Privacy: confirm hosting, email/newsletter, payment, analytics and WebsyChat AI providers; whether analytics cookies are used (and if a cookie banner is needed); retention periods; reply time `[30 days]`
 - [ ] Terms: confirm deposit `[50%]`, invoice terms `[7 days]`, quote validity, cancellation notice `[30 days']` / any minimum term, hosting period + renewal price, WebsyChat trial terms, liability cap, notice period, governing-law state
-- [ ] Set the real "Last updated" dates
+- [ ] Privacy and Terms are filled in (owner approved). Change the "Last updated" date to the launch day. If analytics is added, update the Cookies section first
 - [ ] Shared hero photo is AI-generated (no faces) — swap later if you like
 
 ## Pages

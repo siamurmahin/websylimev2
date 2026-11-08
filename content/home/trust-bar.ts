@@ -1,6 +1,8 @@
 // Homepage → trustBar section.
 // Edit the text below. [Square brackets] = placeholder still to fill in (see TODO.md).
 export const trustBar = {
+  // Hidden until real client logos are added. Set to false to show the row again.
+  hidden: true,
   label: "Trusted by growing businesses across the US",
   // Real client logos (SVG/PNG, transparent) in public/clients/logos/.
   // They render as one solid color so mixed logos look consistent in light & dark.

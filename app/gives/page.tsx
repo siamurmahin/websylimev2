@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, GraduationCap, HeartHandshake, Shirt, Sprout } from "lucide-react";
+import { ArrowRight, CalendarDays, GraduationCap, HeartHandshake, Shirt, Sprout } from "lucide-react";
 import { site } from "@/content/site";
-import { record } from "@/content/pages/gives";
+import { record, upcoming } from "@/content/pages/gives";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { FadeUp } from "@/components/motion/SplitReveal";
 
@@ -89,6 +89,23 @@ export default function GivesPage() {
           <h2 id="gv-record" className={h2}>{r.headline}</h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">{r.subheadline}</p>
         </FadeUp>
+
+        {upcoming.length > 0 && (
+          <FadeUp className="mt-10 rounded-[2rem] border bg-surface p-6 sm:p-8">
+            <h3 className="font-display text-xl font-bold tracking-[-0.02em]">{r.upcomingTitle}</h3>
+            <ul className="mt-4 divide-y">
+              {upcoming.map((u) => (
+                <li key={u.title} className="flex flex-col gap-1 py-3 sm:flex-row sm:items-center sm:gap-4">
+                  <span className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold sm:w-40">
+                    <CalendarDays className="size-4 text-lime-strong dark:text-lime" aria-hidden />
+                    {u.when}
+                  </span>
+                  <span className="leading-relaxed text-muted-foreground">{u.title}</span>
+                </li>
+              ))}
+            </ul>
+          </FadeUp>
+        )}
 
         {entries.length === 0 ? (
           <FadeUp className="mt-10 rounded-[2rem] border border-dashed bg-surface/60 p-8 text-center sm:p-12">
