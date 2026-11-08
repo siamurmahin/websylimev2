@@ -9,7 +9,7 @@ The full history of earlier decisions is in git (`git log -p TODO.md`).
 - Prices: Website Launchpad $799 / Local Pro $1,999 / Storefront $3,499; Graphic Design Essentials $299 (8) / Pro $549 (16) / Studio $899 (30); Growth $1,299 / $1,999 / $2,699
 - Hosting: our shared hosting is included 12 months (then $240 a year) for WordPress and standard custom sites only. Wix, Shopify and other subscription platforms: client pays the platform with their own card. Larger Laravel/Node.js apps: client pays for their own server. Websites live in about 2 weeks. Changes within 2 days. Weekly updates
 - Requests for every service go to one dedicated contact on WhatsApp or email. Reply usually within 12 hours, max 1 business day. Hours Mon–Fri 9am–6pm ET
-- Payment: 50% deposit for websites; Growth paid up front or in two payments 15 days apart. Monthly plans 30 days' notice, no minimum term; Graphic Design 7 days
+- Payment: 50% deposit for websites (non-refundable once paid); Growth paid up front or in two payments 15 days apart. Monthly plans 30 days' notice, no minimum term; Graphic Design 7 days
 - Charity: 2% of revenue, given in Websy Lime's name, for orphaned children and people in need in Bangladesh. Proof on `/gives`
 - Free website design: 10 businesses a month, homepage only, within 2 days, client keeps the design
 - Case studies: every client reviewed and agreed to their story, numbers and quote (2026-11-09). The owner keeps the replies

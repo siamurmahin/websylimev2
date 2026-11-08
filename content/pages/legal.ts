@@ -97,8 +97,8 @@ export const legal = {
               "Email — Hostinger",
               "Booking calls — Cal.com",
               "Messages — WhatsApp",
-              "Call booking — Cal.com",
               "Payments and invoices — Stripe",
+              "Client records — Google Sheets (Google)",
               "WebsyChat — our AI chat provider",
             ],
           },
@@ -142,7 +142,7 @@ export const legal = {
         id: "security",
         title: "Keeping it safe",
         body: [
-          { type: "p", text: "We use secure (HTTPS) connections, trusted providers and limited access to keep your information safe. No system is 100% secure, but we take reasonable steps to protect it." },
+          { type: "p", text: "We use secure (HTTPS) connections, trusted providers and limited access to keep your information safe. Client records are kept in our own CRM, which only our team can access. No system is 100% secure, but we take reasonable steps to protect it." },
         ],
       },
       {
@@ -209,7 +209,7 @@ export const legal = {
             type: "ul",
             items: [
               "Quotes are valid for 30 days.",
-              "Website projects: 50% deposit to start, the rest before launch.",
+              "Website projects: 50% deposit to start, the rest before launch. The deposit is non-refundable once paid.",
               "All-in-One Growth plans: pay the full month up front, or in two payments, the first on day one and the rest 15 days later.",
               "Monthly plans are billed in advance each month and renew automatically.",
               "Invoices are due within 7 days. We may pause work on overdue accounts.",
