@@ -6,7 +6,7 @@ The site has no orange placeholders left. Details for each item are in `TODO.md`
 ## 🔴 Must do before launch
 
 ### Owner
-- [ ] **Case studies:** get each client's OK in writing (email or WhatsApp) for their numbers, story and quote. Three quotes to check: sports nutrition ("Sales nearly tripled"), TFO Medical ("clinical trust"), and tell Hannah (Tide and Tail) her quote now says "orders"
+- [x] **Case studies:** every client agreed to their story, numbers and quote (2026-11-09). Keep the replies
 - [ ] **Test booking:** book a call from the site (Get started → Local Pro), check the confirmation email, then cancel it
 - [ ] **Stripe payment links:** website deposits $399.50 / $999.50 / $1,749.50; Growth $1,299 / $1,999 / $2,699 a month; Graphic Design $299 / $549 / $899 a month
 - [ ] **Lawyer:** review Privacy, Terms, the "2% of revenue" wording and the client contributions line on the Gives page

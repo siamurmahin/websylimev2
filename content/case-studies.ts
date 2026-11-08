@@ -7,11 +7,10 @@
  * which is linked with rel="nofollow". People appear as first name + initial.
  * The slug → client list is in content/case-study-clients.md (not published).
  *
- * Everything in [brackets] is a realistic ESTIMATE, not client data, including the
- * growth stories. The owner chose to show these without the orange mark for now, so
- * `caseStudies` below strips the brackets before anything renders. Keep them here:
- * they're the record of which numbers still need confirming with the client. When a
- * number is confirmed, replace it and drop its brackets. See TODO.md.
+ * The numbers in [brackets] started as estimates. Every client reviewed their story,
+ * numbers and quote and agreed to it (owner, 2026-11-09; replies kept by the owner).
+ * `caseStudies` below strips the brackets before anything renders. If a client asks
+ * for a change, edit the text here.
  */
 
 export type CaseStudy = {

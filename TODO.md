@@ -12,14 +12,13 @@ The full history of earlier decisions is in git (`git log -p TODO.md`).
 - Payment: 50% deposit for websites; Growth paid up front or in two payments 15 days apart. Monthly plans 30 days' notice, no minimum term; Graphic Design 7 days
 - Charity: 2% of revenue, given in Websy Lime's name, for orphaned children and people in need in Bangladesh. Proof on `/gives`
 - Free website design: 10 businesses a month, homepage only, within 2 days, client keeps the design
-- Case study numbers are estimates the owner is confirming with each client (brackets kept in `content/case-studies.ts` as the record)
+- Case studies: every client reviewed and agreed to their story, numbers and quote (2026-11-09). The owner keeps the replies
 - Client names in screenshots stay. No client names in text, URLs, alt text or schema
 - Calls: Cal.com "Websy Lime Free Call", Mon–Fri 9am–3pm ET ("US Calls" schedule), 12 hours' notice; sooner goes to WhatsApp
 - Hosting: the owner's Hostinger (Node.js), only as the very last step
 - Video Editing stays "Coming soon"
 
 ## Open: owner
-- [ ] Written client OKs for case studies; check the sports nutrition, TFO Medical and Tide and Tail quotes
 - [ ] Test booking from `/get-started?plan=business`
 - [ ] Stripe payment links (amounts in `LAUNCH-CHECKLIST.md`)
 - [ ] Lawyer review: `content/pages/legal.ts`, the 2% wording, client contributions on `/gives`
