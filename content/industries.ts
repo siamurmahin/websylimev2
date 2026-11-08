@@ -39,7 +39,7 @@ export const industries: Industry[] = [
     keyword: "website design for plumbers",
     meta: {
       title: "Website Design for Plumbers",
-      description: "Plumbing websites built to bring in calls: tap-to-call, emergency pages, service areas and reviews. Fast WordPress sites with hosting included.",
+      description: "Plumbing websites built to bring in calls: tap-to-call, emergency pages, service areas and reviews. Fast websites with hosting included.",
     },
     card: "For emergency call-outs and booked jobs, with your number one tap away.",
     hero: {

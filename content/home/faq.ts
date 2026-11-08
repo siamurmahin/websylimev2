@@ -22,12 +22,12 @@ export const faq = {
     {
       category: "Websites",
       q: "Is hosting really included?",
-      a: "Yes. Hosting and SSL security are included for the first 12 months, with no separate hosting bill. Your domain name is separate. We don't sell hosting on its own, only with websites we build. After that, hosting is $240 a year.",
+      a: "For WordPress and standard custom sites, yes: our hosting and SSL security are included for the first 12 months, then it's $240 a year. Your domain name is separate. Wix and Shopify sites run on their own plans, which you pay to them directly. Larger custom apps may need their own server, and we'll tell you the cost before we start.",
     },
     {
       category: "Websites",
       q: "What do you build websites with?",
-      a: "Every site is built on WordPress, and online stores use WooCommerce. It's the world's most popular website platform, so you're never locked in.",
+      a: "Most sites are built on WordPress. We also build on Wix and Shopify, or fully custom with code like Laravel and Node.js. Online stores use WooCommerce or Shopify. We'll recommend what fits your business best.",
     },
     {
       category: "Websites",

@@ -27,7 +27,7 @@ export const pricingPage = {
     intro: "A new website, built for you. Hosting included.",
     perLabel: "one-time",
     cta: "Get started",
-    footnote: "One-time price. Hosting and SSL are included for the first 12 months, then $240 a year. Your domain name is separate. Prices in USD.",
+    footnote: "One-time price. Hosting and SSL are included for WordPress and custom sites for the first 12 months, then $240 a year. Wix and Shopify plans, and servers for larger custom apps, are paid separately. Your domain name is separate. Prices in USD.",
     // Rows shown on every card, in this order. "—" = not included.
     rows: [
       "Pages",
@@ -62,7 +62,7 @@ export const pricingPage = {
       {
         id: "store",
         name: "Storefront",
-        tagline: "An online store to sell your products (WooCommerce).",
+        tagline: "An online store to sell your products (WooCommerce or Shopify).",
         price: "$3,499",
         badge: null as string | null,
         values: ["Shop + product pages", "Included", "Included", "Included", "Checkout + contact", "Included", "Included", "Included", "2 rounds", "3–4 weeks"],

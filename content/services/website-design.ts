@@ -8,7 +8,7 @@ export const websiteDesign = {
   meta: {
     title: "Website Design",
     description:
-      "Fast, mobile-first WordPress websites for home service and local businesses — built to turn visitors into calls, bookings and quote requests. Hosting included.",
+      "Fast, mobile-first websites for home service and local businesses — built to turn visitors into calls, bookings and quote requests. Hosting included.",
   },
 
   // Section 1 — hero with photo (offer first: what, for whom, price, how fast)
@@ -72,8 +72,8 @@ export const websiteDesign = {
     eyebrow: "Every website includes",
     headline: "No surprises. Just a site that works.",
     items: [
-      { title: "Hosting + SSL included", body: "For the first 12 months, then $240 a year." },
-      { title: "Speed & security updates", body: "We keep WordPress and plugins up to date while we host it." },
+      { title: "Hosting + SSL included", body: "On WordPress and custom sites: free for 12 months, then $240 a year." },
+      { title: "Speed & security updates", body: "We keep your site, plugins and security up to date while we host it." },
       { title: "You own your website", body: "Your site, your content, your domain." },
       { title: "Clear price, clear timeline", body: "You know the cost and the launch date before we start." },
       { title: "Revisions included", body: "1–2 rounds of changes, depending on the package." },

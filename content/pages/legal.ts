@@ -198,7 +198,7 @@ export const legal = {
         id: "services",
         title: "Our services",
         body: [
-          { type: "p", text: "We offer website design (built on WordPress, with WooCommerce for stores), All-in-One Growth plans, graphic design plans, WebsyChat and, soon, video editing. Exactly what's included in your project or plan is listed in your proposal or on our pricing page." },
+          { type: "p", text: "We offer website design (on WordPress, Wix, Shopify or custom code such as Laravel and Node.js, with online stores on WooCommerce or Shopify), All-in-One Growth plans, graphic design plans, WebsyChat and, soon, video editing. Exactly what's included in your project or plan is listed in your proposal or on our pricing page." },
         ],
       },
       {
@@ -258,7 +258,7 @@ export const legal = {
               "Your website, content and designs become yours once paid in full.",
               "Your domain name is always yours.",
               "We keep ownership of our own tools, templates and know-how, and give you the right to use them as part of your site.",
-              "Third-party items (like WordPress plugins, fonts or stock photos) stay under their own licences.",
+              "Third-party items (like plugins, apps, themes, fonts or stock photos) stay under their own licences.",
               "We may show your project in our portfolio unless you ask us not to.",
             ],
           },
@@ -268,7 +268,7 @@ export const legal = {
         id: "hosting",
         title: "Hosting",
         body: [
-          { type: "p", text: "Website packages include hosting and SSL for the first 12 months. We don't sell hosting on its own. After that, hosting renews at $240 a year unless you move your site elsewhere — we'll help you move it if you want to. We aim for reliable uptime but can't guarantee the site will never go down." },
+          { type: "p", text: "WordPress and standard custom-built websites include our shared hosting and SSL for the first 12 months. We don't sell hosting on its own. After that, hosting renews at $240 a year unless you move your site elsewhere — we'll help you move it if you want to. Sites on subscription platforms like Wix or Shopify run on the platform's own plan, which you pay directly with your own card. Larger custom apps (for example on Laravel or Node.js) with many features may need their own server, which you pay for separately; we'll tell you the cost before we start. We aim for reliable uptime but can't guarantee the site will never go down." },
         ],
       },
       {
