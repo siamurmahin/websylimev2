@@ -221,7 +221,7 @@ Paths below like `home.hero.badge` mean: file `content/home/hero.ts`, field `bad
 - [ ] On hold, no case study yet (business type was wrong or unverifiable in the source file; shown on /work only): FourthWall Agency (actually employer branding), TFO Medical (actually healthcare recruitment), Tide and Tail (actually pet and farm supplies store), Virtuous Earth Solutions (actually regenerative farming for smallholders), Red Rose Care (site blocks automated visits)
 - [ ] Their testimonials are still on the site and don't match the real business (e.g. Tide and Tail: "Bookings have jumped", but it's a shop). Check or remove them in `content/testimonials.ts`
 - [x] Decision: testimonials keep client business names (homepage, About). Only case studies and the portfolio hide them
-- [ ] Screenshots still show the client's logo inside the image. Google can't rank us from that, but people can read it
+- [x] (Owner: keep as is, 2026-11-09) Screenshots still show the client's logo inside the image. Google can't rank us from that, but people can read it
 - [ ] Locations are from the source text or inferred from a .co.uk domain; blank where unknown. "Timeline" was replaced with "Launched" (real date in the source)
 - [ ] Get permission from each client before publishing their story and quote
 - [ ] Hero photo is AI-generated (no faces) — swap for a real photo later

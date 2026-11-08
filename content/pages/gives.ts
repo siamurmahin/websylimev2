@@ -38,16 +38,16 @@ export const upcoming: { when: string; title: string }[] = [
 export const gives = {
   meta: {
     title: "Websy Lime Gives",
-    description: "Websy Lime sets aside 2% of our revenue to sponsor orphaned children in Bangladesh and help homeless people through winter. See updates and receipts.",
+    description: "Websy Lime sets aside 2% of our revenue to help orphaned children and people in need in Bangladesh. See what we give, with updates and receipts.",
   },
   hero: {
     eyebrow: "Websy Lime Gives",
     headline: "2% of what we earn goes back.",
     headlineAccent: "goes back.",
-    subheadline: "We set aside 2% of our revenue to sponsor orphaned children in Bangladesh and help homeless people through winter. Every project we take on helps fund it.",
+    subheadline: "We set aside 2% of our revenue to help orphaned children and people in need in Bangladesh. Every project we take on helps make it possible.",
     primaryCta: { label: "See what we've given", href: "#record" },
     secondaryCta: { label: "Start a project", href: "/start-project" },
-    points: ["2% of our revenue", "Children in Bangladesh", "Updates and receipts"],
+    points: ["2% of our revenue", "Given in Bangladesh", "Updates and receipts"],
     image: { src: "/images/gives-hero.webp", alt: "Folded winter clothes, school books and meal boxes on a wooden table" },
   },
   goals: {
@@ -57,7 +57,7 @@ export const gives = {
     items: [
       { icon: "school", title: "Grow to 10 children a year", body: "Our goal is to sponsor 10 orphaned children in Bangladesh every year, covering their education, food, clothing and daily needs." },
       { icon: "grow", title: "Support more each year", body: "As our fund grows, support more children each year." },
-      { icon: "clothes", title: "Keep people warm", body: "Every winter, provide warm clothes, blankets and other essentials for homeless people." },
+      { icon: "clothes", title: "Help where it's needed", body: "Warm clothes and blankets in winter, help for poor families in villages, and whatever people need most at the time." },
     ],
   },
   funding: {

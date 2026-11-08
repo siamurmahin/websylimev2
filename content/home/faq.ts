@@ -149,7 +149,7 @@ export const faq = {
     {
       category: "General",
       q: "How does the 2% charity work?",
-      a: "We set aside 2% of our revenue to sponsor orphaned children in Bangladesh and provide warm clothes for homeless people in winter. You don't pay anything extra, and we share updates and receipts on our Websy Lime Gives page.",
+      a: "We set aside 2% of our revenue to help orphaned children and people in need in Bangladesh, from education for orphans to warm clothes in winter and help for poor families. You don't pay anything extra, and we share updates and receipts on our Websy Lime Gives page.",
     },
   ],
   call: {

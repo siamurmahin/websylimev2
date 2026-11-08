@@ -58,14 +58,14 @@ export const pricing = {
   charity: {
     eyebrow: "Our promise",
     title: "Every project gives back.",
-    body: "2% of our revenue goes to orphaned children in Bangladesh and homeless people in winter. Your project helps pay for it.",
-    partner: "Orphaned children and people without a home",
+    body: "2% of our revenue goes to orphaned children and people in need in Bangladesh. Every project you start with us helps make it possible, and we're grateful for that.",
+    partner: "Orphaned children and people in need in Bangladesh",
     partnerLabel: "Supporting",
     flowFrom: "Your plan",
     steps: [
       { title: "You grow", body: "You pick a plan and we get to work." },
-      { title: "2% is set aside", body: "From every payment. You don't pay anything extra." },
-      { title: "It goes out in your name", body: "School costs, meals, and warm clothes for winter." },
+      { title: "2% is set aside", body: "From our revenue. You don't pay anything extra." },
+      { title: "We give and show the proof", body: "Education for orphaned children, and help wherever it's needed most." },
     ],
     report: { label: "See what we've given", href: "/gives" },
   },
