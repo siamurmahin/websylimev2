@@ -11,7 +11,7 @@ export const process = {
     { title: "Design", body: "We craft your look.", icon: "penTool", gets: ["Homepage design", "Your colors & fonts"] },
     { title: "Build", body: "We bring it to life.", icon: "code", gets: ["Mobile-first pages", "Fast & search-ready"] },
     { title: "Launch", body: "We go live.", icon: "rocket", gets: ["Domain & hosting set up", "Final check together"] },
-    { title: "Grow", body: "We keep it working.", icon: "trending", gets: ["Monthly updates", "Leads tracked"] },
+    { title: "Grow", body: "We keep it working.", icon: "trending", gets: ["Weekly updates", "Leads tracked"] },
   ] as { title: string; body: string; icon: IconKey; gets: string[] }[],
   // Labels inside the "website building itself" mockup (ProcessBuild.tsx)
   mockup: {

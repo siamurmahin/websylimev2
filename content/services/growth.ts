@@ -36,7 +36,7 @@ export const growth = {
       { title: "Video edits", body: "Short clips for social and your website.", icon: "video" as IconKey, plan: "Market Leader" },
       { title: "Google Ads", body: "Campaigns set up and managed for you.", icon: "megaphone" as IconKey, plan: "Lead Growth +" },
       { title: "Google reviews", body: "Monitoring and replies, so every review gets an answer.", icon: "badgeCheck" as IconKey, plan: "Lead Growth +" },
-      { title: "Clear monthly updates", body: "What we did, what's next — in plain English.", icon: "calendarCheck" as IconKey },
+      { title: "Clear weekly updates", body: "What we did, what's next, every week, in plain English.", icon: "calendarCheck" as IconKey },
     ],
   },
 

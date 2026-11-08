@@ -5,10 +5,10 @@ export const why = {
   headline: "A team that works like it's yours.",
   // `mockup` picks the mini UI on each bento card (components/sections/Why.tsx)
   items: [
-    { title: "Your scalable, dedicated design team", body: "Grow your design needs without hiring.", mockup: "tasks" },
+    { title: "A design team without the hiring", body: "Posts, pages and ads when you need them. No new staff.", mockup: "tasks" },
     { title: "AI that never misses a lead", body: "WebsyChat replies while you're on the job.", mockup: "chat" },
     { title: "Cost-efficient by design", body: "Agency-level work at a fraction of agency pricing.", mockup: "cost" },
-    { title: "Your dedicated social presence team", body: "Consistent posts. Real engagement. No effort from you.", mockup: "calendar" },
+    { title: "Social media, handled", body: "Regular posts that keep you in front of local customers.", mockup: "calendar" },
     { title: "One place for everything", body: "Website, social, growth. One team, one invoice.", mockup: "invoice" },
     { title: "Built to convert", body: "Every page is designed to turn visitors into calls.", mockup: "notifications" },
   ] as {

@@ -1,133 +1,39 @@
 # Websy Lime — Launch Checklist
 
-Audit date: 23 Oct 2026. Every page, button, link, form and image was checked on the dev server (desktop + mobile).
-The detailed item-by-item list lives in `TODO.md`. This file is the summary to work from before launch.
+Updated 2026-11-09. What still has to happen before the new site replaces websylime.com.
+The site has no orange placeholders left. Details for each item are in `TODO.md`.
 
----
+## 🔴 Must do before launch
 
-## ✅ What's already working
+### Owner
+- [ ] **Case studies:** get each client's OK in writing (email or WhatsApp) for their numbers, story and quote. Three quotes to check: sports nutrition ("Sales nearly tripled"), TFO Medical ("clinical trust"), and tell Hannah (Tide and Tail) her quote now says "orders"
+- [ ] **Test booking:** book a call from the site (Get started → Local Pro), check the confirmation email, then cancel it
+- [ ] **Stripe payment links:** website deposits $399.50 / $999.50 / $1,749.50; Growth $1,299 / $1,999 / $2,699 a month; Graphic Design $299 / $549 / $899 a month
+- [ ] **Lawyer:** review Privacy, Terms, the "2% of revenue" wording and the client contributions line on the Gives page
+- [ ] **Stripe and client contributions:** get Stripe's written answer before taking any client contribution on the service account
+- [ ] **Gives:** send date, amount and photos for the late-November Quran donation and the early-December blankets (no children's faces)
 
-| Check | Result |
-|---|---|
-| Pages | All **24 pages** open (200); unknown blog/case-study URLs return a real 404 |
-| Header menu (Services / Products / Company / Resources) | **27 links**, all OK — every `#anchor` lands on the right section too |
-| Links inside pages | No broken internal links or anchors |
-| Mobile (375px) | No sideways scrolling on any page |
-| Interactions | FAQ accordion + search, blog topic filter, Work gallery popup, form validation and success screens all tested |
-| Production build | `next build` passes, all 32 routes prerendered |
-| SEO basics | Title + description + canonical on every page, sitemap (24 URLs), robots.txt, structured data |
+### Together, as the very last step
+- [ ] Move email from Namecheap to Hostinger
+- [ ] Connect all 8 forms: Contact, Start Project, Get Started, Free Design, Careers, footer newsletter, blog newsletter, Video waitlist (pick a newsletter tool)
+- [ ] Deploy to the owner's Hostinger Node.js hosting from GitHub (Node 22, `npm run build`, `npm start`)
+- [ ] Point websylime.com at the new site, keeping the email records
+- [ ] Change "Last updated" on Privacy and Terms to the launch day
+- [ ] Send one test from every form on the live site
 
-**Fixed during this audit:** the "Try Free" button in the header's Products menu (desktop and mobile) was a dead `#` link. It now goes to the WebsyChat sign-up page.
+## 🟠 Nice to have (launch can happen without these)
+- [ ] 6–10 client logos (the row is hidden until then)
+- [ ] Graphic design samples (pages say "coming soon")
+- [ ] Founder photo (Book a free call button, About) and team photos (About shows initials)
+- [ ] Read and approve the 3 blog posts written for the new site
+- [ ] Bigger project screenshots (≥2340px wide) so the Work lightbox looks sharp
+- [ ] A real US or home service client case study
+- [ ] Optional: heading font, WebsyChat logo, lime colour in Cal.com
 
----
-
-## 🔴 1. Must do before launch (the site won't work properly without these)
-
-### 1a. Forms — none of the 8 forms send anywhere yet
-
-Every form validates and shows a "Thank you" message, but the details **aren't saved or sent anywhere**. You choose the tool; I'll connect it.
-
-| # | Form | Where it appears | Fields | Should send to |
-|---|---|---|---|---|
-| 1 | **Contact** | `/contact` | name, email, topic, message | your email / CRM |
-| 2 | **Start Project** (3 steps) | `/start-project` (every "Start a project" button) | service, package, business type, budget, name, email, phone, current website, message | your email / CRM |
-| 3 | **Careers application** | `/careers#apply` | name, email, skills, portfolio link, message | hiring inbox |
-| 4 | **Footer newsletter** | bottom of **every page** | email | newsletter tool |
-| 5 | **Blog newsletter** | `/blog`, all 3 posts | email | the same newsletter tool |
-| 8 | **Get Started** | `/get-started` (every plan's button) | name, business, email, phone, website, plan | your email |
-| 7 | **Free design application** | `/free-website-design#apply` | name, business, email, phone, website, about | your email |
-| 6 | **Video Editing waitlist** | `/services/video-editing#waitlist` | email, video types | newsletter tool (with a "video waitlist" tag) |
-
-**What you need to decide:**
-1. Which email address should receive forms 1–3? Or which CRM (HubSpot, etc.)?
-2. Which newsletter tool will you use for forms 4–6? For example Mailchimp, Kit (ConvertKit) or Brevo.
-
-### 1b. Dead links
-
-None left. Cal.com, WebsyChat sign-up, email, phone, WhatsApp and social links are all real.
-
-### 1c. Brand and domain
-
-- [ ] **Domain:** confirm `https://websylime.com` in `content/shared/meta.ts`. The sitemap, canonical URLs and structured data are all built from it.
-
-### 1d. Prices (shown to customers)
-
-- [x] **Website Design:** Launchpad $799, Local Pro $1,999, Storefront $3,499
-- [x] **Graphic Design:** Essentials $299, Pro $549, Studio $899
-- [ ] Growth and WebsyChat plans already show real prices ✓
-
-### 1e. Legal
-
-- [ ] Get **Privacy** and **Terms** reviewed by a lawyer, then fill in:
-  - your service providers
-  - deposit `[50%]` and invoice terms
-  - cancellation notice
-  - hosting period and renewal price
-  - which state's law applies
-  - the "Last updated" dates
-
----
-
-## 🟠 2. Content to fill in (bracketed `[placeholder]` text that shows on the site)
-
-There are **137 different placeholder texts** across the site. All of them show highlighted in orange. Grouped by page:
-
-| Page / area | What to fill in | File |
-|---|---|---|
-| **Trust bar** | 8 real client logos | `content/home/trust-bar.ts` |
-| **Case studies (45)** | ⚠ orange mark is off, numbers are still estimates: confirm every result and quote, get each client's permission, decide on 5 on hold (see `TODO.md`) | `content/case-studies.ts` |
-| **FAQ answers** | 13 "confirm…" answers (hosting, ownership, cancellation, WebsyChat…) | `content/home/faq.ts` |
-| **Website Design** | hosting `[the first 12 months]`, timeline | `content/services/website-design.ts` |
-| **Graphic Design** | delivery `[2–3]` days, revisions, notice period | `content/services/graphic-design.ts` |
-| **Careers** | flexible hours, paid time off, learning budget, tools: confirm or remove | `content/pages/careers.ts` |
-| **Header menu card** | "Hallmark Contractors — `[headline result]`" | `content/shared/header.ts` |
-| **Blog** | read and edit the 3 posts, real publish dates | `content/blog/posts.ts` |
-
-**Open decisions** (also at the top of `TODO.md`):
-- rewriting the template-sounding lines
-- showing or hiding Video Editing
-
----
-
-## 🟡 3. Images to replace or add
-
-### AI-generated photos (no real faces). They're fine for launch, but real photos build more trust.
-
-| Image | Page |
-|---|---|
-| `about-hero.webp` | About |
-| `book-a-call-hero.webp` | Book a Call |
-| `start-project-hero.webp` | Start Project |
-| `contact-hero.webp` | Contact |
-| `work-hero.webp` | Work |
-| `website-design-hero.webp` | Website Design |
-| `growth-hero.webp` | Growth |
-| `graphic-design-hero.webp` | Graphic Design |
-| `video-editing-hero.webp` | Video Editing |
-| `websychat-hero.webp` | WebsyChat |
-| `faq-hero.webp` | FAQ |
-| `blog-hero.webp` | Blog |
-| `careers-hero.webp` | Careers |
-| `legal-hero.webp` | Privacy + Terms |
-| `blog/missed-calls.webp`, `blog/google-reviews.webp`, `blog/website-signs.webp` | blog post covers |
-
-All are in `public/images/`. Replacements should be **≥2400px wide**, and on inner pages the subject should be on the right.
-
-### Missing (currently shows initials or an icon)
-
-- [ ] **Founder photo.** It appears on the "Book a free call" card everywhere, and on the About team section.
-- [ ] **Team photos** (About page, 8 people; initials show until then)
-- [ ] **8 client logos** (homepage trust bar): transparent SVG/PNG
-- [ ] **Graphic design portfolio:** 0 items right now, so `/work#graphic-design` and the Graphic Design page show an empty state. Add your designs in `content/design-portfolio.ts`.
-- [ ] Optional: bigger (≥2400px) screenshots for the 3 case studies
-- [ ] Optional: testimonial headshots (45 real testimonials currently show initials)
-
----
-
-## 🔵 4. After launch
-
-- [ ] Add the site to **Google Search Console** and submit `https://websylime.com/sitemap.xml`
-- [ ] Set up analytics, then update the Privacy policy (and add a cookie banner if needed)
-- [ ] Send one test from every form and check that it arrives
-- [ ] Write the next blog posts from `content/blog/KEYWORDS.md` (12 ideas, US-first)
-- [ ] Re-add the "Leads generated" stat once you have real tracked numbers
+## 🔵 After launch
+- [ ] Google Search Console: add the site, submit `https://websylime.com/sitemap.xml`
+- [ ] Analytics (then update the Privacy policy's Cookies section, maybe a cookie banner)
+- [ ] Follow up people who fill in Get Started but don't book; track plan → form → booking
+- [ ] Swap AI hero photos for real ones over time
+- [ ] Write the next blog posts from `content/blog/KEYWORDS.md`
+- [ ] Re-add a "Leads generated" stat once there are tracked numbers

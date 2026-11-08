@@ -3,8 +3,8 @@
 import type { IconKey } from "@/content/types";
 export const collaboration = {
   eyebrow: "How we work together",
-  headline: "Seamless collaboration. Zero micromanagement.",
-  body: "You get a team that runs itself. We keep you in the loop — you only step in to say yes.",
+  headline: "You run the jobs. We run the online side.",
+  body: "One person handles it all and keeps you updated. You just say yes.",
   cta: { label: "Book a free call", href: "/book-a-call" },
   points: [
     { title: "One dedicated point of contact", body: "One person who knows your business, on WhatsApp and email. No ticket queues.", icon: "userRound" },
