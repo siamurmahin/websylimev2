@@ -39,7 +39,7 @@ export function CharityCard() {
                     className="absolute inset-y-0 left-0 w-[calc(100%-1.75rem)] animate-flow"
                     style={{ animationDelay: `${row * 0.4 + k * 1.2}s` }}
                   >
-                    <span className="grid size-7 place-items-center rounded-full bg-rose-500 text-[9px] font-bold text-white shadow">2%</span>
+                    <span className="grid size-7 place-items-center rounded-full bg-rose-600 text-[9px] font-bold text-white shadow">2%</span>
                   </span>
                 ))}
               </div>
@@ -60,7 +60,7 @@ export function CharityCard() {
 
       {/* ---------- promise ---------- */}
       <div className="p-7 sm:p-10">
-        <p className="inline-flex items-center gap-2 rounded-full bg-rose-500/10 px-3 py-1 text-xs font-bold text-rose-600 dark:text-rose-400">
+        <p className="inline-flex items-center gap-2 rounded-full bg-rose-500/10 px-3 py-1 text-xs font-bold text-rose-700 dark:text-rose-400">
           <HeartHandshake className="size-3.5" aria-hidden />
           {c.eyebrow}
         </p>
@@ -75,7 +75,7 @@ export function CharityCard() {
         <ol className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
           {c.steps.map((step, i) => (
             <li key={step.title} className="rounded-2xl border bg-background/60 p-4">
-              <span className="font-mono text-xs text-rose-500">{String(i + 1).padStart(2, "0")}</span>
+              <span className="font-mono text-xs text-rose-700 dark:text-rose-400">{String(i + 1).padStart(2, "0")}</span>
               <p className="mt-1 font-semibold">{step.title}</p>
               <p className="mt-1 text-sm leading-snug text-muted-foreground">
                 <Copy text={step.body} />

@@ -109,7 +109,7 @@ export function Footer() {
                           {l.label}
                         </Link>
                       ) : (
-                        <span className="whitespace-nowrap text-muted-foreground/60">{l.label}</span>
+                        <span className="whitespace-nowrap text-muted-foreground">{l.label}</span>
                       )}
                       {l.badge && (
                         <span className="rounded-full bg-lime-soft px-1.5 py-px text-[10px] font-semibold text-foreground">{l.badge}</span>

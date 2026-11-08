@@ -1,5 +1,6 @@
 import { Quote } from "lucide-react";
 import { testimonials, type Testimonial } from "@/content/testimonials";
+import { portfolio, FOCUS_CATEGORY } from "@/content/portfolio";
 import { Avatar, TestimonialsHeading, byline } from "@/components/sections/testimonials/shared";
 import { cn } from "@/lib/utils";
 
@@ -26,13 +27,20 @@ const COLUMNS = [
   { anim: "animate-column-up", duration: "100s", className: "hidden lg:block" },
 ];
 
+/** How many quotes the wall shows. Each is drawn twice for the endless loop, so this keeps the page light on phones. */
+const SHOWN = 18;
+const homeServices = new Set(portfolio.filter((p) => p.category === FOCUS_CATEGORY).map((p) => p.slug));
+const picked = [...testimonials]
+  .sort((a, b) => Number(homeServices.has(b.projectSlug ?? "")) - Number(homeServices.has(a.projectSlug ?? "")))
+  .slice(0, SHOWN);
+
 /**
- * Testimonials — wall of love. All 45 quotes in three endless columns drifting up
- * and down (two on tablet, one on phones), faded at the top and bottom.
- * Hover a column to pause it and read. Reduced motion: columns stand still.
+ * Testimonials — wall of love. 18 quotes (home services first) in three endless
+ * columns drifting up and down (two on tablet, one on phones), faded at the top
+ * and bottom. Hover a column to pause it and read. Reduced motion: columns stand still.
  */
 export function TestimonialsWall() {
-  const columns = COLUMNS.map((_, c) => testimonials.filter((_, i) => i % COLUMNS.length === c));
+  const columns = COLUMNS.map((_, c) => picked.filter((_, i) => i % COLUMNS.length === c));
 
   return (
     <section id="testimonials" aria-labelledby="testimonials-title" className="relative py-14 sm:py-20">

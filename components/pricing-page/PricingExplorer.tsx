@@ -78,7 +78,7 @@ export function PricingExplorer() {
                 )}
                 <span className="relative flex flex-col items-center leading-tight sm:flex-row sm:gap-2">
                   {t.label}
-                  <span className={cn("text-[11px] font-medium", active ? "text-ink/70" : "text-muted-foreground/80")}>{t.note}</span>
+                  <span className={cn("text-[11px] font-medium", active ? "text-ink/70" : "text-muted-foreground")}>{t.note}</span>
                 </span>
               </button>
             );
@@ -87,7 +87,7 @@ export function PricingExplorer() {
       </div>
 
       <div id="plans-panel" role="tabpanel" aria-labelledby={tab}>
-        <p className="mt-6 text-center text-[15px] text-muted-foreground">{view.intro}</p>
+        <h2 className="mt-6 text-center text-[15px] font-normal text-muted-foreground">{view.intro}</h2>
 
         <motion.div key={tab} initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}>
           <PlanCards plans={view.cards} rows={view.rows} rowIcons={view.icons} ctaLabel={view.cta} cardBadge={view.badge} />

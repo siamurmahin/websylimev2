@@ -100,7 +100,7 @@ export function PlanCards({
                     key={label}
                     className={cn(
                       "flex items-center gap-3 rounded-xl py-1.5 text-sm lg:gap-2.5 lg:text-[13px] xl:gap-3 xl:text-sm",
-                      none && (featured ? "text-white/30" : "text-muted-foreground/55"),
+                      none && (featured ? "text-white/45" : "text-muted-foreground"),
                     )}
                   >
                     <span
