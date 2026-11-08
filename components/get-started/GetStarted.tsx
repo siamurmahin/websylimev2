@@ -9,6 +9,8 @@ import { site } from "@/content/site";
 import { CalEmbed } from "@/components/book-a-call/CalEmbed";
 import { findPlan, type ChosenPlan } from "@/components/get-started/plans";
 import { cn } from "@/lib/utils";
+import { submitForm } from "@/app/actions/forms";
+import { SendError, Trap } from "@/components/forms/Trap";
 
 const g = site.getStarted;
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -50,7 +52,7 @@ export function GetStarted() {
       ) : (
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] lg:gap-14">
           <Summary plan={plan} />
-          <DetailsForm onDone={setDetails} />
+          <DetailsForm plan={plan} onDone={setDetails} />
           <NextSteps plan={plan} className="lg:col-start-1 lg:row-start-2" />
         </div>
       )}
@@ -114,10 +116,13 @@ function NextSteps({ plan, className }: { plan: ChosenPlan; className?: string }
   );
 }
 
-function DetailsForm({ onDone }: { onDone: (d: Details) => void }) {
+function DetailsForm({ plan, onDone }: { plan: ChosenPlan; onDone: (d: Details) => void }) {
   const f = g.form;
   const [v, setV] = useState(empty);
   const [tried, setTried] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const trap = useRef<HTMLInputElement>(null);
 
   const bad: Record<Key, boolean> = {
     name: v.name.trim() === "",
@@ -127,10 +132,16 @@ function DetailsForm({ onDone }: { onDone: (d: Details) => void }) {
     website: false,
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (Object.values(bad).some(Boolean)) return setTried(true);
-    onDone(v); // TODO: also send to email / CRM
+    if (sending) return;
+    setSending(true);
+    setFailed(false);
+    const res = await submitForm({ form: "get-started", fields: { plan: `${plan.name} (${plan.price} ${plan.per})`, ...v }, trap: trap.current?.value });
+    setSending(false);
+    if (res.ok) onDone(v);
+    else setFailed(true);
   };
 
   const field = (key: Key, type: string, autoComplete: string) => {
@@ -166,7 +177,7 @@ function DetailsForm({ onDone }: { onDone: (d: Details) => void }) {
   };
 
   return (
-    <form onSubmit={onSubmit} noValidate className="self-start rounded-[2rem] border bg-surface p-5 shadow-[0_30px_70px_-45px_rgb(0_0_0/0.35)] sm:p-8 lg:col-start-2 lg:row-span-2 lg:row-start-1 dark:shadow-none">
+    <form onSubmit={onSubmit} noValidate className="relative self-start rounded-[2rem] border bg-surface p-5 shadow-[0_30px_70px_-45px_rgb(0_0_0/0.35)] sm:p-8 lg:col-start-2 lg:row-span-2 lg:row-start-1 dark:shadow-none">
       <h2 className="font-display text-2xl font-bold tracking-[-0.03em] sm:text-3xl">{f.title}</h2>
       <p className="mt-1.5 text-sm text-muted-foreground">{f.hint}</p>
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -176,13 +187,16 @@ function DetailsForm({ onDone }: { onDone: (d: Details) => void }) {
         {field("phone", "tel", "tel")}
         <div className="sm:col-span-2">{field("website", "text", "url")}</div>
       </div>
+      <Trap ref={trap} />
       <button
         type="submit"
-        className="group mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-lime px-6 text-sm font-semibold text-ink outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-ring/50"
+        disabled={sending}
+        className="group mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-lime px-6 disabled:opacity-60 text-sm font-semibold text-ink outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-ring/50"
       >
-        {f.submit}
+        {sending ? "Sending…" : f.submit}
         <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
       </button>
+      <SendError show={failed} />
     </form>
   );
 }

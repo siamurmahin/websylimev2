@@ -9,6 +9,8 @@ import { site } from "@/content/site";
 import { icons } from "@/components/icons";
 import { Copy, href } from "@/lib/copy";
 import { cn } from "@/lib/utils";
+import { submitForm } from "@/app/actions/forms";
+import { SendError, Trap } from "@/components/forms/Trap";
 
 const f = site.startProject.form;
 const { service: s1, business: s2, contact: s3 } = f.steps;
@@ -74,6 +76,9 @@ export function ProjectForm() {
   const [step, setStep] = useState(0);
   const [dir, setDir] = useState(1);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const trap = useRef<HTMLInputElement>(null);
   const [emailTouched, setEmailTouched] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -90,14 +95,34 @@ export function ProjectForm() {
     if (top < 0) cardRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!canContinue) {
       if (step === 2) setEmailTouched(true);
       return;
     }
-    if (step < TOTAL - 1) go(step + 1);
-    else setSent(true); // TODO: send to email / CRM
+    if (step < TOTAL - 1) return go(step + 1);
+    if (sending) return;
+    setSending(true);
+    setFailed(false);
+    const res = await submitForm({
+      form: "start-project",
+      fields: {
+        name: a.name,
+        email: a.email,
+        phone: a.phone,
+        website: a.website,
+        service: a.service ?? "",
+        package: a.detail ?? "",
+        business: a.business ?? "",
+        budget: a.budget ?? "",
+        message: a.message,
+      },
+      trap: trap.current?.value,
+    });
+    setSending(false);
+    if (res.ok) setSent(true);
+    else setFailed(true);
   };
 
   if (sent) return <Success name={a.name.trim().split(" ")[0]} />;
@@ -116,7 +141,8 @@ export function ProjectForm() {
         </div>
       </div>
 
-      <form onSubmit={onSubmit} noValidate className="mt-6">
+      <form onSubmit={onSubmit} noValidate className="relative mt-6">
+        <Trap ref={trap} />
         <AnimatePresence mode="wait" initial={false} custom={dir}>
           <motion.div
             key={step}
@@ -149,15 +175,17 @@ export function ProjectForm() {
           <button
             type="submit"
             aria-disabled={!canContinue}
+            disabled={sending}
             className={cn(
               "group inline-flex h-12 items-center gap-2 rounded-full px-6 text-sm font-semibold outline-none transition-[background-color,color,filter] focus-visible:ring-3 focus-visible:ring-lime/50",
               canContinue ? "bg-lime text-ink hover:brightness-105" : "cursor-not-allowed bg-muted text-muted-foreground",
             )}
           >
-            {step < TOTAL - 1 ? f.next : f.submit}
+            {step < TOTAL - 1 ? f.next : sending ? f.sending : f.submit}
             <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
           </button>
         </div>
+        <SendError show={failed} />
       </form>
     </div>
   );

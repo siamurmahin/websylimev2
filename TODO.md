@@ -17,6 +17,7 @@ The full history of earlier decisions is in git (`git log -p TODO.md`).
 - Calls: Cal.com "Websy Lime Free Call", Mon–Fri 9am–3pm ET ("US Calls" schedule), 12 hours' notice; sooner goes to WhatsApp
 - Hosting: the owner's Hostinger (Node.js), only as the very last step
 - Video Editing stays "Coming soon"
+- Email tool: Brevo (free plan) for the newsletter and for sending form emails. Owner opens the account; the API key goes in the server settings, never in chat or git
 
 ## Open: owner
 - [ ] Test booking from `/get-started?plan=business`
@@ -27,7 +28,7 @@ The full history of earlier decisions is in git (`git log -p TODO.md`).
 - [ ] Optional: client logos (then `hidden: false` in `content/home/trust-bar.ts`), graphic design samples (`content/design-portfolio.ts`, images in `public/design/`), founder photo (`header.bookCall.avatar`), team photos (`content/pages/about.ts`), bigger screenshots in `public/work/`
 
 ## Open: last step (together)
-- [ ] Email Namecheap → Hostinger, then connect the 8 forms (each has a `// TODO: send to email` in its component) and a newsletter tool
+- [ ] Forms are wired to Brevo (`app/actions/forms.ts`). At launch: move email to Hostinger, verify websylime.com in Brevo, create the two lists, then set the values from `.env.example` in Hostinger. Without BREVO_API_KEY the live forms show an error
 - [ ] Hostinger Node.js app from GitHub, Node 22. Then point the domain without touching MX records
 - [ ] Privacy and Terms "Last updated" = launch day (`content/pages/legal.ts`)
 

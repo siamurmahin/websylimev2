@@ -10,6 +10,8 @@ import { Logo } from "@/components/layout/Logo";
 import { SOCIAL_ICONS } from "@/components/layout/social-icons";
 import { Copy, href, isPlaceholder } from "@/lib/copy";
 import { cn } from "@/lib/utils";
+import { submitForm } from "@/app/actions/forms";
+import { SendError, Trap } from "@/components/forms/Trap";
 
 const f = site.footer;
 
@@ -161,6 +163,8 @@ export function Footer() {
 function Newsletter() {
   const n = f.newsletter;
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   return (
     <div className="mt-12 flex flex-col gap-4 border-t pt-8 md:flex-row md:items-center md:justify-between md:gap-8">
@@ -175,19 +179,27 @@ function Newsletter() {
           {n.success}
         </p>
       ) : (
-        // TODO.md: connect a newsletter provider before launch
         <form
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
-            setSent(true);
+            if (sending) return;
+            const data = new FormData(e.currentTarget);
+            setSending(true);
+            setFailed(false);
+            const res = await submitForm({ form: "newsletter", fields: { email: String(data.get("email") ?? ""), from: "footer" }, trap: String(data.get("website_url") ?? "") });
+            setSending(false);
+            if (res.ok) setSent(true);
+            else setFailed(true);
           }}
-          className="flex w-full shrink-0 items-center gap-1.5 rounded-full border bg-background p-1 transition-[border-color,box-shadow] focus-within:border-lime focus-within:ring-3 focus-within:ring-lime/25 md:w-[22rem]"
+          className="relative flex w-full shrink-0 items-center gap-1.5 rounded-full border bg-background p-1 transition-[border-color,box-shadow] focus-within:border-lime focus-within:ring-3 focus-within:ring-lime/25 md:w-[22rem]"
         >
           <label htmlFor="footer-email" className="sr-only">
             {n.label}
           </label>
+          <Trap ref={null} />
           <input
             id="footer-email"
+            name="email"
             type="email"
             required
             autoComplete="email"
@@ -198,10 +210,15 @@ function Newsletter() {
             type="submit"
             className="group inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full bg-lime px-4 text-sm font-semibold text-ink outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-lime/50"
           >
-            {n.cta}
+            {sending ? "…" : n.cta}
             <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />
           </button>
         </form>
+      )}
+      {failed && (
+        <div className="md:basis-full">
+          <SendError show />
+        </div>
       )}
     </div>
   );

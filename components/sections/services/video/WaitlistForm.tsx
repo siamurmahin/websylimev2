@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { site } from "@/content/site";
 import { cn } from "@/lib/utils";
+import { submitForm } from "@/app/actions/forms";
+import { SendError, Trap } from "@/components/forms/Trap";
 
 const f = site.services.videoEditing.waitlist.form;
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -17,14 +19,23 @@ export function WaitlistForm() {
   const [types, setTypes] = useState<string[]>([]);
   const [tried, setTried] = useState(false);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const trap = useRef<HTMLInputElement>(null);
   const ok = EMAIL.test(email.trim());
 
   const toggle = (t: string) => setTypes((cur) => (cur.includes(t) ? cur.filter((x) => x !== t) : [...cur, t]));
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!ok) return setTried(true);
-    setSent(true); // TODO: send to newsletter / email tool
+    if (sending) return;
+    setSending(true);
+    setFailed(false);
+    const res = await submitForm({ form: "waitlist", fields: { email, types: types.join(", ") }, trap: trap.current?.value });
+    setSending(false);
+    if (res.ok) setSent(true);
+    else setFailed(true);
   };
 
   if (sent)
@@ -42,7 +53,8 @@ export function WaitlistForm() {
 
   const err = tried && !ok;
   return (
-    <form onSubmit={onSubmit} noValidate>
+    <form onSubmit={onSubmit} noValidate className="relative">
+      <Trap ref={trap} />
       <label htmlFor="wl-email" className="mb-1.5 block text-sm font-semibold">
         {f.email.label}
       </label>
@@ -64,12 +76,14 @@ export function WaitlistForm() {
         />
         <button
           type="submit"
-          className="group inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-lime px-6 text-sm font-semibold text-ink outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-lime/50"
+          disabled={sending}
+          className="group inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-lime px-6 disabled:opacity-60 text-sm font-semibold text-ink outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-lime/50"
         >
-          {f.submit}
+          {sending ? "Sending…" : f.submit}
           <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
         </button>
       </div>
+      <SendError show={failed} />
       {err && (
         <p id="wl-email-error" role="alert" className="mt-1.5 text-xs font-medium text-rose-600 dark:text-rose-400">
           {f.email.error}

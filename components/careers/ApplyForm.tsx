@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { site } from "@/content/site";
 import { Copy } from "@/lib/copy";
 import { cn } from "@/lib/utils";
+import { submitForm } from "@/app/actions/forms";
+import { SendError, Trap } from "@/components/forms/Trap";
 
 const f = site.careers.form;
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -25,6 +27,9 @@ export function ApplyForm() {
   const [message, setMessage] = useState("");
   const [tried, setTried] = useState(false);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const trap = useRef<HTMLInputElement>(null);
 
   const nameOk = name.trim() !== "";
   const emailOk = EMAIL.test(email.trim());
@@ -33,10 +38,16 @@ export function ApplyForm() {
 
   const toggle = (a: string) => setAreas((cur) => (cur.includes(a) ? cur.filter((x) => x !== a) : [...cur, a]));
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!(nameOk && emailOk && messageOk)) return setTried(true);
-    setSent(true); // TODO: send to email / hiring inbox
+    if (sending) return;
+    setSending(true);
+    setFailed(false);
+    const res = await submitForm({ form: "careers", fields: { name, email, areas: areas.join(", "), link, message }, trap: trap.current?.value });
+    setSending(false);
+    if (res.ok) setSent(true);
+    else setFailed(true);
   };
 
   if (sent) {
@@ -70,7 +81,7 @@ export function ApplyForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} noValidate className="grid grid-cols-1 gap-4 rounded-[2rem] border bg-surface p-5 shadow-[0_30px_70px_-45px_rgb(0_0_0/0.35)] sm:grid-cols-2 sm:p-8 dark:shadow-none">
+    <form onSubmit={onSubmit} noValidate className="relative grid grid-cols-1 gap-4 rounded-[2rem] border bg-surface p-5 shadow-[0_30px_70px_-45px_rgb(0_0_0/0.35)] sm:grid-cols-2 sm:p-8 dark:shadow-none">
       <Field id="ap-name" label={fl.name.label} error={tried && !nameOk ? fl.name.error : undefined}>
         <input
           id="ap-name"
@@ -142,13 +153,18 @@ export function ApplyForm() {
 
       <div className="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-xs text-muted-foreground sm:order-2 sm:max-w-xs sm:text-right">{f.note}</p>
+        <Trap ref={trap} />
         <button
           type="submit"
-          className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-lime px-6 text-sm font-semibold text-ink outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-lime/50 sm:w-auto"
+          disabled={sending}
+          className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-lime px-6 text-sm font-semibold text-ink disabled:opacity-60 outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-lime/50 sm:w-auto"
         >
-          {f.submit}
+          {sending ? "Sending…" : f.submit}
           <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
         </button>
+      </div>
+      <div className="sm:col-span-2">
+        <SendError show={failed} />
       </div>
     </form>
   );

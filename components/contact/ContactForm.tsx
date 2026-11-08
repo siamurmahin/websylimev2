@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowRight, CalendarDays, CheckCircle2, Info } from "lucide-react";
 import { site } from "@/content/site";
 import { Copy } from "@/lib/copy";
 import { cn } from "@/lib/utils";
+import { submitForm } from "@/app/actions/forms";
+import { SendError, Trap } from "@/components/forms/Trap";
 
 const f = site.contact.form;
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -23,16 +25,25 @@ export function ContactForm() {
   const [message, setMessage] = useState("");
   const [tried, setTried] = useState(false);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const trap = useRef<HTMLInputElement>(null);
 
   const emailOk = EMAIL.test(email.trim());
   const nameOk = name.trim() !== "";
   const messageOk = message.trim() !== "";
   const ok = nameOk && emailOk && messageOk;
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!ok) return setTried(true);
-    setSent(true); // TODO: send to email / CRM
+    if (sending) return;
+    setSending(true);
+    setFailed(false);
+    const res = await submitForm({ form: "contact", fields: { name, email, topic: topic ?? "", message }, trap: trap.current?.value });
+    setSending(false);
+    if (res.ok) setSent(true);
+    else setFailed(true);
   };
 
   const reset = () => {
@@ -52,7 +63,8 @@ export function ContactForm() {
       <h2 className="font-display text-2xl font-bold tracking-[-0.03em] sm:text-3xl">{f.title}</h2>
       <p className="mt-1.5 text-sm text-muted-foreground">{f.hint}</p>
 
-      <form onSubmit={onSubmit} noValidate className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <form onSubmit={onSubmit} noValidate className="relative mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <Trap ref={trap} />
         <Field id="ct-name" label={fl.name.label} required error={tried && !nameOk ? fl.name.error : undefined}>
           <input
             id="ct-name"
@@ -142,11 +154,13 @@ export function ContactForm() {
         <div className="sm:col-span-2">
           <button
             type="submit"
-            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-lime px-6 text-sm font-semibold text-ink outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-lime/50 sm:w-auto"
+            disabled={sending}
+            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-lime px-6 disabled:opacity-60 text-sm font-semibold text-ink outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-lime/50 sm:w-auto"
           >
-            {f.submit}
+            {sending ? "Sending…" : f.submit}
             <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
           </button>
+          <SendError show={failed} />
         </div>
       </form>
     </div>

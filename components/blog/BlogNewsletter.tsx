@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { submitForm } from "@/app/actions/forms";
+import { SendError, Trap } from "@/components/forms/Trap";
 import { ArrowRight, Check, Mail } from "lucide-react";
 import { site } from "@/content/site";
 
@@ -13,6 +15,8 @@ const b = site.blog.newsletter;
  */
 export function BlogNewsletter() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
   return (
     <section id="newsletter" aria-labelledby="blog-nl-title" className="scroll-mt-16 pb-14 sm:pb-20">
       <div className="container-site">
@@ -37,17 +41,26 @@ export function BlogNewsletter() {
             </p>
           ) : (
             <form
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                setSent(true); // TODO: send to newsletter provider
+                if (sending) return;
+                const data = new FormData(e.currentTarget);
+                setSending(true);
+                setFailed(false);
+                const res = await submitForm({ form: "newsletter", fields: { email: String(data.get("email") ?? ""), from: "blog" }, trap: String(data.get("website_url") ?? "") });
+                setSending(false);
+                if (res.ok) setSent(true);
+                else setFailed(true);
               }}
-              className="flex w-full shrink-0 items-center gap-1.5 rounded-full border bg-background p-1.5 transition-[border-color,box-shadow] focus-within:border-lime focus-within:ring-3 focus-within:ring-lime/25 lg:w-[26rem]"
+              className="relative flex w-full shrink-0 items-center gap-1.5 rounded-full border bg-background p-1.5 transition-[border-color,box-shadow] focus-within:border-lime focus-within:ring-3 focus-within:ring-lime/25 lg:w-[26rem]"
             >
               <label htmlFor="blog-email" className="sr-only">
                 {n.label}
               </label>
+              <Trap ref={null} />
               <input
                 id="blog-email"
+                name="email"
                 type="email"
                 required
                 autoComplete="email"
@@ -58,12 +71,13 @@ export function BlogNewsletter() {
                 type="submit"
                 className="group inline-flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-lime px-5 text-sm font-semibold text-ink outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-lime/50"
               >
-                {n.cta}
+                {sending ? "…" : n.cta}
                 <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />
               </button>
             </form>
           )}
         </div>
+        <SendError show={failed} />
       </div>
     </section>
   );

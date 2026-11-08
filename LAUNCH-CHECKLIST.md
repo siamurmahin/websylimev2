@@ -15,7 +15,7 @@ The site has no orange placeholders left. Details for each item are in `TODO.md`
 
 ### Together, as the very last step
 - [ ] Move email from Namecheap to Hostinger
-- [ ] Connect all 8 forms: Contact, Start Project, Get Started, Free Design, Careers, footer newsletter, blog newsletter, Video waitlist (pick a newsletter tool)
+- [ ] Connect all 8 forms through Brevo (free): Contact, Start Project, Get Started, Free Design, Careers, footer newsletter, blog newsletter, Video waitlist. Owner opens a Brevo account first
 - [ ] Deploy to the owner's Hostinger Node.js hosting from GitHub (Node 22, `npm run build`, `npm start`)
 - [ ] Point websylime.com at the new site, keeping the email records
 - [ ] Change "Last updated" on Privacy and Terms to the launch day

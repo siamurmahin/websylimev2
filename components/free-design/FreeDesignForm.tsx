@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { site } from "@/content/site";
 import { cn } from "@/lib/utils";
+import { submitForm } from "@/app/actions/forms";
+import { SendError, Trap } from "@/components/forms/Trap";
 
 const f = site.freeDesign.form;
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -23,6 +25,9 @@ export function FreeDesignForm() {
   const [v, setV] = useState(empty);
   const [tried, setTried] = useState(false);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const trap = useRef<HTMLInputElement>(null);
 
   const bad = {
     name: v.name.trim() === "",
@@ -31,10 +36,16 @@ export function FreeDesignForm() {
     about: v.about.trim() === "",
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (Object.values(bad).some(Boolean)) return setTried(true);
-    setSent(true); // TODO: send to email
+    if (sending) return;
+    setSending(true);
+    setFailed(false);
+    const res = await submitForm({ form: "free-design", fields: v, trap: trap.current?.value });
+    setSending(false);
+    if (res.ok) setSent(true);
+    else setFailed(true);
   };
 
   if (sent) {
@@ -108,21 +119,24 @@ export function FreeDesignForm() {
   };
 
   return (
-    <form onSubmit={onSubmit} noValidate className="grid grid-cols-1 gap-4 rounded-[2rem] border bg-surface p-5 shadow-[0_30px_70px_-45px_rgb(0_0_0/0.35)] sm:grid-cols-2 sm:p-8 dark:shadow-none">
+    <form onSubmit={onSubmit} noValidate className="relative grid grid-cols-1 gap-4 rounded-[2rem] border bg-surface p-5 shadow-[0_30px_70px_-45px_rgb(0_0_0/0.35)] sm:grid-cols-2 sm:p-8 dark:shadow-none">
       {field("name", "text", "name")}
       {field("business", "text", "organization")}
       {field("email", "email", "email")}
       {field("phone", "tel", "tel")}
       <div className="sm:col-span-2">{field("website", "text", "url")}</div>
       {field("about")}
+      <Trap ref={trap} />
       <div className="sm:col-span-2">
         <button
           type="submit"
-          className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-lime px-6 text-sm font-semibold text-ink outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-ring/50"
+          disabled={sending}
+          className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-lime px-6 disabled:opacity-60 text-sm font-semibold text-ink outline-none transition-[filter] hover:brightness-105 focus-visible:ring-3 focus-visible:ring-ring/50"
         >
-          {f.submit}
+          {sending ? "Sending…" : f.submit}
           <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
         </button>
+        <SendError show={failed} />
         <p className="mt-3 text-center text-sm text-muted-foreground">{f.note}</p>
       </div>
     </form>
