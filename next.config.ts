@@ -37,14 +37,6 @@ const nextConfig: NextConfig = {
       { source: "/toolkit", destination: "/blog", permanent: true },
     ];
   },
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
-  },
 };
 
 export default nextConfig;
