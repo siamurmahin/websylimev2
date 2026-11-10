@@ -104,7 +104,8 @@ export default async function CaseStudyPage(props: PageProps<"/work/[slug]">) {
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
               {s.summary}
             </p>
-            {/* nofollow: we don't pass ranking power to client sites */}
+            {/* nofollow: we don't pass ranking power to client sites. Hidden when the site is offline */}
+            {s.liveUrl && (
             <a
               href={s.liveUrl}
               target="_blank"
@@ -114,6 +115,7 @@ export default async function CaseStudyPage(props: PageProps<"/work/[slug]">) {
               {t.visit}
               <ArrowUpRight className="size-4" aria-hidden />
             </a>
+            )}
           </FadeUp>
           {/* portfolio shots are 1170px wide → keep this ≤ 48rem so it stays sharp */}
           <Shot src={s.image} alt={`${s.label} website design`} sizes="(min-width: 800px) 768px, 100vw" preload className="mx-auto mt-10 max-w-3xl" />

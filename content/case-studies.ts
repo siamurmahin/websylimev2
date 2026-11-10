@@ -36,6 +36,7 @@ export type CaseStudy = {
   growth?: { plan: "Foundation" | "Lead Growth" | "Market Leader"; text: string };
   launched: string;
   quote: { text: string; name: string; role: string };
+  /** Leave empty when the client's site is offline: the "Visit" link is then hidden. */
   liveUrl: string;
 };
 
@@ -626,7 +627,8 @@ const drafts: CaseStudy[] = [
     growth: { plan: "Foundation", text: "[After launch they joined our Foundation plan. Regular Instagram and Facebook posts now fill about 20 more class spots a month, and the following has grown by 600.]" },
     launched: "January 2025",
     quote: { text: "Websy Lime captured the calm at the heart of what I do. The site feels nurturing, and bookings have grown steadily since it went live.", name: "Tiffany B.", role: "Founder & yoga teacher" },
-    liveUrl: "https://www.nourishmindbodysoulyoga.co.uk/",
+    // Offline since Nov 2026 (Wix: "domain isn't connected"). Was https://www.nourishmindbodysoulyoga.co.uk/
+    liveUrl: "",
   },
   {
     slug: "corporate-law-firm-website-design",
@@ -642,7 +644,8 @@ const drafts: CaseStudy[] = [
     results: "About [6] corporate inquiries a month now come through the site, from clients who can see the firm's areas of work.",
     launched: "December 2024",
     quote: { text: "Websy Lime delivered a website worthy of our firm. It conveys exactly the authority and trust our clients expect from us.", name: "Thamer A.", role: "Managing partner, corporate law firm" },
-    liveUrl: "https://www.alshawa.law/",
+    // Offline since Nov 2026 (Wix: "domain isn't connected"). Was https://www.alshawa.law/
+    liveUrl: "",
   },
   {
     slug: "supplement-store-website-design",

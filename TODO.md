@@ -28,7 +28,8 @@ The full history of earlier decisions is in git (`git log -p TODO.md`).
 - [ ] Optional: client logos (then `hidden: false` in `content/home/trust-bar.ts`), graphic design samples (`content/design-portfolio.ts`, images in `public/design/`), founder photo (`header.bookCall.avatar`), team photos (`content/pages/about.ts`), bigger screenshots in `public/work/`
 
 ## Open: last step (together)
-- [ ] Forms are wired to Brevo (`app/actions/forms.ts`). At launch: move email to Hostinger, verify websylime.com in Brevo, create the two lists, then set the values from `.env.example` in Hostinger. Without BREVO_API_KEY the live forms show an error
+- [x] Forms send through Brevo (`app/actions/forms.ts`), tested end to end. Lists: #3 newsletter, #4 video waitlist, #5 website leads. Welcome email automation built, Inactive
+- [ ] At launch: move email to Hostinger, verify websylime.com in Brevo (DNS records in Hostinger), add hello@websylime.com as sender, set the values from `.env.example` in Hostinger (FORMS_* = hello@websylime.com), switch the welcome email sender, activate the automation, delete the two test contacts. Without BREVO_API_KEY the live forms show an error
 - [ ] Hostinger Node.js app from GitHub, Node 22. Then point the domain without touching MX records
 - [ ] Privacy and Terms "Last updated" = launch day (`content/pages/legal.ts`)
 

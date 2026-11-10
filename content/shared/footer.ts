@@ -55,7 +55,8 @@ export const footer = {
     label: "Email address",
     placeholder: "you@business.com",
     cta: "Subscribe",
-    success: "Thanks — you're on the list.",
+    // Shown after Subscribe. A confirm email goes out first (double opt-in).
+    success: "Almost done — check your inbox and click the link to confirm.",
     note: "No spam. Unsubscribe anytime.",
   },
   socialLabel: "Follow us",

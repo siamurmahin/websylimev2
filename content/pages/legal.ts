@@ -95,6 +95,7 @@ export const legal = {
             items: [
               "Website hosting — Hostinger",
               "Email — Hostinger",
+              "Form emails, lead records and newsletter — Brevo",
               "Booking calls — Cal.com",
               "Messages — WhatsApp",
               "Payments and invoices — Stripe",

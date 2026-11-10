@@ -14,8 +14,19 @@ The site has no orange placeholders left. Details for each item are in `TODO.md`
 - [ ] **Gives:** send date, amount and photos for the late-November Quran donation and the early-December blankets (no children's faces)
 
 ### Together, as the very last step
-- [ ] Move email from Namecheap to Hostinger
-- [ ] Connect all 8 forms through Brevo (free): Contact, Start Project, Get Started, Free Design, Careers, footer newsletter, blog newsletter, Video waitlist. Owner opens a Brevo account first
+- [ ] ⚠️ The Namecheap hosting (old website) expires **Nov 29, 2026**: launch the new site before then, or renew
+- [x] Move email from Namecheap to Hostinger (2026-11-11): hello, admin, help, info, mahin, payment @websylime.com on Hostinger Free Business Email, all forwarding to Gmail; payment@ old emails imported. DNS notes: `../dns-backup-websylime-2026-11-10.md`
+- [ ] At launch: remove the Namecheap parts from the SPF record (see the DNS notes)
+- [x] Connect all 8 forms through Brevo (free): Contact, Start Project, Get Started, Free Design, Careers, footer newsletter, blog newsletter, Video waitlist. Leads also saved to the Brevo "Website leads" list
+- [x] websylime.com authenticated and branded in Brevo (2026-11-11). All emails go from hello@websylime.com
+- [x] Every form sends an instant auto-reply (words in `content/shared/emails.ts`, Cal link + WhatsApp)
+- [x] Newsletter uses double opt-in (confirm email → `/newsletter-confirmed`), then the welcome email
+- [x] Brevo automations built: "Welcome message" and "Get Started follow-up" (day 2, 5, 10; skips anyone in the "Booked or talking" list)
+- [x] Both automations active (2026-11-11). Welcome: no re-entry. Follow-up: re-entry allowed after 30 days
+- [ ] At launch, in Hostinger: set the env values from `.env.example` (incl. BREVO_FOLLOWUP_LIST=8, BREVO_BOOKED_LIST=9, BREVO_DOI_TEMPLATE=2, CAL_WEBHOOK_SECRET)
+- [ ] At launch, in Cal.com: Settings → Developer → Webhooks → `https://www.websylime.com/api/cal`, event "Booking created", same secret as CAL_WEBHOOK_SECRET
+- [ ] When you talk to a lead yourself (call, WhatsApp, email), add them to the Brevo list "Booked or talking" so the follow-up emails stop
+- [ ] At launch: delete the test contacts (siamurmahin+websylimetest, +websylimelead, +autoreply, +doi, +formtest @gmail.com)
 - [ ] Deploy to the owner's Hostinger Node.js hosting from GitHub (Node 22, `npm run build`, `npm start`)
 - [ ] Point websylime.com at the new site, keeping the email records
 - [ ] Change "Last updated" on Privacy and Terms to the launch day

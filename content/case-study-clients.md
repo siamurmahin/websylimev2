@@ -5,7 +5,7 @@ Not published. The website never shows these names, so people searching for a cl
 | Client | Shown on the site as | Case study | Live site |
 |---|---|---|---|
 | Alpine Online | Data analytics consultancy | /work/data-analytics-consultancy-website-design | https://www.alpineonline.co.uk/ |
-| Alshawa Law | Corporate law firm | /work/corporate-law-firm-website-design | https://www.alshawa.law/ |
+| Alshawa Law | Corporate law firm | /work/corporate-law-firm-website-design | https://www.alshawa.law/ (offline Nov 2026, Visit link hidden) |
 | Anchor Conzult | Recruitment & HR consultancy | /work/recruitment-agency-website-design | https://www.anchorconzult.com/ |
 | Baffo Properties | Property management company | /work/property-management-company-website-design | https://www.baffoproperties.com/ |
 | BroSis Therapy | Therapist directory | /work/therapist-directory-website-design | https://www.brosistherapy.com/ |
@@ -31,7 +31,7 @@ Not published. The website never shows these names, so people searching for a cl
 | Motion Travel | Luxury travel agency | /work/luxury-travel-agency-website-design | https://www.motiontravelgroup.com/ |
 | Mrs Housing | Expat housing advisor | /work/relocation-housing-advisor-website-design | https://www.mrshousing.nl/ |
 | New Key Group | Luxury construction company | /work/luxury-construction-company-website-design | https://www.newkeygroup.co.uk/ |
-| Nourish | Yoga & meditation teacher | /work/yoga-studio-website-design | https://www.nourishmindbodysoulyoga.co.uk/ |
+| Nourish | Yoga & meditation teacher | /work/yoga-studio-website-design | https://www.nourishmindbodysoulyoga.co.uk/ (offline Nov 2026, Visit link hidden) |
 | Powell Spencer & Partners | Criminal & family law firm | /work/criminal-family-law-firm-website-design | https://www.psplaw.co.uk/ |
 | Paul Salmons School of Motoring | Driving school | /work/driving-school-website-design | https://paulsalmonsschoolofmotoring.co.uk/ |
 | Putting Data to Work | Data strategy consultancy | /work/data-strategy-consultant-website-design | https://www.puttingdatatowork.com/ |
