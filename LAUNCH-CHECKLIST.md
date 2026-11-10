@@ -29,7 +29,7 @@ The site has no orange placeholders left. Details for each item are in `TODO.md`
 - [ ] At launch: delete the test contacts (siamurmahin+websylimetest, +websylimelead, +autoreply, +doi, +formtest @gmail.com)
 - [ ] Deploy to the owner's Hostinger Node.js hosting from GitHub (Node 22, `npm run build`, `npm start`)
 - [ ] Point websylime.com at the new site, keeping the email records
-- [ ] Change "Last updated" on Privacy and Terms to the launch day
+- [x] "Last updated" on Privacy and Terms set to November 11, 2026
 - [ ] Send one test from every form on the live site
 
 ## 🟠 Nice to have (launch can happen without these)

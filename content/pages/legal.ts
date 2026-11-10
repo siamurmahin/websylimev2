@@ -38,7 +38,7 @@ export const legal = {
       secondaryCta: { label: "Contact us", href: "/contact" },
       points: ["We never sell your data", "Only what we need", "Delete it anytime"],
     },
-    updated: "November 8, 2026",
+    updated: "November 11, 2026",
     summary: [
       "We only collect what you give us (like your name and email) and basic, anonymous site usage.",
       "We use it to reply to you, do the work you hire us for, and improve our website.",
@@ -180,7 +180,7 @@ export const legal = {
       secondaryCta: { label: "Contact us", href: "/contact" },
       points: ["Clear prices", "You own your website", "Cancel monthly plans anytime"],
     },
-    updated: "November 8, 2026",
+    updated: "November 11, 2026",
     summary: [
       "We agree the price and scope with you before we start.",
       "Once your website is paid for in full, it's yours.",
