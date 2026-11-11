@@ -14,6 +14,13 @@ const nextConfig: NextConfig = {
   // Case studies moved into the Work page
   async redirects() {
     return [
+      // One address for search engines: websylime.com → www.websylime.com
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "websylime.com" }],
+        destination: "https://www.websylime.com/:path*",
+        permanent: true,
+      },
       { source: "/case-studies", destination: "/work", permanent: true },
       { source: "/case-studies/:slug", destination: "/work/:slug", permanent: true },
       // Old site: blog posts we didn't carry over, and tag pages
