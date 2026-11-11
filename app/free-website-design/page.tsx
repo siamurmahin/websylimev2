@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check, ChevronDown } from "lucide-react";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { FreeDesignForm } from "@/components/free-design/FreeDesignForm";
 import { FadeUp } from "@/components/motion/SplitReveal";
@@ -31,6 +33,7 @@ const h2 = "mt-5 font-display text-[clamp(2.25rem,4.5vw,3.5rem)] leading-[1.02] 
 export default function FreeWebsiteDesignPage() {
   return (
     <main id="main" className="relative isolate overflow-hidden">
+      <JsonLd data={breadcrumbSchema([{ name: "Free website design", path: "/free-website-design" }])} />
       <PhotoHero data={p.hero} />
 
       <section aria-labelledby="fd-who" className="container-site pt-16 sm:pt-24">

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { AboutQuotes, AboutStats, AboutStory, AboutTeam, AboutTimeline, AboutValues } from "@/components/about/AboutSections";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -17,6 +19,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main id="main" className="relative">
+      <JsonLd data={breadcrumbSchema([{ name: "About", path: "/about" }])} />
       <PhotoHero data={a.hero} />
       <AboutStats />
       <AboutStory />

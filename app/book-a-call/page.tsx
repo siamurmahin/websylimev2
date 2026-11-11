@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check, MessageCircle } from "lucide-react";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { icons } from "@/components/icons";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { CalEmbed } from "@/components/book-a-call/CalEmbed";
@@ -25,6 +27,7 @@ export const metadata: Metadata = {
 export default function BookACallPage() {
   return (
     <main id="main" className="relative isolate overflow-hidden">
+      <JsonLd data={breadcrumbSchema([{ name: "Book a free call", path: "/book-a-call" }])} />
       <PhotoHero data={b.hero} />
 
       <section

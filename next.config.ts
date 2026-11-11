@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
     // Required allowlist in Next 16: 75 = default, 90 = large hero photos
     // (so big photos never look soft or blocky on high-DPI screens)
     qualities: [75, 90],
+    // Fewer widths = shorter srcset lists = a much smaller HTML page (AI agents pay per token).
+    // 2560 and 3840 stay so full-width photos are sharp on 2x/3x screens.
+    deviceSizes: [640, 828, 1200, 1920, 2560, 3840],
+    imageSizes: [32, 48, 96, 256, 384],
   },
   partialPrefetching: true,
   // Case studies moved into the Work page

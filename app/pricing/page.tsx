@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CalendarDays, Check } from "lucide-react";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { FadeUp, SplitReveal } from "@/components/motion/SplitReveal";
 import { PricingExplorer } from "@/components/pricing-page/PricingExplorer";
 import { CharityCard } from "@/components/sections/pricing/CharityCard";
@@ -26,6 +28,7 @@ export default function PricingPage() {
   const h = pp.hero;
   return (
     <main id="main" className="relative isolate overflow-hidden">
+      <JsonLd data={breadcrumbSchema([{ name: "Pricing", path: "/pricing" }])} />
       {/* hero: grid + glow, plans start just below */}
       <section aria-label={h.headline} className="relative pt-page-top">
         <div

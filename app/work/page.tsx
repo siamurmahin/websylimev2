@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { WorkGallery, type StudyCards } from "@/components/work/WorkGallery";
 import { stories } from "@/components/case-studies/shared";
@@ -24,6 +26,7 @@ export default function WorkPage() {
   const studies: StudyCards = Object.fromEntries(stories.map((s) => [s.slug, { headline: s.headline, stat: s.stats[0] }]));
   return (
     <main id="main" className="relative">
+      <JsonLd data={breadcrumbSchema([{ name: "Work", path: "/work" }])} />
       <PhotoHero data={w.hero} />
       <WorkGallery studies={studies} />
       <CaseStudyCta />

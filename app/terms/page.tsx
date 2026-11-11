@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { LegalPage } from "@/components/legal/LegalPage";
 
 const t = site.legal.terms;
@@ -13,5 +15,10 @@ export const metadata: Metadata = {
 
 /** Terms of Service — copy in content/pages/legal.ts (draft: needs a lawyer's review). */
 export default function TermsPage() {
-  return <LegalPage doc={t} />;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema([{ name: "Terms of Service", path: "/terms" }])} />
+      <LegalPage doc={t} />
+    </>
+  );
 }

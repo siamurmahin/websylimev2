@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CalendarDays, GraduationCap, HeartHandshake, Shirt, Sprout } from "lucide-react";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { record, upcoming } from "@/content/pages/gives";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { FadeUp } from "@/components/motion/SplitReveal";
@@ -38,6 +40,7 @@ export default function GivesPage() {
 
   return (
     <main id="main" className="relative isolate overflow-hidden">
+      <JsonLd data={breadcrumbSchema([{ name: "Gives", path: "/gives" }])} />
       <PhotoHero data={g.hero} />
 
       <section aria-labelledby="gv-goals" className="container-site pt-16 sm:pt-24">

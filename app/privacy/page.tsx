@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { LegalPage } from "@/components/legal/LegalPage";
 
 const p = site.legal.privacy;
@@ -13,5 +15,10 @@ export const metadata: Metadata = {
 
 /** Privacy Policy — copy in content/pages/legal.ts (draft: needs a lawyer's review). */
 export default function PrivacyPage() {
-  return <LegalPage doc={p} />;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema([{ name: "Privacy Policy", path: "/privacy" }])} />
+      <LegalPage doc={p} />
+    </>
+  );
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, CalendarDays, Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { FadeUp } from "@/components/motion/SplitReveal";
@@ -33,6 +35,7 @@ export default function ContactPage() {
 
   return (
     <main id="main" className="relative isolate overflow-hidden">
+      <JsonLd data={breadcrumbSchema([{ name: "Contact", path: "/contact" }])} />
       <PhotoHero data={c.hero} />
 
       <section

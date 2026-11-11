@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { VideoNow, VideoWaitlist, VideoWhat } from "@/components/sections/services/video/VideoSections";
 
@@ -20,6 +22,7 @@ export const metadata: Metadata = {
 export default function VideoEditingPage() {
   return (
     <main id="main" className="relative">
+      <JsonLd data={breadcrumbSchema([{ name: "Video Editing", path: "/services/video-editing" }])} />
       <PhotoHero data={v.hero} />
       <VideoWhat />
       <VideoWaitlist />

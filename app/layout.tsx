@@ -9,6 +9,7 @@ import { themeScript } from "@/lib/theme";
 import { promoScript } from "@/lib/promo";
 import { InlineScript } from "@/components/InlineScript";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { WebMcpTools } from "@/components/seo/WebMcpTools";
 import { siteSchema } from "@/lib/schema";
 import { site } from "@/content/site";
 import "./globals.css";
@@ -85,6 +86,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="min-h-dvh">
         <JsonLd data={siteSchema()} />
+        <WebMcpTools />
         <Providers>
           <Header />
           {children}

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { CareersApply, CareersHow, CareersPerks, CareersRoles } from "@/components/careers/CareersSections";
 
@@ -20,6 +22,7 @@ export const metadata: Metadata = {
 export default function CareersPage() {
   return (
     <main id="main" className="relative">
+      <JsonLd data={breadcrumbSchema([{ name: "Careers", path: "/careers" }])} />
       <PhotoHero data={c.hero} />
       <CareersHow />
       <CareersPerks />

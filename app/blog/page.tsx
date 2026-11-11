@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { BlogIndex } from "@/components/blog/BlogIndex";
 import { BlogNewsletter } from "@/components/blog/BlogNewsletter";
@@ -21,6 +23,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <main id="main" className="relative">
+      <JsonLd data={breadcrumbSchema([{ name: "Blog", path: "/blog" }])} />
       <PhotoHero data={b.hero} />
       <BlogIndex />
       <BlogNewsletter />

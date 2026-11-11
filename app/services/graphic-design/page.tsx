@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { serviceSchema } from "@/lib/schema";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { GraphicHow, GraphicPlans, GraphicWhat, GraphicWork } from "@/components/sections/services/graphic/GraphicSections";
 import { WebsiteGrowthUpsell } from "@/components/sections/services/website/WebsiteSections";
@@ -23,6 +25,15 @@ export const metadata: Metadata = {
 export default function GraphicDesignPage() {
   return (
     <main id="main" className="relative">
+      <JsonLd
+        data={serviceSchema({
+          name: "Graphic Design",
+          description: g.meta.description,
+          path: "/services/graphic-design",
+          serviceType: "Graphic design",
+          plans: g.plans.items.map((p) => ({ name: p.name, price: p.price, monthly: true, url: `/get-started?plan=${p.id}` })),
+        })}
+      />
       <PhotoHero data={g.hero} />
       <GraphicWhat />
       <GraphicWork />

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/mcp-server-card/v1.json",
+  "version": "1.0",
+  "protocolVersion": "2025-06-18",
+  "serverInfo": {
+    "name": "websylime",
+    "title": "Websy Lime",
+    "version": "1.0.0"
+  },
+  "description": "Read-only information about Websy Lime, a web design and marketing agency for home service businesses: services, prices in USD, contact details and a site summary.",
+  "documentationUrl": "https://www.websylime.com/llms.txt",
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://www.websylime.com/api/mcp"
+  },
+  "endpoints": [
+    {
+      "url": "https://www.websylime.com/api/mcp",
+      "transport": "streamable-http"
+    }
+  ],
+  "capabilities": {
+    "tools": { "listChanged": false }
+  },
+  "authentication": {
+    "required": false
+  },
+  "tools": [
+    { "name": "get_services", "description": "List every service with its plans and prices." },
+    { "name": "get_service", "description": "Get one service with its plans, prices and page link." },
+    { "name": "get_contact_info", "description": "Email, phone, WhatsApp, hours, address and booking links." },
+    { "name": "get_site_summary", "description": "Markdown summary of the whole website." }
+  ]
+}

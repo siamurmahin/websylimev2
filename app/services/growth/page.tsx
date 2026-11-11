@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { serviceSchema } from "@/lib/schema";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { GrowthHandled, GrowthHowItWorks, GrowthNeedSite } from "@/components/sections/services/growth/GrowthSections";
 import { Pricing } from "@/components/sections/Pricing";
@@ -24,6 +26,15 @@ export const metadata: Metadata = {
 export default function GrowthPage() {
   return (
     <main id="main" className="relative">
+      <JsonLd
+        data={serviceSchema({
+          name: "All-in-One Growth",
+          description: g.meta.description,
+          path: "/services/growth",
+          serviceType: "Local SEO, website content and social media marketing",
+          plans: site.home.pricing.plans.map((p) => ({ name: p.name, price: p.price, monthly: true, url: `/get-started?plan=${p.id}` })),
+        })}
+      />
       <PhotoHero data={g.hero} />
       <GrowthHandled />
       <GrowthNeedSite />

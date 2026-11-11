@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { CalendarDays, Quote } from "lucide-react";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { testimonials } from "@/content/testimonials";
 import { Avatar, byline } from "@/components/sections/testimonials/shared";
 import { ProjectForm, ProjectFormFallback } from "@/components/start-project/ProjectForm";
@@ -29,6 +31,7 @@ export const metadata: Metadata = {
 export default function StartProjectPage() {
   return (
     <main id="main" className="relative isolate overflow-hidden">
+      <JsonLd data={breadcrumbSchema([{ name: "Start a project", path: "/start-project" }])} />
       <PhotoHero data={sp.hero} />
 
       <div

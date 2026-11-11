@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { serviceSchema } from "@/lib/schema";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import {
   WebsiteGrowthUpsell,
@@ -31,6 +33,15 @@ export const metadata: Metadata = {
 export default function WebsiteDesignPage() {
   return (
     <main id="main" className="relative">
+      <JsonLd
+        data={serviceSchema({
+          name: "Website Design",
+          description: s.meta.description,
+          path: "/services/website-design",
+          serviceType: "Website design",
+          plans: site.pricingPage.website.plans.map((p) => ({ name: p.name, price: p.price, url: `/get-started?plan=${p.id}` })),
+        })}
+      />
       <PhotoHero data={s.hero} />
       <WebsitePains />
       <WebsitePillars />

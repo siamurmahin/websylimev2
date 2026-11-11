@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { PhotoHero } from "@/components/sections/PhotoHero";
 import { FaqExplorer } from "@/components/faq/FaqExplorer";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -32,6 +34,7 @@ const jsonLd = {
 export default function FaqPage() {
   return (
     <main id="main" className="relative">
+      <JsonLd data={breadcrumbSchema([{ name: "FAQ", path: "/faq" }])} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PhotoHero data={p.hero} />
       <FaqExplorer />
