@@ -8,7 +8,9 @@ export const MARQUEE_SPEED = 45;
 
 /**
  * Endless horizontal scroller. Content is rendered twice so translateX(-50%)
- * loops seamlessly; the copy is hidden from screen readers. Duration is derived
+ * loops seamlessly; the copy is hidden from screen readers. The copy is added in
+ * the browser only (after hydration), so the HTML stays half the size for search
+ * engines and AI agents; the strip starts moving once the copy is there. Duration is derived
  * from the measured width, so strips of different lengths share one `speed`.
  * Pauses on hover; stops for prefers-reduced-motion (see globals.css).
  */
@@ -28,12 +30,14 @@ export function Marquee({
 }) {
   const groupRef = useRef<HTMLDivElement>(null);
   const [duration, setDuration] = useState<number | null>(null);
+  const [looped, setLooped] = useState(false);
 
   useLayoutEffect(() => {
     const el = groupRef.current;
     if (!el) return;
     const measure = () => setDuration(el.offsetWidth / speed);
     measure();
+    setLooped(true);
     const ro = new ResizeObserver(measure);
     ro.observe(el);
     return () => ro.disconnect();
@@ -51,7 +55,8 @@ export function Marquee({
     >
       <div
         className={cn(
-          "flex w-max shrink-0 animate-marquee-x group-hover/marquee:[animation-play-state:paused]",
+          "flex w-max shrink-0 group-hover/marquee:[animation-play-state:paused]",
+          looped && "animate-marquee-x",
           direction === "right" && "[animation-direction:reverse]",
         )}
         style={{ "--marquee-duration": duration ? `${duration}s` : "60s" } as React.CSSProperties}
@@ -59,9 +64,11 @@ export function Marquee({
         <div ref={groupRef} className={group} style={groupStyle}>
           {children}
         </div>
-        <div aria-hidden className={group} style={groupStyle}>
-          {children}
-        </div>
+        {looped && (
+          <div aria-hidden className={group} style={groupStyle}>
+            {children}
+          </div>
+        )}
       </div>
     </div>
   );

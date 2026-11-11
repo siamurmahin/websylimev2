@@ -1,10 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CalendarDays } from "lucide-react";
 import { site } from "@/content/site";
 import { portfolio } from "@/content/portfolio";
 import { Magnetic } from "@/components/motion/Magnetic";
 import { StaggerReveal } from "@/components/motion/StaggerReveal";
+import { DriftColumn } from "@/components/sections/DriftColumn";
 import { Copy, href } from "@/lib/copy";
 import { cn } from "@/lib/utils";
 
@@ -86,13 +86,7 @@ export function FinalCta() {
                 const items = Array.from({ length: 6 }, (_, k) => portfolio[(col.offset + k) % portfolio.length]);
                 return (
                   <div key={i} className={cn("w-1/2 min-w-0 sm:w-1/3", col.className)}>
-                    <div className={cn("flex flex-col gap-4 motion-reduce:animate-none", col.anim)} style={{ ["--column-duration" as string]: col.duration }}>
-                      {[...items, ...items].map((p, k) => (
-                        <div key={`${p.slug}-${k}`} className="relative aspect-[1170/630] overflow-hidden rounded-xl border border-white/10 bg-white/5 shadow-[0_20px_40px_-20px_rgb(0_0_0/0.6)]">
-                          <Image src={p.image} alt="" fill sizes="(min-width: 1024px) 220px, (min-width: 640px) 30vw, 45vw" className="object-cover object-top" />
-                        </div>
-                      ))}
-                    </div>
+                    <DriftColumn images={items.map((p) => ({ key: p.slug, src: p.image }))} anim={col.anim} duration={col.duration} />
                   </div>
                 );
               })}
