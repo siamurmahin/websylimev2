@@ -15,6 +15,14 @@ const nextConfig: NextConfig = {
     imageSizes: [32, 48, 96, 256, 384],
   },
   partialPrefetching: true,
+  // Hostinger shared hosting counts every thread toward a 120-process limit (shared
+  // with the other apps on the plan). sharp would open roughly one thread per CPU core
+  // for image resizing; one is plenty here because the CDN caches resized images.
+  // Not preloading every page at start keeps memory low too.
+  experimental: {
+    imgOptConcurrency: 1,
+    preloadEntriesOnStart: false,
+  },
   // Case studies moved into the Work page
   async redirects() {
     return [
