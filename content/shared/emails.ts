@@ -51,6 +51,16 @@ export const emails = {
       ],
       book: false,
     },
+    "tampa-audit": {
+      subject: "Your free Map Pack Review Audit request",
+      body: [
+        "Hi {name},",
+        "Thanks for requesting your free Map Pack Review Audit. We'll compare your Google profile with the top 3 in your area and send you a plain-English report within 2 business days.",
+        "Your reader code TAMPA20 (20% off all Websy Lime services) is saved to your request.",
+        "If you'd rather walk through it together, you can pick a time for a free 30-minute call.",
+      ],
+      book: true,
+    },
     careers: {
       subject: "We got your application",
       body: [

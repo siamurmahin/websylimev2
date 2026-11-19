@@ -26,7 +26,7 @@ import { footer } from "@/content/shared/footer";
  * sent, so the forms can be tested; in production the form shows its error.
  */
 
-export type FormKind = "contact" | "start-project" | "get-started" | "free-design" | "careers" | "newsletter" | "waitlist";
+export type FormKind = "contact" | "start-project" | "get-started" | "free-design" | "careers" | "tampa-audit" | "newsletter" | "waitlist";
 export type FormResult = { ok: boolean };
 
 const LEADS: Record<string, string> = {
@@ -35,6 +35,7 @@ const LEADS: Record<string, string> = {
   "get-started": "Get Started (plan chosen)",
   "free-design": "Free design application",
   careers: "Job application",
+  "tampa-audit": "Map Pack Review Audit (Tampa PDF)",
 };
 const LISTS = new Set(["newsletter", "waitlist"]);
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -191,6 +192,12 @@ export async function submitForm(input: { form: FormKind; fields: Record<string,
   const followUpList = form === "get-started" ? Number(process.env.BREVO_FOLLOWUP_LIST) : 0;
   const details = [
     fields.website && `Website: ${fields.website}`,
+    fields.trade && `Trade: ${fields.trade}`,
+    fields.gbp && `Google profile: ${fields.gbp}`,
+    fields.area && `Service area: ${fields.area}`,
+    fields.promo_code && `Code: ${fields.promo_code}`,
+    fields.sms_ok && `OK to text: ${fields.sms_ok}`,
+    fields.source && `Source: ${fields.source}`,
     fields.budget && `Budget: ${fields.budget}`,
     fields.areas && `Skills: ${fields.areas}`,
     fields.link && `Portfolio: ${fields.link}`,

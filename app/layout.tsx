@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BottomBlur } from "@/components/layout/BottomBlur";
 import { BookCallFloat } from "@/components/layout/BookCallFloat";
+import { ChromeGate } from "@/components/layout/ChromeGate";
 import { themeScript } from "@/lib/theme";
 import { promoScript } from "@/lib/promo";
 import { InlineScript } from "@/components/InlineScript";
@@ -88,11 +89,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <JsonLd data={siteSchema()} />
         <WebMcpTools />
         <Providers>
-          <Header />
+          <ChromeGate>
+            <Header />
+          </ChromeGate>
           {children}
-          <Footer />
-          <BottomBlur />
-          <BookCallFloat />
+          <ChromeGate>
+            <Footer />
+            <BottomBlur />
+            <BookCallFloat />
+          </ChromeGate>
         </Providers>
       </body>
     </html>
