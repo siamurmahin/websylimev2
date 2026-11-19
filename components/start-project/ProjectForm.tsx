@@ -11,6 +11,7 @@ import { Copy, href } from "@/lib/copy";
 import { cn } from "@/lib/utils";
 import { submitForm } from "@/app/actions/forms";
 import { SendError, Trap } from "@/components/forms/Trap";
+import { PromoCode } from "@/components/forms/PromoCode";
 
 const f = site.startProject.form;
 const { service: s1, business: s2, contact: s3 } = f.steps;
@@ -27,6 +28,7 @@ type Answers = {
   phone: string;
   website: string;
   message: string;
+  promo: string;
 };
 
 const GROWTH_PLANS = s1.details.growth.map((d) => d.id) as string[];
@@ -62,6 +64,7 @@ function initialAnswers(params: URLSearchParams): Answers {
     phone: "",
     website: "",
     message: "",
+    promo: "",
   };
 }
 
@@ -117,6 +120,7 @@ export function ProjectForm() {
         business: a.business ?? "",
         budget: a.budget ?? "",
         message: a.message,
+        promo_code: a.promo,
       },
       trap: trap.current?.value,
     });
@@ -351,6 +355,9 @@ function StepContact({ a, set, emailError, onEmailBlur }: StepProps & { emailErr
             className={cn(inputCls, "h-auto resize-none py-3")}
           />
         </Field>
+        <div className="sm:col-span-2">
+          <PromoCode id="sp-promo" value={a.promo} onChange={(v) => set("promo", v)} inputCls={inputCls} />
+        </div>
       </div>
     </>
   );

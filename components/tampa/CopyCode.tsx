@@ -1,11 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { rememberPromo } from "@/components/forms/PromoCode";
 import { Check, Copy } from "lucide-react";
 
 /** The reader code with a one-tap copy button. */
 export function CopyCode({ code, copy, copied }: { code: string; copy: string; copied: string }) {
   const [done, setDone] = useState(false);
+  // the code follows the visitor to Start Project / Get Started if they go there next
+  useEffect(() => rememberPromo(code), [code]);
   const onCopy = async () => {
     try {
       await navigator.clipboard.writeText(code);

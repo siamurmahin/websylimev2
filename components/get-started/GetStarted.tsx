@@ -11,6 +11,7 @@ import { findPlan, type ChosenPlan } from "@/components/get-started/plans";
 import { cn } from "@/lib/utils";
 import { submitForm } from "@/app/actions/forms";
 import { SendError, Trap } from "@/components/forms/Trap";
+import { PromoCode } from "@/components/forms/PromoCode";
 
 const g = site.getStarted;
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -122,6 +123,7 @@ function DetailsForm({ plan, onDone }: { plan: ChosenPlan; onDone: (d: Details) 
   const [tried, setTried] = useState(false);
   const [sending, setSending] = useState(false);
   const [failed, setFailed] = useState(false);
+  const [promoCode, setPromoCode] = useState("");
   const trap = useRef<HTMLInputElement>(null);
 
   const bad: Record<Key, boolean> = {
@@ -138,7 +140,7 @@ function DetailsForm({ plan, onDone }: { plan: ChosenPlan; onDone: (d: Details) 
     if (sending) return;
     setSending(true);
     setFailed(false);
-    const res = await submitForm({ form: "get-started", fields: { plan: `${plan.name} (${plan.price} ${plan.per})`, ...v }, trap: trap.current?.value });
+    const res = await submitForm({ form: "get-started", fields: { plan: `${plan.name} (${plan.price} ${plan.per})`, ...v, promo_code: promoCode }, trap: trap.current?.value });
     setSending(false);
     if (res.ok) onDone(v);
     else setFailed(true);
@@ -186,6 +188,9 @@ function DetailsForm({ plan, onDone }: { plan: ChosenPlan; onDone: (d: Details) 
         {field("email", "email", "email")}
         {field("phone", "tel", "tel")}
         <div className="sm:col-span-2">{field("website", "text", "url")}</div>
+        <div className="sm:col-span-2">
+          <PromoCode id="gs-promo" value={promoCode} onChange={setPromoCode} inputCls={inputCls} />
+        </div>
       </div>
       <Trap ref={trap} />
       <button
